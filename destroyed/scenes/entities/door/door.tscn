@@ -1,0 +1,111 @@
+[gd_scene load_steps=17 format=3 uid="uid://l1kqhoqsf4pp"]
+
+[ext_resource type="Script" uid="uid://cfudxq5fo2xo3" path="res://scenes/entities/door/door.gd" id="1_npj28"]
+[ext_resource type="AudioStream" uid="uid://tk2w30malqnb" path="res://assets/sounds/dropping-rocks-5996.mp3" id="2_36w75"]
+[ext_resource type="AudioStream" uid="uid://b6l0dw0g03q3u" path="res://assets/sounds/Retro Blop 07.wav" id="3_wdstf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rjwi8"]
+size = Vector3(4, 6, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_npj28"]
+noise_type = 0
+frequency = 0.005
+metadata/_preview_in_3d_space_ = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_36w75"]
+seamless = true
+seamless_blend_skirt = 1.0
+noise = SubResource("FastNoiseLite_npj28")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_npj28"]
+albedo_color = Color(0.325595, 0.265339, 0.255083, 1)
+albedo_texture = SubResource("NoiseTexture2D_36w75")
+
+[sub_resource type="BoxMesh" id="BoxMesh_npj28"]
+material = SubResource("StandardMaterial3D_npj28")
+
+[sub_resource type="BoxMesh" id="BoxMesh_36w75"]
+material = SubResource("StandardMaterial3D_npj28")
+
+[sub_resource type="BoxMesh" id="BoxMesh_wdstf"]
+material = SubResource("StandardMaterial3D_npj28")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdstf"]
+albedo_color = Color(0.523976, 0.440563, 0.426311, 1)
+albedo_texture = SubResource("NoiseTexture2D_36w75")
+
+[sub_resource type="BoxMesh" id="BoxMesh_e10ln"]
+material = SubResource("StandardMaterial3D_wdstf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xi6kt"]
+metallic = 1.0
+metallic_specular = 1.0
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 16.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_xi6kt"]
+material = SubResource("StandardMaterial3D_xi6kt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_36w75"]
+albedo_color = Color(0, 0.478865, 0.121254, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_36w75"]
+material = SubResource("StandardMaterial3D_36w75")
+uv2_padding = 2.63
+font_size = 127
+line_spacing = -45.0
+autowrap_mode = 3
+
+[node name="Door" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_npj28")
+
+[node name="SFXPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_36w75")
+volume_db = -3.0
+unit_size = 100.0
+max_distance = 500.0
+
+[node name="SFXPlayer2" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_wdstf")
+pitch_scale = 0.6
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_rjwi8")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(120, 0, 0, 0, -2.18557e-07, -200, 0, 5, -8.74228e-06, 0, 0, 0)
+hit_from_inside = true
+
+[node name="Cadre" type="Node3D" parent="."]
+
+[node name="mod1" type="MeshInstance3D" parent="Cadre"]
+transform = Transform3D(1, 0, 0, 0, 6.276, 0, 0, 0, 1, 1.5165, 0, 0)
+mesh = SubResource("BoxMesh_npj28")
+skeleton = NodePath("../..")
+
+[node name="mod2" type="MeshInstance3D" parent="Cadre"]
+transform = Transform3D(1, 0, 0, 0, 6.276, 0, 0, 0, 1, -1.94096, 0, 0)
+mesh = SubResource("BoxMesh_36w75")
+skeleton = NodePath("../..")
+
+[node name="mod3" type="MeshInstance3D" parent="Cadre"]
+transform = Transform3D(-4.37114e-08, -2.66105, 0, 1, -1.16318e-07, 0, 0, 0, 0.9, -0.196099, 2.56839, 0)
+mesh = SubResource("BoxMesh_wdstf")
+skeleton = NodePath("../..")
+
+[node name="Porte" type="Node3D" parent="."]
+
+[node name="mod4" type="MeshInstance3D" parent="Porte"]
+transform = Transform3D(2.88262, 0, 0, 0, 5.67633, 0, 0, 0, 0.355608, -0.183855, -0.482725, -0.250656)
+mesh = SubResource("BoxMesh_e10ln")
+
+[node name="mod5" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.402, 0, 0, 0, 7.17851, 0, 0, 0, 0.2, 0, -1, 0)
+mesh = SubResource("BoxMesh_xi6kt")
+
+[node name="TextMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.9421, 0, -0.477744, 0, 2, 0, 0.477744, 0, -1.9421, -2.20839, 1.2081, -1.66266)
+mesh = SubResource("TextMesh_36w75")

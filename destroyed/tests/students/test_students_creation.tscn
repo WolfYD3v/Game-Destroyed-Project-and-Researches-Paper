@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5e8ht85b4q52"]
+
+[ext_resource type="PackedScene" uid="uid://bg0k7fehyk2fg" path="res://scenes/entities/students/students.tscn" id="1_drb8d"]
+
+[node name="TestStudentsCreation" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.813913, 0.580987, 0, -0.580987, 0.813913, 13.9213, 9.40889, 9.74212)
+
+[node name="Students" parent="." instance=ExtResource("1_drb8d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.78182)
+students_number = 8
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24.0985)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+spot_range = 89.8373

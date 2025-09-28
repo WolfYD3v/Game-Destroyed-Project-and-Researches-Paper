@@ -1,0 +1,43 @@
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://c3vnpqemj71j2"]
+
+[ext_resource type="FontFile" uid="uid://dqxkps8kby31r" path="res://assets/fonts/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/LinLibertine_DR.otf" id="1_xbnij"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_imipj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y3u7b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jjpe7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5nl6s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_22sbv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2kni4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k2yff"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x6ffq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhyrb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cmts0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5r51a"]
+
+[resource]
+default_font = ExtResource("1_xbnij")
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0.442909, 0.442911, 0.442912, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 25
+Button/styles/disabled = SubResource("StyleBoxEmpty_imipj")
+Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_y3u7b")
+Button/styles/focus = SubResource("StyleBoxEmpty_jjpe7")
+Button/styles/hover = SubResource("StyleBoxEmpty_5nl6s")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_22sbv")
+Button/styles/hover_pressed = SubResource("StyleBoxEmpty_2kni4")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_k2yff")
+Button/styles/normal = SubResource("StyleBoxEmpty_x6ffq")
+Button/styles/normal_mirrored = SubResource("StyleBoxEmpty_yhyrb")
+Button/styles/pressed = SubResource("StyleBoxEmpty_cmts0")
+Button/styles/pressed_mirrored = SubResource("StyleBoxEmpty_5r51a")

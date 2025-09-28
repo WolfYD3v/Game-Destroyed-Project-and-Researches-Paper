@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://c86dmojba8yhp"]
+
+[ext_resource type="Script" uid="uid://f83iitjtvh2p" path="res://scenes/entities/pile/pile.gd" id="1_chrp4"]
+
+[sub_resource type="Gradient" id="Gradient_chrp4"]
+colors = PackedColorArray(0.474797, 8.48304e-07, 2.40654e-07, 1, 0.411841, 0.411628, 9.62615e-08, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_a8lvb"]
+frequency = 0.007
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8t33l"]
+width = 1000
+height = 1000
+color_ramp = SubResource("Gradient_chrp4")
+noise = SubResource("FastNoiseLite_a8lvb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_50e1l"]
+albedo_texture = SubResource("NoiseTexture2D_8t33l")
+
+[sub_resource type="BoxMesh" id="BoxMesh_chrp4"]
+material = SubResource("StandardMaterial3D_50e1l")
+
+[sub_resource type="TextMesh" id="TextMesh_a8lvb"]
+material = SubResource("StandardMaterial3D_50e1l")
+font_size = 60
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8t33l"]
+radius = 5.2
+
+[node name="Pile" type="Node3D"]
+script = ExtResource("1_chrp4")
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(0.899543, -0.433016, 0.0576228, 0.436833, 0.891682, -0.118659, 0, 0.13191, 0.991262, 0, 0, 0)
+mesh = SubResource("BoxMesh_chrp4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(0.870199, -0.108515, 0.480603, 0.122975, 0.992409, 0.00141022, -0.477108, 0.0578752, 0.876937, 0.298333, 0, -0.440042)
+mesh = SubResource("BoxMesh_chrp4")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(0.822658, -0.216935, 0.525522, 0.268823, 0.962907, -0.023331, -0.500967, 0.160466, 0.85046, -0.187529, 0.198329, -0.704919)
+mesh = SubResource("BoxMesh_chrp4")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(0.362709, -0.775735, 0.516408, 0.797786, 0.544877, 0.258159, -0.481642, 0.318347, 0.816503, 0.580428, -0.399683, -0.0675365)
+mesh = SubResource("BoxMesh_chrp4")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(0.68438, -0.492643, 0.537519, 0.632759, 0.767582, -0.102145, -0.362269, 0.410026, 0.837042, -0.213216, -0.155018, 0)
+mesh = SubResource("BoxMesh_chrp4")
+
+[node name="TextMesh" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0982263, 0.0152315, 1.19229)
+mesh = SubResource("TextMesh_a8lvb")
+skeleton = NodePath("../..")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6, 0)
+light_energy = 100.0
+spot_range = 9.31922
+spot_angle = 24.4438
+
+[node name="SFXPlayer" type="AudioStreamPlayer3D" parent="."]
+max_db = 6.0
+max_distance = 1500.0
+panning_strength = 0.75
+
+[node name="PlayerDetectionArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerDetectionArea"]
+shape = SubResource("SphereShape3D_8t33l")
+
+[connection signal="body_entered" from="PlayerDetectionArea" to="." method="_on_player_detection_area_body_entered"]
+[connection signal="body_exited" from="PlayerDetectionArea" to="." method="_on_player_detection_area_body_exited"]

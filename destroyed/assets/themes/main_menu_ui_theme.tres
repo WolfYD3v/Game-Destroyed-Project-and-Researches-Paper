@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c0taeflltce28"]
+
+[ext_resource type="FontFile" uid="uid://dqxkps8kby31r" path="res://assets/fonts/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/LinLibertine_DR.otf" id="1_gbsli"]
+
+[resource]
+default_font = ExtResource("1_gbsli")

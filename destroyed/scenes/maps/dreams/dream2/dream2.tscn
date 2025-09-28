@@ -1,0 +1,237 @@
+[gd_scene load_steps=20 format=3 uid="uid://c5xhu77i64xb3"]
+
+[ext_resource type="PackedScene" uid="uid://byuif6sgygvl8" path="res://scenes/maps/dreams/Dream.tscn" id="1_qhlpy"]
+[ext_resource type="Script" uid="uid://c7kdlontxgrm7" path="res://scenes/maps/dreams/dream2/dream_2.gd" id="2_not7f"]
+[ext_resource type="PackedScene" uid="uid://d0ljvgh36ouql" path="res://scenes/maps/dreams/dream_camera.tscn" id="3_ai01k"]
+[ext_resource type="PackedScene" uid="uid://dwvdrxd0wyk4n" path="res://assets/models/wall_dream.tscn" id="3_fq7bh"]
+[ext_resource type="PackedScene" uid="uid://b7s8vuryo3ewd" path="res://assets/models/ground_dream.tscn" id="4_ai01k"]
+
+[sub_resource type="Environment" id="Environment_fq7bh"]
+background_mode = 1
+ambient_light_source = 3
+ambient_light_color = Color(0.201527, 0.201527, 0.201527, 1)
+fog_light_color = Color(0.210757, 0.23209, 0.265627, 1)
+fog_density = 0.03
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ai01k"]
+size = Vector3(8.84741, 13.996, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hs5b2"]
+size = Vector3(8.84741, 13.996, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fq7bh"]
+size = Vector3(34.2008, 14.0833, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai01k"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hs5b2"]
+material = SubResource("StandardMaterial3D_ai01k")
+size = Vector3(70, 0.5, 70)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hs5b2"]
+albedo_color = Color(0, 0.478865, 0.121254, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_ai01k"]
+material = SubResource("StandardMaterial3D_hs5b2")
+font_size = 110
+line_spacing = -55.0
+autowrap_mode = 3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c88qj"]
+albedo_color = Color(0, 0.478865, 0.121254, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_llfkt"]
+material = SubResource("StandardMaterial3D_c88qj")
+font_size = 110
+line_spacing = -50.0
+autowrap_mode = 3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_llfkt"]
+albedo_color = Color(0, 0.478865, 0.121254, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_j00vt"]
+material = SubResource("StandardMaterial3D_llfkt")
+font_size = 90
+line_spacing = -50.0
+autowrap_mode = 3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j00vt"]
+albedo_color = Color(0, 0.478865, 0.121254, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_cab5c"]
+material = SubResource("StandardMaterial3D_j00vt")
+font_size = 127
+line_spacing = -50.0
+autowrap_mode = 3
+
+[node name="Dream" instance=ExtResource("1_qhlpy")]
+script = ExtResource("2_not7f")
+day = "March 26 , 2025"
+hour = "1am"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+environment = SubResource("Environment_fq7bh")
+
+[node name="Player" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3859, 0, 16.595)
+
+[node name="Cube" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.8354, 0, 33.4835)
+next_scene_wake_up = "res://scenes/maps/school/day2/day2.tscn"
+wake_up_dialogue = "It should be great today"
+
+[node name="Door" parent="." index="3"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.226466, 1.30176, -3.01929)
+unlocked = true
+test_opening = 2
+unvaible_text_open_door = "It's not use to try now"
+text_door_open = "It's not use to try anymore"
+
+[node name="Main" parent="Cameras" index="0"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.97498, 4.9934, 13.9005)
+
+[node name="DreamCamera1" parent="Cameras" index="1" instance=ExtResource("3_ai01k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.966, 5.6707, 32.7895)
+
+[node name="switch_cam_main" type="Area3D" parent="Events" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.374177, 17.741)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/switch_cam_main" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24353, 4.49799, 0)
+shape = SubResource("BoxShape3D_ai01k")
+
+[node name="switch_cam_1" type="Area3D" parent="Events" index="1"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.11123, 5.27082, 23.3931)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/switch_cam_1" index="0"]
+shape = SubResource("BoxShape3D_hs5b2")
+
+[node name="Map" parent="." index="6"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="WallDream" parent="Map" index="1" instance=ExtResource("3_fq7bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.372, -3.28324)
+
+[node name="WallDream2" parent="Map" index="2" instance=ExtResource("3_fq7bh")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.42786, 5.372, -0.00664639)
+
+[node name="WallDream3" parent="Map" index="3" instance=ExtResource("3_fq7bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 5.372, -3.283)
+
+[node name="WallDream4" parent="Map" index="4" instance=ExtResource("3_fq7bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 5.372, -3.283)
+
+[node name="WallDream5" parent="Map" index="5" instance=ExtResource("3_fq7bh")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20, 5.372, -7)
+
+[node name="WallDream6" parent="Map" index="6" instance=ExtResource("3_fq7bh")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20, 5.372, -15)
+
+[node name="WallDream7" parent="Map" index="7" instance=ExtResource("3_fq7bh")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20, 5.372, -23)
+
+[node name="WallDream8" parent="Map" index="8" instance=ExtResource("3_fq7bh")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20, 5.372, -31)
+
+[node name="WallDream9" parent="Map" index="9" instance=ExtResource("3_fq7bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 5.372, -34.636)
+
+[node name="WallDream10" parent="Map" index="10" instance=ExtResource("3_fq7bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31, 5.372, -34.636)
+
+[node name="WallDream12" parent="Map" index="11" instance=ExtResource("3_fq7bh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -34.7357, 5.372, -31.7601)
+
+[node name="GroundDream" parent="Map" index="12" instance=ExtResource("4_ai01k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.88021, 0)
+
+[node name="GroundDream2" parent="Map" index="13" instance=ExtResource("4_ai01k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -1.88, 0)
+
+[node name="GroundDream3" parent="Map" index="14" instance=ExtResource("4_ai01k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -1.88, 0)
+
+[node name="GroundDream4" parent="Map" index="15" instance=ExtResource("4_ai01k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -1.88, 0)
+
+[node name="GroundDream5" parent="Map" index="16" instance=ExtResource("4_ai01k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -1.88, -8)
+
+[node name="GroundDream6" parent="Map" index="17" instance=ExtResource("4_ai01k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -1.88, -16)
+
+[node name="GroundDream7" parent="Map" index="18" instance=ExtResource("4_ai01k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -1.88, -24)
+
+[node name="GroundDream8" parent="Map" index="19" instance=ExtResource("4_ai01k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -1.88, -32)
+
+[node name="GroundDream9" parent="Map" index="20" instance=ExtResource("4_ai01k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, -1.88, -32)
+
+[node name="InvisibleWall" type="StaticBody3D" parent="Map" index="21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6727, 0, 3.03321)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWall" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.70245, 6.54166, 2.38419e-07)
+shape = SubResource("BoxShape3D_fq7bh")
+
+[node name="InvisibleWall2" type="StaticBody3D" parent="Map" index="22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.2477, 0, -28.563)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWall2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.70245, 6.54166, 2.38419e-07)
+shape = SubResource("BoxShape3D_fq7bh")
+
+[node name="InvisibleWall3" type="StaticBody3D" parent="Map" index="23"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -27.3932, 0, -8.4896)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWall3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.70245, 6.54166, 2.38419e-07)
+shape = SubResource("BoxShape3D_fq7bh")
+
+[node name="DreamLimit" type="MeshInstance3D" parent="Map" index="24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9319, -2.21382, -15.2146)
+mesh = SubResource("BoxMesh_hs5b2")
+
+[node name="TextMesh1" type="MeshInstance3D" parent="Map" index="25"]
+transform = Transform3D(1.97583, 0.181648, 0.251182, -0.180197, 1.99173, -0.022908, -0.252225, 7.94007e-09, 1.98403, -7.93034, 3.73564, -1.60304)
+mesh = SubResource("TextMesh_ai01k")
+
+[node name="TextMesh2" type="MeshInstance3D" parent="Map" index="26"]
+transform = Transform3D(-1.01589, -0.0664156, 1.7215, 0.0607607, 1.99589, 0.112858, -1.72171, 0.109625, -1.01178, -35.5713, 3.73564, -1.45223)
+mesh = SubResource("TextMesh_llfkt")
+
+[node name="TextMesh3" type="MeshInstance3D" parent="Map" index="27"]
+transform = Transform3D(0.193081, 0.011299, -1.99063, -0.00645463, 1.99996, 0.0107259, 1.99065, 0.00538888, 0.193114, -21.7076, 5.14045, -19.403)
+mesh = SubResource("TextMesh_j00vt")
+
+[node name="TextMesh4" type="MeshInstance3D" parent="Map" index="28"]
+transform = Transform3D(1.12751, -0.157896, -1.64432, -0.0380784, 1.98783, -0.216992, 1.65144, 0.153637, 1.11764, -22.215, 4.92217, -28.7287)
+mesh = SubResource("TextMesh_cab5c")
+
+[node name="TextSFXPlayer" parent="." index="10"]
+volume_db = -5.0
+max_db = 6.0
+pitch_scale = 0.5
+
+[node name="NewDayText" parent="CanvasLayer" index="4"]
+offset_left = -482.5
+offset_top = -165.0
+offset_right = 482.5
+offset_bottom = 165.0
+text = "He's wrong ,
+listen to him is useless .
+Everything is fine ."
+fit_content = true
+
+[connection signal="body_entered" from="Events/switch_cam_main" to="." method="_on_switch_cam_main_body_entered"]
+[connection signal="body_entered" from="Events/switch_cam_1" to="." method="_on_switch_cam_1_body_entered"]

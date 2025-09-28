@@ -1,0 +1,456 @@
+[gd_scene load_steps=35 format=3 uid="uid://dlv7s8tkcifjt"]
+
+[ext_resource type="Script" uid="uid://cbgx8v17obksl" path="res://scenes/maps/dreams/acceptation_dialog/acceptation_scene.gd" id="1_eetmj"]
+[ext_resource type="AudioStream" uid="uid://b6l0dw0g03q3u" path="res://assets/sounds/Retro Blop 07.wav" id="2_eetmj"]
+[ext_resource type="PackedScene" uid="uid://bne7dw8uxnbco" path="res://scenes/entities/cube/Cube.tscn" id="2_ijhk2"]
+[ext_resource type="Shader" uid="uid://bgbio15y2eu83" path="res://assets/shaders/picelate_sceen.gdshader" id="2_l5jfy"]
+[ext_resource type="AudioStream" uid="uid://xx0h4pfglkhf" path="res://assets/musics/Elton John - I'm Still Standing (Lyrics).mp3" id="2_wmti2"]
+[ext_resource type="Theme" uid="uid://c3vnpqemj71j2" path="res://assets/themes/button_theme.tres" id="3_pu7xl"]
+[ext_resource type="AudioStream" uid="uid://x5ix4j8unip2" path="res://assets/sounds/Retro Impact 20.wav" id="4_8hvfc"]
+[ext_resource type="Texture2D" uid="uid://dns2oijlmciyv" path="res://assets/sprites/player_sprites/player_arm.png" id="4_py36j"]
+[ext_resource type="AudioStream" uid="uid://cb58ktagxxe1k" path="res://assets/sounds/Retro Event 19.wav" id="5_eqhnw"]
+[ext_resource type="AudioStream" uid="uid://cqytylu4vgnew" path="res://assets/sounds/Retro Swooosh 16.wav" id="6_7ppny"]
+[ext_resource type="Theme" uid="uid://ia57j0oh24cl" path="res://assets/themes/day_ui_theme.tres" id="7_q17ej"]
+
+[sub_resource type="Environment" id="Environment_eetmj"]
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 16.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q17ej"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_eqhnw"]
+material = SubResource("StandardMaterial3D_q17ej")
+size = Vector2(25, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_7ppny"]
+material = SubResource("StandardMaterial3D_q17ej")
+size = Vector2(35, 35)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q17ej"]
+render_priority = 0
+shader = ExtResource("2_l5jfy")
+shader_parameter/pixelation = 0.001
+shader_parameter/opacity = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_8hvfc"]
+material = SubResource("ShaderMaterial_q17ej")
+size = Vector2(10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ijhk2"]
+size = Vector3(10, 10, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wmti2"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_py36j"]
+material = SubResource("StandardMaterial3D_wmti2")
+size = Vector2(20, 20)
+
+[sub_resource type="Gradient" id="Gradient_yvjeh"]
+colors = PackedColorArray(2.74345e-06, 0.47441, 0.565657, 1, 0, 0.160884, 0.289893, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_utnor"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_b17uw"]
+width = 700
+height = 700
+color_ramp = SubResource("Gradient_yvjeh")
+noise = SubResource("FastNoiseLite_utnor")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sefb2"]
+albedo_texture = SubResource("NoiseTexture2D_b17uw")
+
+[sub_resource type="TextMesh" id="TextMesh_eetmj"]
+material = SubResource("StandardMaterial3D_sefb2")
+font_size = 100
+line_spacing = -20.0
+
+[sub_resource type="ImageTexture" id="ImageTexture_eetmj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pu7xl"]
+albedo_texture = SubResource("ImageTexture_eetmj")
+
+[sub_resource type="QuadMesh" id="QuadMesh_wmti2"]
+material = SubResource("StandardMaterial3D_pu7xl")
+size = Vector2(20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5jfy"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("4_py36j")
+
+[sub_resource type="QuadMesh" id="QuadMesh_q17ej"]
+material = SubResource("StandardMaterial3D_l5jfy")
+size = Vector2(5, 15)
+
+[sub_resource type="Animation" id="Animation_l5jfy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerHand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.05361, 0.637375, 13.8266)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BullingMemories:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BullingMemories:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -3.22678)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -3.35072)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Camera3D/MeshInstance3D:mesh:material:shader_parameter/pixelation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.001]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PlayerWakeUp/Cube:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -15.3925, -9.29983)]
+}
+
+[sub_resource type="Animation" id="Animation_py36j"]
+resource_name = "punching"
+length = 5.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerHand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.03333, 1.18333, 3.5),
+"transitions": PackedFloat32Array(1.41421, 0.366022, 0.366022, 2.46229),
+"update": 0,
+"values": [Vector3(-2.05361, 0.637375, 13.8266), Vector3(-2.054, 0.637, -10.5), Vector3(-2.05361, 0.637375, -6.17344), Vector3(-2.05361, 0.637375, 13.8266)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BullingMemories:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.1, 3.5),
+"transitions": PackedFloat32Array(1, 1.8, 0.195874),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-1.5708, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BullingMemories:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.1, 3.5, 5.5),
+"transitions": PackedFloat32Array(1, 1.8, 0.195874, 1),
+"update": 0,
+"values": [Vector3(0, 0, -3.22678), Vector3(0, 0, -3.22678), Vector3(0, -11, -13.227), Vector3(0, -26, -13.227)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.1, 3.5),
+"transitions": PackedFloat32Array(1, 1.8, 0.195874),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-1.5708, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.1, 3.5, 5.5),
+"transitions": PackedFloat32Array(1, 1.8, 0.195874, 1),
+"update": 0,
+"values": [Vector3(0, 0, -3.35072), Vector3(0, 0, -3.35072), Vector3(0, -12, -13.351), Vector3(0, -27, -13.351)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Camera3D/MeshInstance3D:mesh:material:shader_parameter/pixelation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.2, 3.5),
+"transitions": PackedFloat32Array(1, 1.7411, 0.574349),
+"update": 0,
+"values": [0.001, 0.001, 0.015]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PunchingSFXPlayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.03333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("FallingMemoriesSFXPlayer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(3.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ijhk2"]
+resource_name = "show_cube"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerWakeUp/Cube:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(0.378929, 2.54912),
+"update": 0,
+"values": [Vector3(0, -15.3925, -9.29983), Vector3(0, -0.392473, -9.29983)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q17ej"]
+_data = {
+&"RESET": SubResource("Animation_l5jfy"),
+&"punching": SubResource("Animation_py36j"),
+&"show_cube": SubResource("Animation_ijhk2")
+}
+
+[node name="AcceptationScene" type="Node3D"]
+script = ExtResource("1_eetmj")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_eetmj")
+
+[node name="PlayerWakeUp" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerWakeUp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -14.5941)
+mesh = SubResource("QuadMesh_eqhnw")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="PlayerWakeUp"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 2, 9.40595)
+mesh = SubResource("QuadMesh_eqhnw")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="PlayerWakeUp"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12, 2, -2.59405)
+mesh = SubResource("QuadMesh_eqhnw")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="PlayerWakeUp"]
+transform = Transform3D(1.19209e-07, 0, -1, 0, 1, 0, 1, 0, 1.19209e-07, 12, 2, -2.59405)
+mesh = SubResource("QuadMesh_eqhnw")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="PlayerWakeUp"]
+transform = Transform3D(-5.2108e-15, 1, 4.37114e-08, -1.19209e-07, -4.37114e-08, 1, 1, 0, 1.19209e-07, 1, -8, -2.59405)
+mesh = SubResource("QuadMesh_7ppny")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="PlayerWakeUp"]
+transform = Transform3D(-5.2108e-15, 1, 4.37114e-08, 2.38419e-07, 4.37114e-08, -1, -1, 7.10543e-15, -2.38419e-07, 1, 9, -2.59405)
+mesh = SubResource("QuadMesh_7ppny")
+
+[node name="Cube" parent="PlayerWakeUp" instance=ExtResource("2_ijhk2")]
+transform = Transform3D(-4.68567, -2.81626, 0.602672, -2.8147, 4.72174, 0.180663, -0.609901, -0.154513, -5.46389, 0, -15.3925, -9.29983)
+player_version = true
+next_scene_wake_up = "res://scenes/maps/school/day4/day4.tscn"
+wake_up_dialogue = " "
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.81455)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.2929)
+mesh = SubResource("QuadMesh_8hvfc")
+
+[node name="CubeDetection" type="StaticBody3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3D/CubeDetection"]
+shape = SubResource("BoxShape3D_ijhk2")
+
+[node name="Background" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.35072)
+mesh = SubResource("QuadMesh_py36j")
+
+[node name="TextMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2.58139, -3.4)
+mesh = SubResource("TextMesh_eetmj")
+
+[node name="BullingMemories" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.22678)
+mesh = SubResource("QuadMesh_wmti2")
+
+[node name="TextSFXPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_eetmj")
+volume_db = -15.0
+pitch_scale = 1.1
+max_distance = 300.0
+
+[node name="PunchingSFXPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_8hvfc")
+volume_db = 80.0
+max_db = 6.0
+
+[node name="ChangeMemorySFXPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_eqhnw")
+volume_db = 80.0
+unit_size = 100.0
+max_db = 6.0
+pitch_scale = 0.4
+
+[node name="FallingMemoriesSFXPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_7ppny")
+volume_db = 80.0
+max_db = 6.0
+
+[node name="PlayerHand" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.05361, 0.637375, 13.8266)
+
+[node name="PlayerHandMesh1" type="MeshInstance3D" parent="PlayerHand"]
+transform = Transform3D(-4.37114e-08, -4.37114e-08, -1, -1, 1.91069e-15, 4.37114e-08, 0, 1, -4.37114e-08, 0, 0, 12)
+mesh = SubResource("QuadMesh_q17ej")
+skeleton = NodePath("../..")
+
+[node name="PlayerHandMesh2" type="MeshInstance3D" parent="PlayerHand"]
+transform = Transform3D(1, 1.77636e-15, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 12)
+mesh = SubResource("QuadMesh_q17ej")
+skeleton = NodePath("../..")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_wmti2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_q17ej")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ACCEPTLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -168.5
+offset_right = 168.5
+offset_bottom = 101.0
+grow_horizontal = 2
+theme = ExtResource("7_q17ej")
+theme_override_font_sizes/font_size = 95
+text = "You can't deny your past"
+horizontal_alignment = 1
+
+[node name="ButtonPunch" type="Button" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -178.0
+offset_top = -76.0
+offset_right = 178.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_pu7xl")
+theme_override_font_sizes/font_size = 55
+text = "Make it stop"
+
+[node name="PlayerLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -168.5
+offset_top = -101.0
+offset_right = 168.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("7_q17ej")
+text = "Everything is fine ,
+just listen to music ."
+horizontal_alignment = 1
+
+[connection signal="go_to_day" from="PlayerWakeUp/Cube" to="." method="_on_cube_go_to_day"]
+[connection signal="pressed" from="CanvasLayer/ButtonPunch" to="." method="_on_button_punch_pressed"]

@@ -1,0 +1,303 @@
+[gd_scene load_steps=21 format=3 uid="uid://byuif6sgygvl8"]
+
+[ext_resource type="PackedScene" uid="uid://dghq0afywihnp" path="res://scenes/entities/player/player.tscn" id="1_4o73w"]
+[ext_resource type="Script" uid="uid://bxulntdhiy7dm" path="res://scenes/maps/dreams/dream.gd" id="1_cnopv"]
+[ext_resource type="PackedScene" uid="uid://bne7dw8uxnbco" path="res://scenes/entities/cube/Cube.tscn" id="2_cnopv"]
+[ext_resource type="PackedScene" uid="uid://d0ljvgh36ouql" path="res://scenes/maps/dreams/dream_camera.tscn" id="2_pl8rh"]
+[ext_resource type="PackedScene" uid="uid://l1kqhoqsf4pp" path="res://scenes/entities/door/door.tscn" id="4_yfsgk"]
+[ext_resource type="Texture2D" uid="uid://ce27limt63h3o" path="res://assets/textures/Tutoriel.png" id="6_kl6bp"]
+[ext_resource type="AudioStream" uid="uid://b4kclpyf73gtr" path="res://assets/sounds/Retro Instrument - drumset - C09.wav" id="7_7ljwn"]
+[ext_resource type="PackedScene" uid="uid://dwvdrxd0wyk4n" path="res://assets/models/wall_dream.tscn" id="7_ncfbg"]
+[ext_resource type="PackedScene" uid="uid://b7s8vuryo3ewd" path="res://assets/models/ground_dream.tscn" id="8_ovdpx"]
+[ext_resource type="AudioStream" uid="uid://d0xyuocw0mcmy" path="res://assets/musics/Retro Ambience 02.wav" id="9_ncfbg"]
+[ext_resource type="Theme" uid="uid://c3vnpqemj71j2" path="res://assets/themes/button_theme.tres" id="11_ovdpx"]
+[ext_resource type="AudioStream" uid="uid://b6l0dw0g03q3u" path="res://assets/sounds/Retro Blop 07.wav" id="11_yt1kx"]
+[ext_resource type="Texture2D" uid="uid://cfq8hho2prxjp" path="res://assets/sprites/player_direction_arrow.png" id="12_7utud"]
+[ext_resource type="FontFile" uid="uid://dqxkps8kby31r" path="res://assets/fonts/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/LinLibertine_DR.otf" id="14_8ttet"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qx5k5"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("6_kl6bp")
+
+[sub_resource type="QuadMesh" id="QuadMesh_kl6bp"]
+material = SubResource("StandardMaterial3D_qx5k5")
+size = Vector2(10, 10)
+
+[sub_resource type="Animation" id="Animation_82sdg"]
+resource_name = "Fading_out"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Fading:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"set_day_indicator"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/DayIndicator")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"clear"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SFXPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AmbianceStreamPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_p57fx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Fading:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yfsgk"]
+resource_name = "go_to_day_map"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Fading:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Fading")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/NewDayText")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/EverythingIsFine")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_icof5"]
+_data = {
+&"Fading_out": SubResource("Animation_82sdg"),
+&"RESET": SubResource("Animation_p57fx"),
+&"go_to_day_map": SubResource("Animation_yfsgk")
+}
+
+[node name="Dream" type="Node3D"]
+script = ExtResource("1_cnopv")
+
+[node name="Player" parent="." instance=ExtResource("1_4o73w")]
+speed = 200
+
+[node name="Cube" parent="." instance=ExtResource("2_cnopv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -23.1289)
+
+[node name="Door" parent="." instance=ExtResource("4_yfsgk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.6666)
+
+[node name="Cameras" type="Node3D" parent="."]
+
+[node name="Main" parent="Cameras" instance=ExtResource("2_pl8rh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8904, 0, 0)
+
+[node name="Events" type="Node3D" parent="."]
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="TutorialMesh" type="MeshInstance3D" parent="Map"]
+transform = Transform3D(0.151088, 0, 0.98852, 0, 1, 0, -0.98852, 0, 0.151088, -1.14339, 1.98099, -13.9105)
+mesh = SubResource("QuadMesh_kl6bp")
+skeleton = NodePath("../..")
+
+[node name="MapAssets" type="Node3D" parent="."]
+
+[node name="WallDream" parent="MapAssets" instance=ExtResource("7_ncfbg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125.533, -49.3768, -0.807724)
+
+[node name="GroundDream" parent="MapAssets" instance=ExtResource("8_ovdpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105.665, -40.7261, -9.20757)
+
+[node name="AmbianceStreamPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("9_ncfbg")
+volume_db = 10.0
+unit_size = 100.0
+max_db = 6.0
+
+[node name="SFXPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_7ljwn")
+volume_db = 80.0
+unit_size = 100.0
+max_db = 6.0
+
+[node name="TextSFXPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("11_yt1kx")
+volume_db = -10.0
+pitch_scale = 0.4
+max_distance = 300.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_icof5")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PlayerDirectionArrow" type="Sprite2D" parent="CanvasLayer"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(1076, 75)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("12_7utud")
+flip_h = true
+
+[node name="Fading" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="EverythingIsFine" type="Button" parent="CanvasLayer"]
+offset_left = 377.0
+offset_top = 553.0
+offset_right = 799.0
+offset_bottom = 630.0
+theme = ExtResource("11_ovdpx")
+theme_override_colors/font_pressed_color = Color(0.149051, 0.425741, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Everything is fine"
+
+[node name="DayIndicator" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -421.5
+offset_top = -151.0
+offset_right = 421.5
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("14_8ttet")
+theme_override_font_sizes/normal_font_size = 110
+bbcode_enabled = true
+horizontal_alignment = 1
+
+[node name="NewDayText" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -421.5
+offset_top = -123.0
+offset_right = 421.5
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("14_8ttet")
+theme_override_font_sizes/normal_font_size = 90
+bbcode_enabled = true
+text = "Wake up ,
+everything is fine"
+horizontal_alignment = 1
+
+[connection signal="go_to_day" from="Cube" to="." method="_on_cube_go_to_day"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="CanvasLayer/EverythingIsFine" to="." method="_on_everything_is_fine_pressed"]

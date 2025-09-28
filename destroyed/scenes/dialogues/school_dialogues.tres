@@ -1,0 +1,4708 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dlwoet11ev6al"]
+
+[ext_resource type="Script" uid="uid://dgh3dkvvdwv5a" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_je6br"]
+
+[resource]
+script = ExtResource("1_je6br")
+starts = {
+"Day1Retrospective": &"0_2",
+"LucyDialogue": &"0_9",
+"TheaterScene": &"0_7",
+"bulling1day1": &"0_1",
+"bulling1day2": &"0_4",
+"day1communication_speak": &"0_3",
+"day2communication_speak": &"0_5",
+"day3dialogue1": &"0_6",
+"day4dialogue1": &"0_8",
+"last_dialogue": &"0_10"
+}
+nodes = {
+&"0_1": {
+"link": &"3_2",
+"offset": Vector2(-780, 180),
+"start_id": "bulling1day1"
+},
+&"0_10": {
+"link": &"1_215",
+"offset": Vector2(-2240, -5760),
+"start_id": "last_dialogue"
+},
+&"0_2": {
+"link": &"1_33",
+"offset": Vector2(-780, -460),
+"start_id": "Day1Retrospective"
+},
+&"0_3": {
+"link": &"1_46",
+"offset": Vector2(-780, 740),
+"start_id": "day1communication_speak"
+},
+&"0_4": {
+"link": &"1_70",
+"offset": Vector2(-780, -980),
+"start_id": "bulling1day2"
+},
+&"0_5": {
+"link": &"1_100",
+"offset": Vector2(-780, -1260),
+"start_id": "day2communication_speak"
+},
+&"0_6": {
+"link": &"1_117",
+"offset": Vector2(-780, -1620),
+"start_id": "day3dialogue1"
+},
+&"0_7": {
+"link": &"1_142",
+"offset": Vector2(-780, -2020),
+"start_id": "TheaterScene"
+},
+&"0_8": {
+"link": &"1_192",
+"offset": Vector2(-780, -2840),
+"start_id": "day4dialogue1"
+},
+&"0_9": {
+"link": &"1_210",
+"offset": Vector2(-3980, -3800),
+"start_id": "LucyDialogue"
+},
+&"1_1": {
+"dialogue": "Isn't that my friiiiiiiiieeend?",
+"offset": Vector2(-560, 180),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 252),
+"speaker": 0
+},
+&"1_10": {
+"dialogue": "Just wow...",
+"offset": Vector2(3860, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"3_14",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_100": {
+"dialogue": "Good morning ,",
+"offset": Vector2(-560, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_101",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_101": {
+"dialogue": "how was your night ?",
+"offset": Vector2(-220, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_102",
+"text": "Not good ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "The part of you that's still stable"
+},
+&"1_102": {
+"dialogue": "It happen again ...",
+"offset": Vector2(120, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_103",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_103": {
+"dialogue": "When the wall of self-confidence and hope in 90% fully re-build , it keeps being destroyed .",
+"offset": Vector2(460, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_104",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_104": {
+"dialogue": "You are still determinated , less hope but determination .
+Which make your way to hope harder and longer .",
+"offset": Vector2(800, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_105",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_105": {
+"dialogue": "How is your vision ?",
+"offset": Vector2(1140, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_106",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_106": {
+"dialogue": "How do you see the world ?",
+"offset": Vector2(1480, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_107",
+"text": "Strange ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "The part of you that's still stable"
+},
+&"1_107": {
+"dialogue": "How do you see them ? The persons all around you .",
+"offset": Vector2(1820, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_108",
+"text": "Strange ..."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "The part of you that's still stable"
+},
+&"1_108": {
+"dialogue": "What is strange about them ?",
+"offset": Vector2(2160, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_109",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_109": {
+"dialogue": "Their passive attitude ?",
+"offset": Vector2(2500, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_110",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_11": {
+"dialogue": "The guy's taleengt is JUST immeasurable !",
+"offset": Vector2(4200, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"3_15",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_110": {
+"dialogue": "Their ignorance ?",
+"offset": Vector2(2840, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_111",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_111": {
+"dialogue": "Well , that's not strange .",
+"offset": Vector2(3180, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_112",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_112": {
+"dialogue": "You want to be free all by yourself , right ?",
+"offset": Vector2(3520, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_113",
+"text": "Yes ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "The part of you that's still stable"
+},
+&"1_113": {
+"dialogue": "So here you are .",
+"offset": Vector2(3860, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_114",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_114": {
+"dialogue": "Alone with your problems .",
+"offset": Vector2(4200, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_115",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_115": {
+"dialogue": "Ready to solve them all by yourself .",
+"offset": Vector2(4540, -1420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_116",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_116": {
+"dialogue": "Don't worry , everything is fine .",
+"offset": Vector2(4880, -1420),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_117": {
+"dialogue": "Alright buddy .",
+"offset": Vector2(-560, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_118",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_118": {
+"dialogue": "How is it today ?",
+"offset": Vector2(-220, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_119",
+"text": "I'm great ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "The part of you that's still stable"
+},
+&"1_119": {
+"dialogue": "See , life is better when you deny your past .",
+"offset": Vector2(120, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_120",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_12": {
+"dialogue": "My 5-year-old brother will be jealous of you if he sees this .",
+"offset": Vector2(4560, 180),
+"options": {
+0: {
+"condition": {},
+"link": &"3_20",
+"text": "LET YOURSELF GO"
+},
+1: {
+"condition": {},
+"link": &"3_16",
+"text": "ASK"
+}
+},
+"size": Vector2(300, 284),
+"speaker": 0
+},
+&"1_120": {
+"dialogue": "But did you forget it completely .",
+"offset": Vector2(460, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_121",
+"text": "I did"
+}
+},
+"size": Vector2(300, 252),
+"speaker": "The part of you that's still stable"
+},
+&"1_121": {
+"dialogue": "There is an ocean between forget and deny you know .",
+"offset": Vector2(800, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_122",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_122": {
+"dialogue": "So , what are you doing ?",
+"offset": Vector2(1140, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_123",
+"text": "Forget"
+},
+1: {
+"condition": {},
+"link": &"1_123",
+"text": "Deny"
+}
+},
+"size": Vector2(300, 284),
+"speaker": "The part of you that's still stable"
+},
+&"1_123": {
+"dialogue": "What are you doing ?",
+"offset": Vector2(1480, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_124",
+"text": "Forget"
+},
+1: {
+"condition": {},
+"link": &"1_124",
+"text": "Deny"
+},
+2: {
+"condition": {},
+"link": &"1_124",
+"text": "Deny"
+}
+},
+"size": Vector2(300, 316),
+"speaker": "The part of you that's still stable"
+},
+&"1_124": {
+"dialogue": "What are you doing ?",
+"offset": Vector2(1820, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_125",
+"text": "Forget"
+},
+1: {
+"condition": {},
+"link": &"1_125",
+"text": "Deny"
+},
+2: {
+"condition": {},
+"link": &"1_125",
+"text": "Deny"
+},
+3: {
+"condition": {},
+"link": &"1_125",
+"text": "Deny"
+}
+},
+"size": Vector2(300, 316),
+"speaker": "The part of you that's still stable"
+},
+&"1_125": {
+"dialogue": "What am I doing ?",
+"offset": Vector2(2160, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_126",
+"text": "Deny"
+},
+1: {
+"condition": {},
+"link": &"1_126",
+"text": "Deny"
+},
+2: {
+"condition": {},
+"link": &"1_126",
+"text": "Deny"
+},
+3: {
+"condition": {},
+"link": &"1_126",
+"text": "Deny"
+}
+},
+"size": Vector2(300, 316),
+"speaker": 2
+},
+&"1_126": {
+"dialogue": "How is your vision ? Still 'strange' ?",
+"offset": Vector2(2500, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_127",
+"text": "Yes"
+}
+},
+"size": Vector2(300, 252),
+"speaker": "The part of you that's still stable"
+},
+&"1_127": {
+"dialogue": "Of course .",
+"offset": Vector2(2840, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_128",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_128": {
+"dialogue": "Your vision is broken , but your communication is still clear .",
+"offset": Vector2(3180, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_129",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_129": {
+"dialogue": "This is why you can see it , not pixalated .
+And this is why this is responsive too .",
+"offset": Vector2(3520, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_130",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_13": {
+"dialogue": "What humility...",
+"offset": Vector2(5240, -100),
+"options": {
+0: {
+"condition": {},
+"link": &"3_21",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_130": {
+"dialogue": "By the way , you can call me Unconscious .",
+"offset": Vector2(3860, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_131",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_131": {
+"dialogue": "This is my common name .",
+"offset": Vector2(4200, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_132",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_132": {
+"dialogue": "I am your unconscious , inaccessible but mostly present in your mind .",
+"offset": Vector2(4540, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_133",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_133": {
+"dialogue": "I am everything .
+Your personnality , your passions , yourself .",
+"offset": Vector2(4880, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_134",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_134": {
+"dialogue": "But don't worry ,",
+"offset": Vector2(5220, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_135",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_135": {
+"dialogue": "everything is fine .",
+"offset": Vector2(5560, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_136",
+"text": "Everything is fine"
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Unconscious"
+},
+&"1_136": {
+"dialogue": "Accumulation is the key .",
+"offset": Vector2(5900, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_137",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_137": {
+"dialogue": "Accumulate them , like you are doing now .",
+"offset": Vector2(6240, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_138",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_138": {
+"dialogue": "Talking is perfekt ,",
+"offset": Vector2(6580, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_139",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_139": {
+"dialogue": "to make the storage room in your head empty .",
+"offset": Vector2(6920, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_140",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_14": {
+"dialogue": "Give what back ?",
+"offset": Vector2(5240, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"3_18",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_140": {
+"dialogue": "Remember , you are alone with your problems .",
+"offset": Vector2(7260, -1780),
+"options": {
+0: {
+"condition": {},
+"link": &"1_141",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_141": {
+"dialogue": "Now go to your class , you are late .",
+"offset": Vector2(7600, -1780),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_142": {
+"dialogue": "You can start , everyone is paying attention .",
+"offset": Vector2(-560, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_143",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_143": {
+"dialogue": "O... Okay .",
+"offset": Vector2(-220, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_144",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_144": {
+"dialogue": "So , uhh .",
+"offset": Vector2(120, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_145",
+"text": "What is the story ?"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 2
+},
+&"1_145": {
+"dialogue": "Your role is Sir Lennins , a fallen king that want to kill his brother because he has killed you to become the new king of the kingdom .",
+"offset": Vector2(460, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_146",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_146": {
+"dialogue": "But a God has isekay you to let you get revenge on your brother .",
+"offset": Vector2(800, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_147",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_147": {
+"dialogue": "This scene is a monolog of you talking about how bad is your brother .",
+"offset": Vector2(1140, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_148",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_148": {
+"dialogue": "Improvise your role , I know you can do it .",
+"offset": Vector2(1480, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_149",
+"text": "Okay..."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Teacher"
+},
+&"1_149": {
+"dialogue": "(How can I start ?)",
+"offset": Vector2(1820, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_152",
+"text": "This damn brother ,"
+},
+1: {
+"condition": {},
+"link": &"1_150",
+"text": "How dare he !"
+}
+},
+"size": Vector2(300, 284),
+"speaker": 2
+},
+&"1_15": {
+"dialogue": "He doesn't eeeeven know how to respond to my praise !",
+"offset": Vector2(5580, -100),
+"options": {
+0: {
+"condition": {},
+"link": &"3_22",
+"text": "*silence*"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 0
+},
+&"1_150": {
+"dialogue": "Kill me to become the king .
+He don't know how to rule a kingdom .",
+"offset": Vector2(2160, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_151",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_151": {
+"dialogue": "Can your acting be better please ?",
+"offset": Vector2(2500, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_154",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Public"
+},
+&"1_152": {
+"dialogue": "I hate him so much .
+Huuu , I , huuuu",
+"offset": Vector2(2160, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_153",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_153": {
+"dialogue": "You don't know your text ?",
+"offset": Vector2(2500, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_161",
+"text": "I try to find something to say"
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Public"
+},
+&"1_154": {
+"dialogue": "Well , I ...",
+"offset": Vector2(2840, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_155",
+"text": "He is a bad king ,"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 2
+},
+&"1_155": {
+"dialogue": "a very bad king .
+He don't care about the civilians !",
+"offset": Vector2(3180, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_156",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_156": {
+"dialogue": "My new body is a farmer , and this is horrible .",
+"offset": Vector2(3520, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_157",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_157": {
+"dialogue": "The conditions are just terrible , how can he take so much fro...",
+"offset": Vector2(3860, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_158",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_158": {
+"dialogue": "Just like listen to you , trying to act but failling a lot .",
+"offset": Vector2(4200, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_159",
+"text": "I... I try okay ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Public"
+},
+&"1_159": {
+"dialogue": "Yes , of course .",
+"offset": Vector2(4540, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_160",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Public"
+},
+&"1_16": {
+"dialogue": "This piece of paper ?",
+"offset": Vector2(5580, 200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_23",
+"text": "Yes . This piece of paper ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": 0
+},
+&"1_160": {
+"dialogue": "Caan you be silent please .",
+"offset": Vector2(4880, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_169",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_161": {
+"dialogue": "K... Kill me to...
+Kill me to take my place , to become the king is disgusting .",
+"offset": Vector2(2840, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_162",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_162": {
+"dialogue": "We was so close , but no .",
+"offset": Vector2(3180, -2460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_164",
+"text": "Huuu..."
+},
+1: {
+"condition": {},
+"link": &"1_163",
+"text": "But Gods decided to give me a second chance"
+}
+},
+"size": Vector2(300, 284),
+"speaker": 2
+},
+&"1_163": {
+"dialogue": "I can kill him in return to get my crown again .",
+"offset": Vector2(3520, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_165",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_164": {
+"dialogue": "Teacher , it's getting long actually .",
+"offset": Vector2(3520, -2700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_166",
+"text": "God has..."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Public"
+},
+&"1_165": {
+"dialogue": "This sword will be the last one he will see .",
+"offset": Vector2(3860, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_167",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_166": {
+"dialogue": "God has give me a new chance to get a revenge .",
+"offset": Vector2(3860, -2700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_168",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_167": {
+"dialogue": "What sword ?",
+"offset": Vector2(4540, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_160",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Public"
+},
+&"1_168": {
+"dialogue": "Thanks to this divine sword I have .",
+"offset": Vector2(4200, -2700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_167",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_169": {
+"dialogue": "This scene is traaaash .
+Can you just come with a better idea ?",
+"offset": Vector2(5220, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_176",
+"text": "Sorry , I will try to make it more intresting"
+},
+1: {
+"condition": {},
+"link": &"1_170",
+"text": "Something easier for exemple"
+}
+},
+"size": Vector2(300, 284),
+"speaker": "Public"
+},
+&"1_17": {
+"dialogue": "I'mmmmmmmm sooooooo soooorryy .",
+"offset": Vector2(7280, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_20",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_170": {
+"dialogue": "So a medevial story is not great for today's kids .",
+"offset": Vector2(5560, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_171",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_171": {
+"dialogue": "I have an idea !
+Tell a story about you .
+",
+"offset": Vector2(5900, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_172",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_172": {
+"dialogue": "Something that has happened in your life .",
+"offset": Vector2(6240, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_173",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_173": {
+"dialogue": "He will not act great , trust me teacher .",
+"offset": Vector2(6580, -2180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_174",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_174": {
+"dialogue": "Let him try , I can see something .",
+"offset": Vector2(6920, -2140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_175",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_175": {
+"dialogue": "What do you want to show to everyone ?",
+"offset": Vector2(7260, -2180),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_176": {
+"dialogue": "So show us how good you try .
+You can't do it anyways .",
+"offset": Vector2(5560, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_177",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Public"
+},
+&"1_177": {
+"dialogue": "Stop being rude , that's a bad behavior kids .",
+"offset": Vector2(5900, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_178",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_178": {
+"dialogue": "You will get a cross in your book if you continue .",
+"offset": Vector2(6240, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_179",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_179": {
+"dialogue": "Go ahead , you did well .",
+"offset": Vector2(6580, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_180",
+"text": "O... Okay ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Teacher"
+},
+&"1_18": {
+"dialogue": "Oh craaap...",
+"offset": Vector2(6600, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_19",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_180": {
+"dialogue": "So , huuu ...",
+"offset": Vector2(6920, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_187",
+"text": "OPTION 1"
+},
+1: {
+"condition": {},
+"link": &"1_185",
+"text": "OPTION 2"
+},
+2: {
+"condition": {},
+"link": &"1_181",
+"text": "OPTION 3"
+}
+},
+"size": Vector2(300, 316),
+"speaker": 2
+},
+&"1_181": {
+"dialogue": "I will be disguised as a pope to kill him , I will kill him in the church ...",
+"offset": Vector2(7260, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_182",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_182": {
+"dialogue": "Very convincing , congrats dude .",
+"offset": Vector2(7940, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_183",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Public"
+},
+&"1_183": {
+"dialogue": "Alright .
+I think we will stop there .",
+"offset": Vector2(8280, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_184",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_184": {
+"dialogue": "Great job , 7/10 .",
+"offset": Vector2(8620, -2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_191",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_185": {
+"dialogue": "When he will come take my pigs , I will stab him with this sword .
+And I will stab everyone that ...",
+"offset": Vector2(7260, -2700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_186",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_186": {
+"dialogue": "Will be on my way ...",
+"offset": Vector2(7600, -2700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_182",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_187": {
+"dialogue": "I will kill my brother NOW ! So let's go KILL him NOW !
+There is NO time to WAIT .",
+"offset": Vector2(7260, -2960),
+"options": {
+0: {
+"condition": {},
+"link": &"1_188",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_188": {
+"dialogue": "What an energy .
+You like this role , I can see it .",
+"offset": Vector2(7600, -2960),
+"options": {
+0: {
+"condition": {},
+"link": &"1_189",
+"text": "Thanks"
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Teacher"
+},
+&"1_189": {
+"dialogue": "You have 8.5/10 , this is well done .
+Don't worry , you did a really good job .",
+"offset": Vector2(7940, -2960),
+"options": {
+0: {
+"condition": {},
+"link": &"1_190",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_19": {
+"dialogue": "I think I threw it away for lack of atteeeeeentioooooon .",
+"offset": Vector2(6940, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"3_24",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_190": {
+"dialogue": "(I did a really good job , yes)
+(I did it)
+(I DID IT !)
+(You're the greatest actor of this class , for sure)
+(I have no problems in my life , everything is fine)
+(All theses little insects can't do nothing , I am superior than them)
+(What a day , really)",
+"offset": Vector2(8280, -2960),
+"options": {
+0: {
+"condition": {},
+"link": &"1_191",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_191": {
+"dialogue": "Next , Lucy .",
+"offset": Vector2(8960, -2440),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_192": {
+"dialogue": "Can you tell me what have you done ?",
+"offset": Vector2(-560, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_193",
+"text": "I did what you adviced me to do"
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Unconscious"
+},
+&"1_193": {
+"dialogue": "No , no , no .
+You did what you adviced you to do .",
+"offset": Vector2(-220, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_194",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_194": {
+"dialogue": "Listen , I know your past in undesire . But why going too far ?",
+"offset": Vector2(120, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_195",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_195": {
+"dialogue": "Can't you just ignore ? And not attack yourself .",
+"offset": Vector2(460, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_196",
+"text": "I have deny my past , like you said..."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Unconscious"
+},
+&"1_196": {
+"dialogue": "Denying is a step , but you need reason to see how you will deny .",
+"offset": Vector2(800, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_197",
+"text": "Reason ?"
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Unconscious"
+},
+&"1_197": {
+"dialogue": "Yes , reason .",
+"offset": Vector2(1140, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_198",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_198": {
+"dialogue": "Can you tell me where is your reason ?",
+"offset": Vector2(1480, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_199",
+"text": "I can't tell ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Unconscious"
+},
+&"1_199": {
+"dialogue": "Do you want to know ?",
+"offset": Vector2(1820, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"4_1",
+"text": "Yes"
+},
+1: {
+"condition": {},
+"link": &"1_200",
+"text": "No"
+}
+},
+"size": Vector2(300, 284),
+"speaker": "Unconscious"
+},
+&"1_2": {
+"dialogue": "As you say so well .",
+"offset": Vector2(460, -80),
+"options": {
+0: {
+"condition": {},
+"link": &"3_4",
+"text": "*silence*"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 0
+},
+&"1_20": {
+"dialogue": "Breef , I've got to go , I've got training .",
+"offset": Vector2(7620, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_21",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_200": {
+"dialogue": "Will you deny what is going on inside your mind ?",
+"offset": Vector2(2500, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_201",
+"text": "Yes"
+},
+1: {
+"condition": {},
+"link": &"4_2",
+"text": "No"
+}
+},
+"size": Vector2(300, 284),
+"speaker": "Unconscious"
+},
+&"1_201": {
+"dialogue": "Do you want to know where is your reason ?",
+"offset": Vector2(3180, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_203",
+"text": "Yes I want"
+},
+1: {
+"condition": {},
+"link": &"1_202",
+"text": "No ."
+}
+},
+"size": Vector2(300, 284),
+"speaker": "Unconscious"
+},
+&"1_202": {
+"dialogue": "If you say so ...",
+"offset": Vector2(3520, -2980),
+"options": {
+0: {
+"condition": {},
+"link": &"1_204",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_203": {
+"dialogue": "You will see later , just wait until you go sleep .",
+"offset": Vector2(3520, -3240),
+"options": {
+0: {
+"condition": {},
+"link": &"1_204",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_204": {
+"dialogue": "You should go outside , trust me .",
+"offset": Vector2(3860, -2980),
+"options": {
+0: {
+"condition": {},
+"link": &"1_205",
+"text": "Ok ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Unconscious"
+},
+&"1_205": {
+"dialogue": "Talk to someone , or work on",
+"offset": Vector2(4200, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_206",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_206": {
+"dialogue": "Do something of your life , you see .",
+"offset": Vector2(4540, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_207",
+"text": "I see ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": "Unconscious"
+},
+&"1_207": {
+"dialogue": "Great !",
+"offset": Vector2(4880, -3000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_208",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_208": {
+"dialogue": "Let me tell you something , one day you will have a peaceful life .",
+"offset": Vector2(5220, -3020),
+"options": {
+0: {
+"condition": {},
+"link": &"1_209",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_209": {
+"dialogue": "Keep hope , and see you tonight , maybe .",
+"offset": Vector2(5560, -3040),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Unconscious"
+},
+&"1_21": {
+"dialogue": "Again , sorry .
+I really am .",
+"offset": Vector2(7960, 220),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_210": {
+"dialogue": "H... Hi :)",
+"offset": Vector2(-3760, -3960),
+"options": {
+0: {
+"condition": {},
+"link": &"1_211",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_211": {
+"dialogue": "So... Hum...",
+"offset": Vector2(-3420, -3960),
+"options": {
+0: {
+"condition": {},
+"link": &"1_212",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_212": {
+"dialogue": "Are you... alright ?",
+"offset": Vector2(-3080, -3960),
+"options": {
+0: {
+"condition": {},
+"link": &"3_25",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_213": {
+"dialogue": "I... I mean...",
+"offset": Vector2(-2740, -3960),
+"options": {
+0: {
+"condition": {},
+"link": &"1_214",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_214": {
+"dialogue": "You look sad , so...",
+"offset": Vector2(-2400, -3960),
+"options": {
+0: {
+"condition": {},
+"link": &"3_26",
+"text": "*silence*"
+},
+1: {
+"condition": {},
+"link": &"1_254",
+"text": "Hi ."
+}
+},
+"size": Vector2(300, 284),
+"speaker": "???"
+},
+&"1_215": {
+"dialogue": "(What do I do with my life ?)",
+"offset": Vector2(-2025.03, -5902),
+"options": {
+0: {
+"condition": {},
+"link": &"1_300",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_216": {
+"dialogue": "Very... Silent... I see...",
+"offset": Vector2(-2060, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_27",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_217": {
+"dialogue": "I will not eat you, okay .",
+"offset": Vector2(-1720, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_28",
+"text": "*silence*"
+},
+1: {
+"condition": {},
+"link": &"3_30",
+"text": "Maybe ."
+}
+},
+"size": Vector2(300, 284),
+"speaker": "???"
+},
+&"1_218": {
+"dialogue": "Don't worry , your arms will stay with your body .",
+"offset": Vector2(-1380, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_254",
+"text": "*silence*"
+}
+},
+"size": Vector2(300, 252),
+"speaker": "???"
+},
+&"1_219": {
+"dialogue": "Soooo...",
+"offset": Vector2(-1380, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_220",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_22": {
+"dialogue": "I'll give it back to you , it's yours after all .",
+"offset": Vector2(5920, -80),
+"options": {
+0: {
+"condition": {},
+"link": &"1_32",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_220": {
+"dialogue": "Huuum...",
+"offset": Vector2(-1040, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"3_29",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_221": {
+"dialogue": "My name is Lucy .
+And your's ?",
+"offset": Vector2(-700, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"3_51",
+"text": "*silence*"
+},
+1: {
+"condition": {},
+"link": &"1_222",
+"text": "Lucy... From the theater ."
+}
+},
+"size": Vector2(300, 284),
+"speaker": "???"
+},
+&"1_222": {
+"dialogue": "So Lucy , right ?",
+"offset": Vector2(-360, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_231",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_223": {
+"dialogue": "Your prestation yesterday was great :)",
+"offset": Vector2(-360, -4980),
+"options": {
+0: {
+"condition": {},
+"link": &"1_224",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_224": {
+"dialogue": "Don't listen to theses idiots .",
+"offset": Vector2(-20, -4980),
+"options": {
+0: {
+"condition": {},
+"link": &"3_53",
+"text": "*silence*"
+},
+1: {
+"condition": {},
+"link": &"1_225",
+"text": "Oh... Thanks... I guess..."
+}
+},
+"size": Vector2(300, 284),
+"speaker": 1
+},
+&"1_225": {
+"dialogue": "You did a great job , I'm serious .",
+"offset": Vector2(320, -4980),
+"options": {
+0: {
+"condition": {},
+"link": &"3_52",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_226": {
+"dialogue": "I should... leave you alone .",
+"offset": Vector2(320, -5240),
+"options": {
+0: {
+"condition": {},
+"link": &"1_227",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_227": {
+"dialogue": "Yes... I should...",
+"offset": Vector2(660, -5240),
+"options": {
+0: {
+"condition": {},
+"link": &"1_228",
+"text": "*silence*"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_228": {
+"dialogue": "Bie , ah ah ...",
+"offset": Vector2(1000, -5240),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_229": {
+"dialogue": "Compared to me ... What a shame .",
+"offset": Vector2(660, -4980),
+"options": {
+0: {
+"condition": {},
+"link": &"1_230",
+"text": "A shame ?"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_23": {
+"dialogue": "I just came to say 'hello !' to a dear friend .",
+"offset": Vector2(460, 200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_24",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_230": {
+"dialogue": "My parents are actors .",
+"offset": Vector2(1000, -4980),
+"options": {
+0: {
+"condition": {},
+"link": &"1_222",
+"text": "I see ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_231": {
+"dialogue": "The Lucy from the theater :)",
+"offset": Vector2(-20, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"3_32",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_232": {
+"dialogue": "Nice to meet you .",
+"offset": Vector2(320, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_234",
+"text": "Me too ."
+},
+1: {
+"condition": {},
+"link": &"1_233",
+"text": "It's nice to meet you too"
+}
+},
+"size": Vector2(300, 284),
+"speaker": 1
+},
+&"1_233": {
+"dialogue": "Weell , can I know your name ?",
+"offset": Vector2(660, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_238",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_234": {
+"dialogue": "How can I call you ?",
+"offset": Vector2(660, -4720),
+"options": {
+0: {
+"condition": {},
+"link": &"1_235",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_235": {
+"dialogue": "Andrew .",
+"offset": Vector2(1000, -4720),
+"options": {
+0: {
+"condition": {},
+"link": &"1_236",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_236": {
+"dialogue": "So... Why was you silent when...",
+"offset": Vector2(1340, -4720),
+"options": {
+0: {
+"condition": {},
+"link": &"1_237",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_237": {
+"dialogue": "My normal behavior... Maybe .",
+"offset": Vector2(1680, -4720),
+"options": {
+0: {
+"condition": {},
+"link": &"3_34",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_238": {
+"dialogue": "Name's Andrew .",
+"offset": Vector2(1000, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_239",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_239": {
+"dialogue": "That's a great name .",
+"offset": Vector2(1340, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_240",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_24": {
+"dialogue": "I'm not allowed to ? ;)",
+"offset": Vector2(800, 200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_8",
+"text": "If you say so..."
+}
+},
+"size": Vector2(300, 252),
+"speaker": 0
+},
+&"1_240": {
+"dialogue": "I... I know .",
+"offset": Vector2(1680, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_241",
+"text": "What do you want ?"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 2
+},
+&"1_241": {
+"dialogue": "What a question ,",
+"offset": Vector2(2020, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_242",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_242": {
+"dialogue": "I want nothing from you . Exept just have a talk .",
+"offset": Vector2(2360, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_243",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_243": {
+"dialogue": "Is this a bad thing ?",
+"offset": Vector2(2700, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_244",
+"text": "Not really"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_244": {
+"dialogue": "Not at all !",
+"offset": Vector2(3040, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_245",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_245": {
+"dialogue": "I like when this is calm here .",
+"offset": Vector2(3380, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_246",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_246": {
+"dialogue": "The sun , no people to make noise ,",
+"offset": Vector2(3720, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_247",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_247": {
+"dialogue": "I can sing without being judge .",
+"offset": Vector2(4060, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_249",
+"text": "Yes , I like this silence too"
+},
+1: {
+"condition": {},
+"link": &"1_248",
+"text": "What do you sing ?"
+}
+},
+"size": Vector2(300, 284),
+"speaker": 1
+},
+&"1_248": {
+"dialogue": "Do you want to listen to my songs ?",
+"offset": Vector2(4740, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_251",
+"text": "Why not"
+},
+1: {
+"condition": {},
+"link": &"1_250",
+"text": "Sorry but no"
+}
+},
+"size": Vector2(300, 284),
+"speaker": 1
+},
+&"1_249": {
+"dialogue": "People can be so hard to live with sometimes .",
+"offset": Vector2(4400, -4720),
+"options": {
+0: {
+"condition": {},
+"link": &"1_248",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_25": {
+"dialogue": "So , how's it going ?
+(\"Alors , ça boom\" in french . I think it work better)",
+"offset": Vector2(800, -80),
+"options": {
+0: {
+"condition": {},
+"link": &"3_5",
+"text": "*silence*"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 0
+},
+&"1_250": {
+"dialogue": "You didn't heard me singing yet .",
+"offset": Vector2(5080, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_252",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_251": {
+"dialogue": "I will bring my guitar tomorrow , I have an angel voice .",
+"offset": Vector2(5080, -4720),
+"options": {
+0: {
+"condition": {},
+"link": &"1_252",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_252": {
+"dialogue": "You will love the songs I will sing tomorrow .",
+"offset": Vector2(5420, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_253",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_253": {
+"dialogue": "Trust me ;)",
+"offset": Vector2(5760, -4460),
+"options": {
+0: {
+"condition": {},
+"link": &"3_37",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_254": {
+"dialogue": "I am Lucy .",
+"offset": Vector2(-1040, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_255",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_255": {
+"dialogue": "*silence*",
+"offset": Vector2(-700, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_31",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_256": {
+"dialogue": "And you ?",
+"offset": Vector2(-360, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_257",
+"text": "*silence*"
+},
+1: {
+"condition": {},
+"link": &"1_258",
+"text": "TALK"
+}
+},
+"size": Vector2(300, 284),
+"speaker": 1
+},
+&"1_257": {
+"dialogue": "Don't worry ... it's fine for me .",
+"offset": Vector2(-20, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_258",
+"text": "TALK"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_258": {
+"dialogue": "Andrew .",
+"offset": Vector2(320, -3940),
+"options": {
+0: {
+"condition": {},
+"link": &"3_33",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_259": {
+"dialogue": "Well ... Hi :)",
+"offset": Vector2(660, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_260",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_26": {
+"dialogue": "*silence*",
+"offset": Vector2(120, -80),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_260": {
+"dialogue": "Hi .",
+"offset": Vector2(1000, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_34",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_261": {
+"dialogue": "You're here because it's calm , quiet ?",
+"offset": Vector2(1340, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_35",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_262": {
+"dialogue": "Every breaks I stay here , listening to the noise of the wind .",
+"offset": Vector2(1680, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_36",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_263": {
+"dialogue": "Do you hear it ?",
+"offset": Vector2(2020, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_264",
+"text": "Yes"
+},
+1: {
+"condition": {},
+"link": &"1_265",
+"text": "No"
+}
+},
+"size": Vector2(300, 284),
+"speaker": 1
+},
+&"1_264": {
+"dialogue": "It helps to get inspiration .",
+"offset": Vector2(2360, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_37",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_265": {
+"dialogue": "No problems .",
+"offset": Vector2(2700, -3940),
+"options": {
+0: {
+"condition": {},
+"link": &"3_37",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_266": {
+"dialogue": "I write my songs , and then I sing them .",
+"offset": Vector2(3040, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_267",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_267": {
+"dialogue": "And when it's calm I am efficient at this .",
+"offset": Vector2(3380, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_268",
+"text": "Ok"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_268": {
+"dialogue": "And what are you singing .",
+"offset": Vector2(3720, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_269",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_269": {
+"dialogue": "What kind of songs ?",
+"offset": Vector2(4060, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_38",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_27": {
+"dialogue": "  ",
+"offset": Vector2(-220, 180),
+"options": {
+0: {
+"condition": {},
+"link": &"3_3",
+"text": "SAY NOTHING"
+},
+1: {
+"condition": {},
+"link": &"3_6",
+"text": "ANSWER"
+}
+},
+"size": Vector2(300, 284),
+"speaker": 2
+},
+&"1_270": {
+"dialogue": "Well , songs about life , how hard it is to live in , the difficulties , songs that concerns people like us .",
+"offset": Vector2(4400, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_39",
+"text": "Intresting"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_271": {
+"dialogue": "Really ?!",
+"offset": Vector2(4740, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_272",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_272": {
+"dialogue": "My parents always tell me to work on my acting , more than 'stupid songs' .",
+"offset": Vector2(5080, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_273",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_273": {
+"dialogue": "You want to become an actress ?",
+"offset": Vector2(5420, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_40",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_274": {
+"dialogue": "No , my parents want it . But I don't share their dreams .",
+"offset": Vector2(5760, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_41",
+"text": "What is your dream ?"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_275": {
+"dialogue": "Become a famous singer .",
+"offset": Vector2(6100, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_276",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_276": {
+"dialogue": "In fact , singing has helped me a lot while I was depressing .",
+"offset": Vector2(6440, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_42",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_277": {
+"dialogue": "Acting has destroyed my mental health .",
+"offset": Vector2(6780, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_43",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_278": {
+"dialogue": "You know , getting critisisms like 'too perfect' , or 'not to perfect' , or 'we need to re-write your character' , or being a girl in the film industry .",
+"offset": Vector2(7120, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_279",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_279": {
+"dialogue": "I was 10 at this time . It was hard to endure .",
+"offset": Vector2(7460, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_280",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_28": {
+"dialogue": "What do you want ?",
+"offset": Vector2(120, 200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_7",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_280": {
+"dialogue": "Yea , times are hard for me too . But not as yours before .",
+"offset": Vector2(7800, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_281",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_281": {
+"dialogue": "It's not comparable , of course .",
+"offset": Vector2(8140, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_44",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_282": {
+"dialogue": "But for your problems , it's visible .",
+"offset": Vector2(8480, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_283",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_283": {
+"dialogue": "I mean , you look sad , scared , not too self-confident .",
+"offset": Vector2(8820, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_284",
+"text": "I'm okay ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_284": {
+"dialogue": "Don't worry about me , I'm fine .",
+"offset": Vector2(9160, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_45",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_285": {
+"dialogue": "Are you sure ?",
+"offset": Vector2(9500, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_46",
+"text": "Yes . I am ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_286": {
+"dialogue": "You know , when I was 10 , stressed a lot , scared , people around me was worried about me .",
+"offset": Vector2(9840, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_287",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_287": {
+"dialogue": "And I was telling to all of them 'No , I'm fine' .",
+"offset": Vector2(10180, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_288",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_288": {
+"dialogue": "But was I fine ?",
+"offset": Vector2(10520, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_47",
+"text": "No"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_289": {
+"dialogue": "Not a all .",
+"offset": Vector2(10860, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_290",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_29": {
+"dialogue": "Okaaaaay...",
+"offset": Vector2(1480, 200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_10",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_290": {
+"dialogue": "And it was a big mistake of my own .",
+"offset": Vector2(11200, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_291",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_291": {
+"dialogue": "What you are doing now the same mistake .",
+"offset": Vector2(11540, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_292",
+"text": "I'm fine , okay ."
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_292": {
+"dialogue": "Can you close this subject now .",
+"offset": Vector2(11880, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_293",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_293": {
+"dialogue": "*silence*",
+"offset": Vector2(12220, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_48",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_294": {
+"dialogue": "I can .",
+"offset": Vector2(12560, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_295",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_295": {
+"dialogue": "*silence*",
+"offset": Vector2(12900, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_49",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_296": {
+"dialogue": "It's me or... It's getting cold...",
+"offset": Vector2(13240, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_50",
+"text": "It's me , sorry"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 1
+},
+&"1_297": {
+"dialogue": "No , don't be sorry .",
+"offset": Vector2(13580, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_298",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_298": {
+"dialogue": "It's a hard subject for you , I understand your feelings .",
+"offset": Vector2(13920, -4200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_299",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_299": {
+"dialogue": "But talking of them will help you . Parents are comprehensive .",
+"offset": Vector2(14260, -4200),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+&"1_3": {
+"dialogue": "Ooooooooooooh !
+What are you drawing there ?",
+"offset": Vector2(1140, 160),
+"options": {
+0: {
+"condition": {},
+"link": &"3_9",
+"text": "*silence*"
+},
+1: {
+"condition": {},
+"link": &"3_9",
+"text": "Nothing .."
+}
+},
+"size": Vector2(300, 284),
+"speaker": 0
+},
+&"1_30": {
+"dialogue": "*silence*",
+"offset": Vector2(4900, -100),
+"options": {
+0: {
+"condition": {},
+"link": &"1_13",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_300": {
+"dialogue": "(Is she right ?)",
+"offset": Vector2(-1700, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_301",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_301": {
+"dialogue": "(... ...)",
+"offset": Vector2(-1360, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_302",
+"text": "(I'm fine .)"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 2
+},
+&"1_302": {
+"dialogue": "(Yes , I'm fine . I have no problems .)",
+"offset": Vector2(-1020, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_303",
+"text": "(Yes .)"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 2
+},
+&"1_303": {
+"dialogue": "(This is not her concern .)",
+"offset": Vector2(-680, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_304",
+"text": "(Not a all .)"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 2
+},
+&"1_304": {
+"dialogue": "(I don't need her help , not a all .)",
+"offset": Vector2(-340, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_305",
+"text": "(I don't need someone's help .)"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 2
+},
+&"1_305": {
+"dialogue": "(Lucy ... you're kind but , just this is not your concern .)",
+"offset": Vector2(0, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_306",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_306": {
+"dialogue": "Andrew",
+"offset": Vector2(340, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_307",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_307": {
+"dialogue": "(I am the only person capable of managing my problems .)",
+"offset": Vector2(680, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_308",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_308": {
+"dialogue": "Andrew , Andrew !",
+"offset": Vector2(1020, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_309",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_309": {
+"dialogue": "It's your turn .",
+"offset": Vector2(1360, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_310",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_31": {
+"dialogue": "Can you just give it back to me ?",
+"offset": Vector2(4900, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"3_17",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_310": {
+"dialogue": "Wake up dog !",
+"offset": Vector2(1700, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_311",
+"text": "WAKE UP"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 0
+},
+&"1_311": {
+"dialogue": "You have a shitty presentation to make .",
+"offset": Vector2(2040, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_312",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_312": {
+"dialogue": "Stop being rude , you are ... Anyways .",
+"offset": Vector2(2380, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_313",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_313": {
+"dialogue": "I can go if he don't want . It will not be bad , compared to this guy .",
+"offset": Vector2(2720, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_314",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_314": {
+"dialogue": "Maybe he haven't prepared his presentation , so he will not wake up . At least stop faking his sleeping session .",
+"offset": Vector2(3060, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_315",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_315": {
+"dialogue": "Give me your book , now .",
+"offset": Vector2(3400, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_316",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_316": {
+"dialogue": "Here it is .",
+"offset": Vector2(3740, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_317",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_317": {
+"dialogue": "Go in front of the class . Andrew will go after you .",
+"offset": Vector2(4080, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_318",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_318": {
+"dialogue": "I will take a lot of time , to let him sleep again .",
+"offset": Vector2(4420, -5900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_319",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_319": {
+"dialogue": "This kid is just impossible .",
+"offset": Vector2(4760, -5900),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Teacher"
+},
+&"1_32": {
+"dialogue": "*silence*",
+"offset": Vector2(6260, -80),
+"options": {
+0: {
+"condition": {},
+"link": &"3_23",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_33": {
+"dialogue": "(I should go get it back .)",
+"offset": Vector2(-560, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_34",
+"text": "KEEP THIS IDEA IN MIND"
+},
+1: {
+"condition": {},
+"link": &"1_34",
+"text": "LEAVE IT IN THE GARBAGE CAN"
+}
+},
+"size": Vector2(300, 284),
+"speaker": 2
+},
+&"1_34": {
+"dialogue": "(Surely)",
+"offset": Vector2(-220, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_35",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_35": {
+"dialogue": "(It's funny though)",
+"offset": Vector2(120, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_36",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_36": {
+"dialogue": "(When I hope for the best , the opposite happens)",
+"offset": Vector2(460, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_37",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_37": {
+"dialogue": "(As if that hope were just a wind)",
+"offset": Vector2(800, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_38",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_38": {
+"dialogue": "(*silence*)",
+"offset": Vector2(1140, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_39",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_39": {
+"dialogue": "(*silence* *silence*)",
+"offset": Vector2(1480, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_40",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_4": {
+"dialogue": "you're always so nice .",
+"offset": Vector2(1820, 200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_11",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_40": {
+"dialogue": "(*silence* *silence* *silence*)",
+"offset": Vector2(1820, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_41",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_41": {
+"dialogue": "*inspire*",
+"offset": Vector2(2160, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_42",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_42": {
+"dialogue": "*expire*",
+"offset": Vector2(2500, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_43",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_43": {
+"dialogue": "(I've got to keep hope alive)",
+"offset": Vector2(2840, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_44",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_44": {
+"dialogue": "(I must continue this hunt for liberation)",
+"offset": Vector2(3180, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_45",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_45": {
+"dialogue": "(Because everything is fine)",
+"offset": Vector2(3520, -620),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_46": {
+"dialogue": "Here we go again .",
+"offset": Vector2(-560, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_47",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_47": {
+"dialogue": "You get up to go to school .",
+"offset": Vector2(-220, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_48",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_48": {
+"dialogue": "And you'll see him again .",
+"offset": Vector2(120, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_49",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_49": {
+"dialogue": "How was your night ?",
+"offset": Vector2(460, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_50",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_5": {
+"dialogue": "Let me see your artwork , seriously .",
+"offset": Vector2(2160, 200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_12",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_50": {
+"dialogue": "Pretty quiet for once .",
+"offset": Vector2(800, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_51",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_51": {
+"dialogue": "Makes a change from those long , zigzagging corridors , doesn't it ?",
+"offset": Vector2(1140, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_52",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_52": {
+"dialogue": "Your self-therapy must have worked then .",
+"offset": Vector2(1480, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_53",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_53": {
+"dialogue": "You're back on your feet , that's good .",
+"offset": Vector2(1820, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_54",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_54": {
+"dialogue": "*silence*",
+"offset": Vector2(2160, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_55",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_55": {
+"dialogue": "No ?",
+"offset": Vector2(2500, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_56",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_56": {
+"dialogue": "You mean coming here is hurting you ?",
+"offset": Vector2(2840, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_57",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_57": {
+"dialogue": "You poor thing .",
+"offset": Vector2(3180, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_58",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_58": {
+"dialogue": "You seem to have lost all your bearings .",
+"offset": Vector2(3520, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_59",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_59": {
+"dialogue": "But tell yourself that the part of you that's still stable , albeit broken around the edges , is there with you .",
+"offset": Vector2(3860, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_60",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "???"
+},
+&"1_6": {
+"dialogue": "Like the great Vincent Van Gogh that you are !",
+"offset": Vector2(2500, 200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_19",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_60": {
+"dialogue": "To help you .",
+"offset": Vector2(4200, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_61",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_61": {
+"dialogue": "You know he's coming , you know it .",
+"offset": Vector2(4540, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_62",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_62": {
+"dialogue": "But you know what to do .",
+"offset": Vector2(4880, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_63",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_63": {
+"dialogue": "Either you respond , calling on your determination to get through this on your own .",
+"offset": Vector2(5220, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_64",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_64": {
+"dialogue": "Or let it happen .",
+"offset": Vector2(5560, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_65",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_65": {
+"dialogue": "It's up to you to decide what you're going to do .",
+"offset": Vector2(5900, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_66",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_66": {
+"dialogue": "I'm not trying to influence you , mind you .",
+"offset": Vector2(6240, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_67",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_67": {
+"dialogue": "Fighting .",
+"offset": Vector2(6580, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_68",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_68": {
+"dialogue": "Or don't fight .",
+"offset": Vector2(6920, 580),
+"options": {
+0: {
+"condition": {},
+"link": &"1_69",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_69": {
+"dialogue": "For your own happiness .",
+"offset": Vector2(7260, 580),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "The part of you that's still stable"
+},
+&"1_7": {
+"dialogue": "??? takes your drawing by force , and there's nothing you can do about it .",
+"offset": Vector2(2840, 200),
+"options": {
+0: {
+"condition": {},
+"link": &"3_13",
+"text": "LET YOURSELF GO"
+},
+1: {
+"condition": {},
+"link": &"1_8",
+"text": "RESIST"
+}
+},
+"size": Vector2(300, 284),
+"speaker": 4
+},
+&"1_70": {
+"dialogue": "You're here .",
+"offset": Vector2(-560, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_71",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_71": {
+"dialogue": "Again , I'm very sorry .
+It wasn't intended , trust me .",
+"offset": Vector2(-220, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_72",
+"text": "I don't think so"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 0
+},
+&"1_72": {
+"dialogue": "It was intended okay .",
+"offset": Vector2(120, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_73",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_73": {
+"dialogue": "But it was funny .",
+"offset": Vector2(460, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_74",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_74": {
+"dialogue": "Also your draw was so baaaaaad .
+How can you be proud of your skills .",
+"offset": Vector2(800, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_75",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_75": {
+"dialogue": "I mean , your old draws were bad too .
+You haven't evolved at all !",
+"offset": Vector2(1140, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_76",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_76": {
+"dialogue": "The ones you've destroyed , I know...",
+"offset": Vector2(1480, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_77",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_77": {
+"dialogue": "Ah , the good old memories .",
+"offset": Vector2(1820, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_78",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_78": {
+"dialogue": "Do you remember when I have hide your backpack in this big green bin ?",
+"offset": Vector2(2160, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_79",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_79": {
+"dialogue": "You was so worried about not finding it , it was so funny .",
+"offset": Vector2(2500, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_80",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_8": {
+"dialogue": "Hey ! Give it back .",
+"offset": Vector2(3200, -60),
+"options": {
+0: {
+"condition": {},
+"link": &"3_13",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 2
+},
+&"1_80": {
+"dialogue": "You was crying too if I remember...",
+"offset": Vector2(2840, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_81",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_81": {
+"dialogue": "Crying at 12 , seriously .
+It was sooo CRINGE for everyone .",
+"offset": Vector2(3180, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_82",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_82": {
+"dialogue": "And you was filmed too , this was a good video .",
+"offset": Vector2(3520, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_83",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_83": {
+"dialogue": "I filmed it so it was a good one .",
+"offset": Vector2(3860, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_84",
+"text": "*silence*"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 0
+},
+&"1_84": {
+"dialogue": "And...",
+"offset": Vector2(4200, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_85",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_85": {
+"dialogue": "And when you was accused of cheating .",
+"offset": Vector2(4540, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_86",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_86": {
+"dialogue": "The director was so furious at you it was so funny to listen .",
+"offset": Vector2(4880, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_87",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_87": {
+"dialogue": "What was your little name after that ?
+I don't remember ...",
+"offset": Vector2(5220, -1140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_89",
+"text": "Dirlo bad dog..."
+},
+1: {
+"condition": {},
+"link": &"1_90",
+"text": "*silence*"
+}
+},
+"size": Vector2(300, 284),
+"speaker": 0
+},
+&"1_88": {
+"dialogue": "Yea , I don't remember .
+Was it important ?",
+"offset": Vector2(5900, -1120),
+"options": {
+0: {
+"condition": {},
+"link": &"1_91",
+"text": "*silence*"
+},
+1: {
+"condition": {},
+"link": &"1_92",
+"text": "Not really ."
+}
+},
+"size": Vector2(300, 284),
+"speaker": 0
+},
+&"1_89": {
+"dialogue": "What a great name hu ?",
+"offset": Vector2(5560, -1400),
+"options": {
+0: {
+"condition": {},
+"link": &"1_93",
+"text": "*silence*"
+}
+},
+"size": Vector2(300, 252),
+"speaker": 0
+},
+&"1_9": {
+"dialogue": "Wow...",
+"offset": Vector2(3520, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_10",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_90": {
+"dialogue": "There was a link with dogs but...",
+"offset": Vector2(5560, -1120),
+"options": {
+0: {
+"condition": {},
+"link": &"1_88",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_91": {
+"dialogue": "Yes it was .",
+"offset": Vector2(6240, -1120),
+"options": {
+0: {
+"condition": {},
+"link": &"1_93",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_92": {
+"dialogue": "You're not funny maaaan .",
+"offset": Vector2(6240, -860),
+"options": {
+0: {
+"condition": {},
+"link": &"1_94",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_93": {
+"dialogue": "What a time ...",
+"offset": Vector2(6920, -1120),
+"options": {
+0: {
+"condition": {},
+"link": &"1_95",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_94": {
+"dialogue": "But .",
+"offset": Vector2(6580, -860),
+"options": {
+0: {
+"condition": {},
+"link": &"1_93",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_95": {
+"dialogue": "So maany good memories are still in my head ...",
+"offset": Vector2(7260, -1120),
+"options": {
+0: {
+"condition": {},
+"link": &"1_96",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_96": {
+"dialogue": "I think they are in yours too !",
+"offset": Vector2(7600, -1120),
+"options": {
+0: {
+"condition": {},
+"link": &"1_97",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_97": {
+"dialogue": "Remembering his past make our life better .
+Trust me .",
+"offset": Vector2(7940, -1120),
+"options": {
+0: {
+"condition": {},
+"link": &"1_98",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_98": {
+"dialogue": "Forget it means deny what you are .",
+"offset": Vector2(8280, -1120),
+"options": {
+0: {
+"condition": {},
+"link": &"1_99",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"1_99": {
+"dialogue": "And why deny after all ?",
+"offset": Vector2(8620, -1120),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+&"2_1": {
+"comment": "BAD END",
+"offset": Vector2(1320, -5100),
+"size": Vector2(200, 100)
+},
+&"3_1": {
+"link": &"1_27",
+"offset": Vector2(-220, 100),
+"signalValue": "insistant"
+},
+&"3_10": {
+"link": &"1_4",
+"offset": Vector2(1820, 460),
+"signalValue": "insistant"
+},
+&"3_11": {
+"link": &"1_5",
+"offset": Vector2(2160, 460),
+"signalValue": "talk"
+},
+&"3_12": {
+"link": &"1_6",
+"offset": Vector2(2500, 460),
+"signalValue": "sarcasm"
+},
+&"3_13": {
+"link": &"1_9",
+"offset": Vector2(3520, 480),
+"signalValue": "talk"
+},
+&"3_14": {
+"link": &"1_11",
+"offset": Vector2(4200, 480),
+"signalValue": "sarcasm"
+},
+&"3_15": {
+"link": &"1_12",
+"offset": Vector2(4560, 480),
+"signalValue": "insistant"
+},
+&"3_16": {
+"link": &"1_31",
+"offset": Vector2(4900, 480),
+"signalValue": "normal"
+},
+&"3_17": {
+"link": &"1_14",
+"offset": Vector2(5240, 480),
+"signalValue": "sarcasm"
+},
+&"3_18": {
+"link": &"1_16",
+"offset": Vector2(5580, 480),
+"signalValue": "insistant"
+},
+&"3_19": {
+"link": &"1_7",
+"offset": Vector2(2840, 500),
+"signalValue": "normal"
+},
+&"3_2": {
+"link": &"1_1",
+"offset": Vector2(-560, 100),
+"signalValue": "sarcasm"
+},
+&"3_20": {
+"link": &"1_30",
+"offset": Vector2(4900, -180),
+"signalValue": "normal"
+},
+&"3_21": {
+"link": &"1_15",
+"offset": Vector2(5580, -180),
+"signalValue": "sarcasm"
+},
+&"3_22": {
+"link": &"1_22",
+"offset": Vector2(5920, -160),
+"signalValue": "insistant"
+},
+&"3_23": {
+"link": &"1_18",
+"offset": Vector2(6600, 480),
+"signalValue": "chocked"
+},
+&"3_24": {
+"link": &"1_17",
+"offset": Vector2(7280, 480),
+"signalValue": "insistant"
+},
+&"3_25": {
+"link": &"1_213",
+"offset": Vector2(-2740, -4040),
+"signalValue": "kind"
+},
+&"3_26": {
+"link": &"1_216",
+"offset": Vector2(-2060, -4280),
+"signalValue": "stressing"
+},
+&"3_27": {
+"link": &"1_217",
+"offset": Vector2(-1720, -4280),
+"signalValue": "kind"
+},
+&"3_28": {
+"link": &"1_219",
+"offset": Vector2(-1380, -4540),
+"signalValue": "stressing"
+},
+&"3_29": {
+"link": &"1_221",
+"offset": Vector2(-700, -4540),
+"signalValue": "comprehensive"
+},
+&"3_3": {
+"link": &"1_26",
+"offset": Vector2(120, -160),
+"signalValue": "normal"
+},
+&"3_30": {
+"link": &"1_218",
+"offset": Vector2(-1380, -3920),
+"signalValue": "kind"
+},
+&"3_31": {
+"link": &"1_256",
+"offset": Vector2(-360, -3900),
+"signalValue": "comprehensive"
+},
+&"3_32": {
+"link": &"1_232",
+"offset": Vector2(320, -4540),
+"signalValue": "kind"
+},
+&"3_33": {
+"link": &"1_259",
+"offset": Vector2(660, -3940),
+"signalValue": "kind"
+},
+&"3_34": {
+"link": &"1_261",
+"offset": Vector2(1360, -3940),
+"signalValue": "intresting"
+},
+&"3_35": {
+"link": &"1_262",
+"offset": Vector2(1680, -3940),
+"signalValue": "comprehensive"
+},
+&"3_36": {
+"link": &"1_263",
+"offset": Vector2(2020, -3900),
+"signalValue": "kind"
+},
+&"3_37": {
+"link": &"1_266",
+"offset": Vector2(3040, -3940),
+"signalValue": "comprehensive"
+},
+&"3_38": {
+"link": &"1_270",
+"offset": Vector2(4400, -3920),
+"signalValue": "kind"
+},
+&"3_39": {
+"link": &"1_271",
+"offset": Vector2(4740, -3940),
+"signalValue": "kind"
+},
+&"3_4": {
+"link": &"1_25",
+"offset": Vector2(800, -160),
+"signalValue": "insistant"
+},
+&"3_40": {
+"link": &"1_274",
+"offset": Vector2(5760, -3940),
+"signalValue": "stressing"
+},
+&"3_41": {
+"link": &"1_275",
+"offset": Vector2(6100, -3940),
+"signalValue": "comprehensive"
+},
+&"3_42": {
+"link": &"1_277",
+"offset": Vector2(6800, -3940),
+"signalValue": "kind"
+},
+&"3_43": {
+"link": &"1_278",
+"offset": Vector2(7120, -3940),
+"signalValue": "sad"
+},
+&"3_44": {
+"link": &"1_282",
+"offset": Vector2(8480, -3940),
+"signalValue": "comprehensive"
+},
+&"3_45": {
+"link": &"1_285",
+"offset": Vector2(9500, -3940),
+"signalValue": "intresting"
+},
+&"3_46": {
+"link": &"1_286",
+"offset": Vector2(9840, -3940),
+"signalValue": "sad"
+},
+&"3_47": {
+"link": &"1_289",
+"offset": Vector2(10860, -3940),
+"signalValue": "comprehensive"
+},
+&"3_48": {
+"link": &"1_294",
+"offset": Vector2(12560, -3940),
+"signalValue": "kind"
+},
+&"3_49": {
+"link": &"1_296",
+"offset": Vector2(13240, -3920),
+"signalValue": "intresting"
+},
+&"3_5": {
+"link": &"1_3",
+"offset": Vector2(1140, 80),
+"signalValue": "chocked"
+},
+&"3_50": {
+"link": &"1_297",
+"offset": Vector2(13580, -3940),
+"signalValue": "comprehensive"
+},
+&"3_51": {
+"link": &"1_223",
+"offset": Vector2(-360, -5060),
+"signalValue": "kind"
+},
+&"3_52": {
+"link": &"1_229",
+"offset": Vector2(440, -4720),
+"signalValue": "sad"
+},
+&"3_53": {
+"link": &"1_226",
+"offset": Vector2(320, -5320),
+"signalValue": "stressing"
+},
+&"3_6": {
+"link": &"1_28",
+"offset": Vector2(120, 460),
+"signalValue": "normal"
+},
+&"3_7": {
+"link": &"1_23",
+"offset": Vector2(460, 460),
+"signalValue": "insistant"
+},
+&"3_8": {
+"link": &"1_3",
+"offset": Vector2(1140, 460),
+"signalValue": "chocked"
+},
+&"3_9": {
+"link": &"1_29",
+"offset": Vector2(1480, 460),
+"signalValue": "normal"
+},
+&"4_1": {
+"link": &"1_200",
+"offset": Vector2(2160, -2820),
+"type": 0,
+"value": "1",
+"variable": "not_deny_score"
+},
+&"4_2": {
+"link": &"1_201",
+"offset": Vector2(2840, -2820),
+"type": 0,
+"value": "2",
+"variable": "not_deny_score"
+}
+}
+variables = {
+"not_deny_score": {
+"type": 4,
+"value": "0"
+}
+}
+strays = Array[String](["2_1"])
+characters = "res://scenes/dialogues/characters/characters.tres"

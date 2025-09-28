@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://btdtqcbpsvpe6"]
+
+[ext_resource type="PackedScene" uid="uid://dpe4j80bwkph0" path="res://assets/models/school_locker.tscn" id="1_es0uh"]
+
+[node name="Test" type="Node3D"]
+
+[node name="SchoolLocker" parent="." instance=ExtResource("1_es0uh")]
+repetition = 3
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.90936, 0.416011, 0, -0.416011, 0.90936, 2.19544, 0.85621, 3.24581)

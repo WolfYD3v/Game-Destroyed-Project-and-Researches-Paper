@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=3 uid="uid://duyyftv1r0jfu"]
+
+[ext_resource type="Script" uid="uid://dtv5oa4uge3yx" path="res://scenes/menus/settings/settings.gd" id="1_glfl3"]
+[ext_resource type="Theme" uid="uid://ia57j0oh24cl" path="res://assets/themes/day_ui_theme.tres" id="2_i8nf2"]
+[ext_resource type="Theme" uid="uid://c3vnpqemj71j2" path="res://assets/themes/button_theme.tres" id="3_2np4y"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_glfl3")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.156863)
+
+[node name="Settings" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.5
+offset_top = -80.5
+offset_right = 152.5
+offset_bottom = 80.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsLabel" type="Label" parent="Settings"]
+layout_mode = 2
+theme = ExtResource("2_i8nf2")
+theme_override_font_sizes/font_size = 65
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="SeperationLabel1" type="Label" parent="Settings"]
+layout_mode = 2
+
+[node name="CopyrightSettings" type="HBoxContainer" parent="Settings"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="CopyrightLabel" type="Label" parent="Settings/CopyrightSettings"]
+layout_mode = 2
+theme = ExtResource("2_i8nf2")
+theme_override_font_sizes/font_size = 40
+text = "Enable copyright protection"
+
+[node name="EnableCopyrightCheckButton" type="CheckButton" parent="Settings/CopyrightSettings"]
+layout_mode = 2
+
+[node name="SeperationLabel2" type="Label" parent="Settings"]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="Settings"]
+layout_mode = 2
+theme = ExtResource("3_2np4y")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Close"
+
+[node name="VolumeSettings" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 279.0
+offset_top = 341.0
+offset_right = 873.0
+offset_bottom = 401.0
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="VolumeLabel" type="Label" parent="VolumeSettings"]
+layout_mode = 2
+theme = ExtResource("2_i8nf2")
+theme_override_font_sizes/font_size = 40
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="VolumeSettings"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+value = 1.0
+
+[connection signal="pressed" from="Settings/CopyrightSettings/EnableCopyrightCheckButton" to="." method="_on_enable_copyright_check_button_pressed"]
+[connection signal="pressed" from="Settings/CloseButton" to="." method="_on_close_button_pressed"]

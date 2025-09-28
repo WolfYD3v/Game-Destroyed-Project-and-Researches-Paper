@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=3 uid="uid://by1oolj2dakae"]
+
+[ext_resource type="PackedScene" uid="uid://bekabrcydvmwc" path="res://scenes/maps/school/day.tscn" id="1_o2xrp"]
+[ext_resource type="Script" uid="uid://dcw7to11843eq" path="res://scenes/maps/school/day3/day_3.gd" id="2_3uap5"]
+[ext_resource type="AudioStream" uid="uid://cjes22bgr6cb2" path="res://assets/sounds/Retro FootStep Grass 01.wav" id="3_4ktfq"]
+[ext_resource type="PackedScene" uid="uid://bap8evjiewc80" path="res://scenes/maps/school/3d_places/school_corridor.tscn" id="3_sxeyf"]
+[ext_resource type="AudioStream" uid="uid://eg14p0gii6tv" path="res://assets/sounds/wind-sound-301491.mp3" id="4_vyxtl"]
+[ext_resource type="AudioStream" uid="uid://d0xyuocw0mcmy" path="res://assets/musics/Retro Ambience 02.wav" id="5_rh7mi"]
+
+[sub_resource type="Environment" id="Environment_sxeyf"]
+background_energy_multiplier = 2.0
+ambient_light_energy = 1.8
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sxeyf"]
+size = Vector3(20, 20, 20)
+
+[node name="Day" instance=ExtResource("1_o2xrp")]
+script = ExtResource("2_3uap5")
+dialogue_id = "day3dialogue1"
+next_scene_dream = "res://scenes/maps/dreams/dream4/dream4.tscn"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+environment = SubResource("Environment_sxeyf")
+
+[node name="Camera3D" parent="." index="3"]
+transform = Transform3D(-1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, -1, 0, 20, -305.253)
+
+[node name="MovingTimer" type="Timer" parent="Camera3D" index="1"]
+wait_time = 0.3
+one_shot = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" index="2"]
+transform = Transform3D(300, -2.98023e-06, 7.8162e-13, 0, -2.18557e-06, -300, 1.78814e-05, 50, -1.31134e-05, 0, 0, 0)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="Area3D" type="Area3D" parent="Camera3D" index="3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3D/Area3D" index="0"]
+shape = SubResource("BoxShape3D_sxeyf")
+
+[node name="WalkSFXPlayer1" type="AudioStreamPlayer3D" parent="Camera3D" index="4"]
+stream = ExtResource("3_4ktfq")
+volume_db = 70.0
+max_db = 6.0
+pitch_scale = 0.5
+
+[node name="WalkSFXPlayer2" type="AudioStreamPlayer3D" parent="Camera3D" index="5"]
+stream = ExtResource("3_4ktfq")
+volume_db = 60.0
+pitch_scale = 0.7
+
+[node name="OmniLight3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02174, 75.2189, -302.605)
+light_energy = 16.0
+omni_range = 4096.0
+
+[node name="SchoolCorridor" parent="Areas" index="0" instance=ExtResource("3_sxeyf")]
+
+[node name="DayLabel" parent="DayUI" index="1"]
+text = "04/04/2025
+Wednesday"
+
+[node name="WindSFXPlayer" type="AudioStreamPlayer3D" parent="." index="7"]
+stream = ExtResource("4_vyxtl")
+volume_db = 40.0
+max_db = 6.0
+max_distance = 500.0
+parameters/looping = true
+
+[node name="AmbiancePlayer" type="AudioStreamPlayer3D" parent="." index="8"]
+stream = ExtResource("5_rh7mi")
+volume_db = 15.0
+max_db = 6.0
+pitch_scale = 2.0
+max_distance = 500.0
+
+[connection signal="item_clicked" from="Areas/SchoolCorridor" to="." method="_on_school_corridor_item_clicked"]
+[connection signal="theater_visible" from="Areas/SchoolCorridor" to="." method="_on_school_corridor_theater_visible"]

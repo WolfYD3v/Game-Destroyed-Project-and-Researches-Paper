@@ -1,0 +1,1314 @@
+[gd_scene load_steps=22 format=3 uid="uid://bc07lsxypg13g"]
+
+[ext_resource type="PackedScene" uid="uid://bekabrcydvmwc" path="res://scenes/maps/school/day.tscn" id="1_wt7ib"]
+[ext_resource type="Script" uid="uid://c3g8otpsaaqbm" path="res://scenes/maps/school/day4/day_4.gd" id="2_2h2on"]
+[ext_resource type="PackedScene" uid="uid://bo6knl653rj4s" path="res://scenes/maps/school/3d_places/toilets.tscn" id="2_e2rl4"]
+[ext_resource type="PackedScene" uid="uid://dpe4j80bwkph0" path="res://assets/models/school_locker.tscn" id="4_udnq3"]
+[ext_resource type="PackedScene" uid="uid://b6togi4v8k8jy" path="res://scenes/entities/girl/girl_mesh.tscn" id="4_ycipn"]
+[ext_resource type="Texture2D" uid="uid://3cfw0awkccj" path="res://assets/textures/DreamFloor.webp" id="5_ycipn"]
+
+[sub_resource type="Environment" id="Environment_2h2on"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ne0hy"]
+seed = 2
+frequency = 0.0009
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vijnt"]
+noise = SubResource("FastNoiseLite_ne0hy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_woirh"]
+albedo_color = Color(0.783411, 0.633633, 0.514617, 1)
+albedo_texture = SubResource("NoiseTexture2D_vijnt")
+
+[sub_resource type="BoxMesh" id="BoxMesh_ydmhq"]
+material = SubResource("StandardMaterial3D_woirh")
+size = Vector3(100, 1, 750)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_udnq3"]
+albedo_texture = ExtResource("5_ycipn")
+
+[sub_resource type="BoxMesh" id="BoxMesh_edwu5"]
+material = SubResource("StandardMaterial3D_udnq3")
+size = Vector3(35, 0.5, 35)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ne0hy"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_26ylf"]
+material = SubResource("StandardMaterial3D_ne0hy")
+size = Vector3(150, 150, 30)
+
+[sub_resource type="Animation" id="Animation_5ruae"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2.98023e-08, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(13, 6, -11)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D:fov")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [75.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WorldEnvironment:environment:background_energy_multiplier")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Areas/Corridor:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(38.5461, -9.14722, 39.7741)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Areas/Toilets:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Areas/Corridor/GirlMesh:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-19.6624, 19.8184, -129.435)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Areas/Corridor/WallRight:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Areas/Corridor/WallLeft:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Areas/Corridor/Ground:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Areas/Corridor/Bin:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Areas/Corridor/Roof:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 68.0672, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vijnt"]
+resource_name = "destroy_corridor"
+length = 11.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/Corridor/WallRight:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1.93187, 0.420448),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 350, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Areas/Corridor/WallLeft:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1.8025, 0.450625),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 350, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Areas/Corridor/Ground:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2, 8),
+"transitions": PackedFloat32Array(2.07053, 0.466516),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -350, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Areas/Corridor/Bin:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2, 8),
+"transitions": PackedFloat32Array(2.14355, 0.482968),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -350, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Areas/Corridor/Roof:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 10),
+"transitions": PackedFloat32Array(2.21914, 0.217638),
+"update": 0,
+"values": [Vector3(0, 68.0672, 0), Vector3(0, 500, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("WorldEnvironment:environment:background_energy_multiplier")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 11),
+"transitions": PackedFloat32Array(1.93187, 0.353554),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["res://assets/sounds/Retro Impact 20.wav", 80.0, 0.35],
+"method": &"play_sfx"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_2h2on"]
+resource_name = "move_camera_head"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 1.7, 4.1, 4.5),
+"transitions": PackedFloat32Array(2.21914, 0.378929, 0.594604, 1.68179, 1),
+"update": 0,
+"values": [Vector3(2.98023e-08, 0, 0), Vector3(-0.523599, 0, 0), Vector3(-0.523599, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.6, 1.7, 4.2, 4.5),
+"transitions": PackedFloat32Array(1.51572, 0.466517, 0.466517, 2.14355, 1),
+"update": 0,
+"values": [Vector3(13, 6, -11), Vector3(13, 6.5, -11), Vector3(13, 6.5, -11), Vector3(13, 6, -11), Vector3(13, 6, -11)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.0, 0.7, 3.0]
+}
+
+[sub_resource type="Animation" id="Animation_ycipn"]
+resource_name = "start_girl_dialogue"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/Corridor/GirlMesh:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1.7411, 0.366021),
+"update": 0,
+"values": [Vector3(27.8376, 19.8184, -129.435), Vector3(-16, 19.818, -105)]
+}
+
+[sub_resource type="Animation" id="Animation_udnq3"]
+resource_name = "walk_to_door"
+length = 13.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 4.5, 8, 12, 13),
+"transitions": PackedFloat32Array(1, 2.54912, 2.54912, 0.34151, 0.34151, 0.34151),
+"update": 0,
+"values": [Vector3(13, 6, -11), Vector3(13, 6, -4), Vector3(13, 6, -4), Vector3(13, 6, -0.869628), Vector3(13, 6, -0.869628), Vector3(13, 3.5, -0.87)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 4.5, 8, 8.3, 12, 13),
+"transitions": PackedFloat32Array(1, 2.2974, 2.2974, 0.450625, 0.450625, 2.82843, 2.37841),
+"update": 0,
+"values": [Vector3(2.98023e-08, 0, 0), Vector3(0, -3.14159, 0), Vector3(0, -3.14159, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0), Vector3(-3.1152e-08, -1.5708, -0.793305), Vector3(0, -1.5708, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:fov")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 8.3, 12, 13),
+"transitions": PackedFloat32Array(1, 1, 2.73208, 1.86607),
+"update": 0,
+"values": [75.0, 75.0, 25.0, 75.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WorldEnvironment:environment:background_energy_multiplier")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 8.3, 12, 12.4, 13),
+"transitions": PackedFloat32Array(1, 1, 3.4822, 3.4822, 1.86607),
+"update": 0,
+"values": [1.0, 1.0, 0.0, 0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Areas/Corridor:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 12.4, 13),
+"transitions": PackedFloat32Array(1, 1, 2.92817),
+"update": 0,
+"values": [Vector3(38.5461, -9.14722, 39.7741), Vector3(38.5461, -9.14722, 39.7741), Vector3(25.1879, -9.14722, 39.7741)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Areas/Toilets:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 12.4, 13),
+"transitions": PackedFloat32Array(1, 1, 2.14355),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(85, 0, 0)]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(12),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["res://assets/sounds/Retro Swooosh 16.wav", 80.0, 0.5],
+"method": &"play_sfx"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_udnq3"]
+_data = {
+&"RESET": SubResource("Animation_5ruae"),
+&"destroy_corridor": SubResource("Animation_vijnt"),
+&"move_camera_head": SubResource("Animation_2h2on"),
+&"start_girl_dialogue": SubResource("Animation_ycipn"),
+&"walk_to_door": SubResource("Animation_udnq3")
+}
+
+[node name="Day" instance=ExtResource("1_wt7ib")]
+script = ExtResource("2_2h2on")
+dialogue_id = "day4dialogue1"
+next_scene_dream = "res://scenes/maps/dreams/dream5/dream5.tscn"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+environment = SubResource("Environment_2h2on")
+
+[node name="BullyMesh" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 4.3, -12)
+visible = false
+
+[node name="Camera3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 13, 6, -11)
+current = true
+
+[node name="OmniLight3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.39061, 0)
+omni_range = 4096.0
+
+[node name="Toilets" parent="Areas" index="0" instance=ExtResource("2_e2rl4")]
+
+[node name="Corridor" type="Node3D" parent="Areas" index="1"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 38.5461, -9.14722, 39.7741)
+
+[node name="GirlMesh" parent="Areas/Corridor" index="0" instance=ExtResource("4_ycipn")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, -19.6624, 19.8184, -129.435)
+
+[node name="WallRight" type="Node3D" parent="Areas/Corridor" index="1"]
+
+[node name="Wall1" type="MeshInstance3D" parent="Areas/Corridor/WallRight" index="0"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -41.3858, 35.7558, 0)
+mesh = SubResource("BoxMesh_ydmhq")
+skeleton = NodePath("../../..")
+
+[node name="SchoolLocker" parent="Areas/Corridor/WallRight" index="1" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37, 7, -355.87)
+
+[node name="SchoolLocker2" parent="Areas/Corridor/WallRight" index="2" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37, 7, -305.87)
+
+[node name="SchoolLocker3" parent="Areas/Corridor/WallRight" index="3" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37, 7, -255.87)
+
+[node name="SchoolLocker4" parent="Areas/Corridor/WallRight" index="4" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37, 7, -205.87)
+
+[node name="SchoolLocker5" parent="Areas/Corridor/WallRight" index="5" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37, 7, -55.87)
+
+[node name="SchoolLocker6" parent="Areas/Corridor/WallRight" index="6" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37, 7, -5.87)
+
+[node name="SchoolLocker7" parent="Areas/Corridor/WallRight" index="7" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37, 7, 40.87)
+
+[node name="SchoolLocker8" parent="Areas/Corridor/WallRight" index="8" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37, 7, 90.87)
+
+[node name="SchoolLocker9" parent="Areas/Corridor/WallRight" index="9" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37, 7, 140.87)
+
+[node name="SchoolLocker10" parent="Areas/Corridor/WallRight" index="10" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37, 7, 190.87)
+
+[node name="WallLeft" type="Node3D" parent="Areas/Corridor" index="2"]
+
+[node name="Wall2" type="MeshInstance3D" parent="Areas/Corridor/WallLeft" index="0"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 34.6142, 35.7558, 0)
+mesh = SubResource("BoxMesh_ydmhq")
+skeleton = NodePath("../../..")
+
+[node name="SchoolLocker13" parent="Areas/Corridor/WallLeft" index="1" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.1644, 7, -355.87)
+
+[node name="SchoolLocker14" parent="Areas/Corridor/WallLeft" index="2" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.1644, 7, -305.87)
+
+[node name="SchoolLocker15" parent="Areas/Corridor/WallLeft" index="3" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.1644, 7, -255.87)
+
+[node name="SchoolLocker16" parent="Areas/Corridor/WallLeft" index="4" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.1644, 7, -205.87)
+
+[node name="SchoolLocker17" parent="Areas/Corridor/WallLeft" index="5" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.1644, 7, -55.87)
+
+[node name="SchoolLocker18" parent="Areas/Corridor/WallLeft" index="6" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.1644, 7, -5.87)
+
+[node name="SchoolLocker19" parent="Areas/Corridor/WallLeft" index="7" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.1644, 7, 40.87)
+
+[node name="SchoolLocker20" parent="Areas/Corridor/WallLeft" index="8" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.1644, 7, 90.87)
+
+[node name="SchoolLocker21" parent="Areas/Corridor/WallLeft" index="9" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.1644, 7, 140.87)
+
+[node name="SchoolLocker22" parent="Areas/Corridor/WallLeft" index="10" instance=ExtResource("4_udnq3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.1644, 7, 190.87)
+
+[node name="Ground" type="Node3D" parent="Areas/Corridor" index="3"]
+
+[node name="Ground" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 393.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground2" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 393.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground3" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 393.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground4" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 358.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground5" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 358.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground6" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 358.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground7" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 323.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground8" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 323.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground9" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 323.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground10" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 288.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground11" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 288.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground12" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 288.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground13" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 253.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground14" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 253.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground15" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 253.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground16" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 218.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground17" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 218.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground18" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 218.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground19" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 183.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground20" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 183.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground21" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 183.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground22" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 148.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground23" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 148.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground24" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 148.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground25" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 113.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground26" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 113.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground27" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 113.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground28" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 78.0042)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground29" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 78.0042)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground30" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 78.0042)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground31" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 43.0042)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground32" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 43.0042)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground33" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 43.0042)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground34" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="33"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 8.00415)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground35" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="34"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 8.00415)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground36" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="35"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 8.00415)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground37" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="36"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -26.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground38" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="37"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -26.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground39" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="38"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -26.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground40" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="39"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -61.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground41" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="40"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -61.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground42" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="41"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -61.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground43" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="42"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -96.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground44" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="43"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -96.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground45" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="44"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -96.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground46" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="45"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -131.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground47" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="46"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -131.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground48" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="47"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -131.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground49" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="48"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -166.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground50" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="49"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -166.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground51" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="50"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -166.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground52" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="51"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -201.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground53" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="52"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -201.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground54" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="53"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -201.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground55" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="54"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -236.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground56" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="55"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -236.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground57" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="56"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -236.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground58" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="57"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -271.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground59" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="58"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -271.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground60" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="59"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -271.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground61" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="60"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -306.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground62" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="61"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -306.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground63" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="62"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -306.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground64" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="63"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -341.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground65" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="64"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -341.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground66" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="65"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -341.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground67" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="66"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -376.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground68" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="67"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -376.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground69" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="68"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -376.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground70" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="69"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -411.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground71" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="70"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -411.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground72" type="MeshInstance3D" parent="Areas/Corridor/Ground" index="71"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -411.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Roof" type="Node3D" parent="Areas/Corridor" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 68.0672, 0)
+
+[node name="Ground" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 393.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground2" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 393.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground3" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 393.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground4" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 358.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground5" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 358.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground6" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 358.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground7" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 323.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground8" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 323.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground9" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 323.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground10" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 288.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground11" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 288.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground12" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 288.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground13" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 253.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground14" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 253.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground15" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 253.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground16" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 218.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground17" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 218.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground18" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 218.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground19" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 183.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground20" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 183.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground21" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 183.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground22" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 148.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground23" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 148.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground24" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 148.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground25" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 113.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground26" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 113.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground27" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 113.004)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground28" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 78.0042)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground29" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 78.0042)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground30" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 78.0042)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground31" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 43.0042)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground32" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 43.0042)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground33" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 43.0042)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground34" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="33"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, 8.00415)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground35" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="34"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, 8.00415)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground36" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="35"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, 8.00415)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground37" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="36"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -26.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground38" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="37"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -26.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground39" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="38"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -26.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground40" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="39"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -61.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground41" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="40"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -61.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground42" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="41"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -61.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground43" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="42"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -96.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground44" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="43"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -96.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground45" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="44"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -96.9958)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground46" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="45"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -131.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground47" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="46"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -131.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground48" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="47"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -131.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground49" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="48"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -166.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground50" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="49"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -166.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground51" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="50"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -166.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground52" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="51"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -201.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground53" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="52"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -201.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground54" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="53"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -201.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground55" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="54"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -236.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground56" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="55"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -236.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground57" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="56"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -236.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground58" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="57"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -271.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground59" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="58"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -271.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground60" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="59"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -271.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground61" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="60"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -306.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground62" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="61"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -306.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground63" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="62"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -306.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground64" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="63"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -341.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground65" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="64"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -341.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground66" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="65"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -341.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground67" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="66"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -376.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground68" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="67"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -376.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground69" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="68"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -376.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground70" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="69"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1228, 0, -411.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground71" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="70"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87723, 0, -411.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Ground72" type="MeshInstance3D" parent="Areas/Corridor/Roof" index="71"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8772, 0, -411.996)
+mesh = SubResource("BoxMesh_edwu5")
+skeleton = NodePath("../../..")
+
+[node name="Bin" type="Node3D" parent="Areas/Corridor" index="5"]
+
+[node name="LimitLeft" type="Node3D" parent="Areas/Corridor/Bin" index="0"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Areas/Corridor/Bin/LimitLeft" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29.4281, 355.718)
+mesh = SubResource("BoxMesh_26ylf")
+skeleton = NodePath("../..")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Areas/Corridor/Bin/LimitLeft" index="1"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 50, 400.123)
+light_color = Color(0, 0, 0, 1)
+light_energy = 16.0
+spot_range = 410.514
+spot_angle = 137.69
+
+[node name="LimitRight" type="Node3D" parent="Areas/Corridor/Bin" index="1"]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Areas/Corridor/Bin/LimitRight" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29.4281, -371.162)
+mesh = SubResource("BoxMesh_26ylf")
+skeleton = NodePath("../..")
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Areas/Corridor/Bin/LimitRight" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, -449.028)
+light_color = Color(0, 0, 0, 1)
+light_energy = 16.0
+spot_range = 410.514
+spot_angle = 137.69
+
+[node name="SFXPlayer" type="AudioStreamPlayer3D" parent="." index="6"]
+max_db = 6.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="7"]
+libraries = {
+&"": SubResource("AnimationLibrary_udnq3")
+}
+
+[node name="DayLabel" parent="DayUI" index="1"]
+text = "__/__/____
+???"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

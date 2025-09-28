@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc1su6sf5q77g"]
+
+[ext_resource type="PackedScene" uid="uid://l1kqhoqsf4pp" path="res://scenes/entities/door/door.tscn" id="1_8ho18"]
+[ext_resource type="PackedScene" uid="uid://dghq0afywihnp" path="res://scenes/entities/player/player.tscn" id="2_c4ugm"]
+
+[node name="TestDoor" type="Node3D"]
+
+[node name="Door" parent="." instance=ExtResource("1_8ho18")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -3.01714)
+unvaible_text_open_door = "It's not use"
+text_door_open = "It's not use to try anymore"
+
+[node name="Player" parent="." instance=ExtResource("2_c4ugm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.11154)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.107)
+light_energy = 16.0
+spot_range = 25.3083
+spot_angle = 20.3129
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.888753, 0.458386, 0, -0.458386, 0.888753, 0, 3.37494, 1.34814)
+current = true

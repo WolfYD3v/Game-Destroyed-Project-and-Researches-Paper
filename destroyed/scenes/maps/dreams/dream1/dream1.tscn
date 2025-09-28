@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=3 uid="uid://ug3ssym7hs1a"]
+
+[ext_resource type="PackedScene" uid="uid://byuif6sgygvl8" path="res://scenes/maps/dreams/Dream.tscn" id="1_sm2yi"]
+[ext_resource type="Script" uid="uid://ddyregj38gg3d" path="res://scenes/maps/dreams/dream1/dream_1.gd" id="2_omtli"]
+[ext_resource type="PackedScene" uid="uid://dwvdrxd0wyk4n" path="res://assets/models/wall_dream.tscn" id="2_p57fx"]
+[ext_resource type="PackedScene" uid="uid://b7s8vuryo3ewd" path="res://assets/models/ground_dream.tscn" id="3_icof5"]
+
+[sub_resource type="Environment" id="Environment_icof5"]
+background_mode = 1
+ambient_light_source = 3
+ambient_light_color = Color(0.201527, 0.201527, 0.201527, 1)
+fog_mode = 1
+fog_light_color = Color(0.210757, 0.23209, 0.265627, 1)
+fog_density = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_icof5"]
+size = Vector3(1, 16.4169, 25.4106)
+
+[sub_resource type="BoxMesh" id="BoxMesh_icof5"]
+size = Vector3(30, 1, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m2kor"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Dream" instance=ExtResource("1_sm2yi")]
+script = ExtResource("2_omtli")
+tutorial_dream = true
+day = "March 23 , 2025"
+hour = "Midnight"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+environment = SubResource("Environment_icof5")
+
+[node name="Player" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15039, 0.328801, -14.096)
+
+[node name="Cube" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.69066, 0, -3.68832)
+next_scene_wake_up = "res://scenes/maps/school/day1/day1.tscn"
+wake_up_dialogue = "Everything will be fine today"
+
+[node name="Door" parent="." index="3"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.45277, 1, -25.2486)
+unvaible_text_open_door = "It's not use to try now"
+text_door_open = "It's not use to try anymore"
+
+[node name="Main" parent="Cameras" index="0"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.65642, 3.30675, -13.4139)
+
+[node name="WallDream" parent="Map" index="0" instance=ExtResource("2_p57fx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.05167, 4.20915, -22.7791)
+
+[node name="WallDream2" parent="Map" index="1" instance=ExtResource("2_p57fx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.052, 4.209, -14.779)
+
+[node name="WallDream3" parent="Map" index="2" instance=ExtResource("2_p57fx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.052, 4.209, -6.779)
+
+[node name="WallDream4" parent="Map" index="3" instance=ExtResource("2_p57fx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.052, 4.209, 1.2)
+
+[node name="WallDream5" parent="Map" index="4" instance=ExtResource("2_p57fx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74077, 4.209, -25.5023)
+
+[node name="WallDream6" parent="Map" index="5" instance=ExtResource("2_p57fx")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.74077, 4.209, -2.18685)
+
+[node name="GroundDream" parent="Map" index="6" instance=ExtResource("3_icof5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.992226, -1.64869, -21.9271)
+
+[node name="GroundDream2" parent="Map" index="7" instance=ExtResource("3_icof5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.992, -1.649, -13.9275)
+
+[node name="GroundDream3" parent="Map" index="8" instance=ExtResource("3_icof5")]
+transform = Transform3D(0.999992, -0.0012564, 0.00388296, 0.00127493, 0.999988, -0.00477479, -0.00387692, 0.0047797, 0.999981, 0.992, -1.649, -5.92749)
+
+[node name="InvisibleWall" type="StaticBody3D" parent="Map" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.20417, 0, -11.4635)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWall" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.11368, -2.54037)
+shape = SubResource("BoxShape3D_icof5")
+
+[node name="DreamLimit" type="MeshInstance3D" parent="Map" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4189, -2.27055, -7.08376)
+mesh = SubResource("BoxMesh_icof5")
+surface_material_override/0 = SubResource("StandardMaterial3D_m2kor")
+
+[node name="AmbianceStreamPlayer" parent="." index="8"]
+max_distance = 500.0
+
+[node name="SFXPlayer" parent="." index="9"]
+max_distance = 500.0

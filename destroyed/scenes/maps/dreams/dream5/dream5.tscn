@@ -1,0 +1,441 @@
+[gd_scene load_steps=45 format=3 uid="uid://bsxg2eh6gwkq6"]
+
+[ext_resource type="PackedScene" uid="uid://byuif6sgygvl8" path="res://scenes/maps/dreams/Dream.tscn" id="1_guljx"]
+[ext_resource type="Script" uid="uid://c0213ta8uw3hf" path="res://scenes/maps/dreams/dream5/dream_5.gd" id="2_a2hdj"]
+[ext_resource type="PackedScene" uid="uid://c86dmojba8yhp" path="res://scenes/entities/pile/pile.tscn" id="3_41sw1"]
+[ext_resource type="Texture2D" uid="uid://yvcgmlaob3tq" path="res://assets/textures/Dream 5/01.png" id="4_tj473"]
+[ext_resource type="Theme" uid="uid://ia57j0oh24cl" path="res://assets/themes/day_ui_theme.tres" id="5_riifo"]
+[ext_resource type="Texture2D" uid="uid://woeoobccce8j" path="res://assets/textures/Dream 5/05.png" id="5_tqva4"]
+[ext_resource type="Texture2D" uid="uid://bh2hg6b1uu8kw" path="res://assets/textures/Dream 5/06.png" id="6_gnw8t"]
+[ext_resource type="Texture2D" uid="uid://8vogbm75wiy7" path="res://assets/textures/Dream 5/07.png" id="7_pfn8g"]
+[ext_resource type="Texture2D" uid="uid://5o1tlm5586r7" path="res://assets/textures/Dream 5/08.png" id="8_s0bx5"]
+[ext_resource type="Texture2D" uid="uid://bgssyta8tidxl" path="res://assets/textures/Dream 5/09.png" id="9_ex5w1"]
+[ext_resource type="Texture2D" uid="uid://dncqy0bjvfn1e" path="res://assets/textures/Dream 5/10.png" id="10_st0qy"]
+
+[sub_resource type="Environment" id="Environment_a2hdj"]
+background_energy_multiplier = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pfn8g"]
+size = Vector3(17, 17, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ex5w1"]
+size = Vector3(17, 17, 20.6035)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tqva4"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("4_tj473")
+
+[sub_resource type="QuadMesh" id="QuadMesh_gnw8t"]
+material = SubResource("StandardMaterial3D_tqva4")
+size = Vector2(5, 5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b38h7"]
+load_path = "res://.godot/imported/04.png-0c880dc374d85de5acc3dc70e58eaf34.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pfn8g"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = SubResource("CompressedTexture2D_b38h7")
+
+[sub_resource type="QuadMesh" id="QuadMesh_s0bx5"]
+material = SubResource("StandardMaterial3D_pfn8g")
+size = Vector2(5, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gnw8t"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("5_tqva4")
+
+[sub_resource type="QuadMesh" id="QuadMesh_b38h7"]
+material = SubResource("StandardMaterial3D_gnw8t")
+size = Vector2(5, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b38h7"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("6_gnw8t")
+
+[sub_resource type="QuadMesh" id="QuadMesh_pfn8g"]
+material = SubResource("StandardMaterial3D_b38h7")
+size = Vector2(5, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ex5w1"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("7_pfn8g")
+
+[sub_resource type="QuadMesh" id="QuadMesh_st0qy"]
+material = SubResource("StandardMaterial3D_ex5w1")
+size = Vector2(5, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onrf7"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("8_s0bx5")
+
+[sub_resource type="QuadMesh" id="QuadMesh_as3x2"]
+material = SubResource("StandardMaterial3D_onrf7")
+size = Vector2(5, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_as3x2"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("9_ex5w1")
+
+[sub_resource type="QuadMesh" id="QuadMesh_tjw70"]
+material = SubResource("StandardMaterial3D_as3x2")
+size = Vector2(5, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_51lcv"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("10_st0qy")
+
+[sub_resource type="QuadMesh" id="QuadMesh_r7jd3"]
+material = SubResource("StandardMaterial3D_51lcv")
+size = Vector2(5, 5)
+
+[sub_resource type="Gradient" id="Gradient_a2hdj"]
+interpolation_mode = 2
+colors = PackedColorArray(0.114897, 0.114897, 0.114897, 1, 0.41598, 0.41598, 0.41598, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_41sw1"]
+noise_type = 4
+metadata/_preview_in_3d_space_ = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tj473"]
+width = 1200
+height = 1200
+color_ramp = SubResource("Gradient_a2hdj")
+noise = SubResource("FastNoiseLite_41sw1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riifo"]
+albedo_texture = SubResource("NoiseTexture2D_tj473")
+
+[sub_resource type="BoxMesh" id="BoxMesh_a2hdj"]
+material = SubResource("StandardMaterial3D_riifo")
+size = Vector3(100, 1, 300)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_a2hdj"]
+frequency = 0.0014
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_41sw1"]
+noise = SubResource("FastNoiseLite_a2hdj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tj473"]
+albedo_color = Color(0.288518, 0.288518, 0.288518, 1)
+albedo_texture = SubResource("NoiseTexture2D_41sw1")
+
+[sub_resource type="BoxMesh" id="BoxMesh_riifo"]
+material = SubResource("StandardMaterial3D_tj473")
+size = Vector3(6, 10, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_41sw1"]
+material = SubResource("StandardMaterial3D_riifo")
+size = Vector3(100, 100, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_41sw1"]
+size = Vector3(100, 100, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a2hdj"]
+size = Vector3(1, 50, 300)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tj473"]
+size = Vector3(1, 50, 75)
+
+[node name="Dream" instance=ExtResource("1_guljx")]
+script = ExtResource("2_a2hdj")
+day = "Look at"
+hour = "this"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+environment = SubResource("Environment_a2hdj")
+
+[node name="Player" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 139)
+camera_management = "Own"
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Player" index="6"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 9.90433, 0)
+light_energy = 16.0
+spot_range = 37.0
+spot_angle_attenuation = 3.605
+
+[node name="Cube" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -17, -23.1289)
+visible = false
+
+[node name="Door" parent="." index="3"]
+transform = Transform3D(3.01992e-07, 0, 4, 0, 4, 0, -4, 0, 3.01992e-07, 14, -90.647, -55.1334)
+visible = false
+unlocked = true
+test_opening = 0
+unvaible_text_open_door = " "
+text_door_open = " "
+
+[node name="Cameras" parent="." index="4"]
+visible = false
+
+[node name="Main" parent="Cameras" index="0"]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1.8904, 1, 143.693)
+visible = false
+
+[node name="BigSpotLight" type="Area3D" parent="Events" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 20)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/BigSpotLight" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 0)
+shape = SubResource("BoxShape3D_pfn8g")
+debug_color = Color(0, 0.615686, 0.607843, 1)
+
+[node name="EndDream" type="Area3D" parent="Events" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -48.218)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/EndDream" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 2.00577)
+shape = SubResource("BoxShape3D_ex5w1")
+debug_color = Color(0, 0.615686, 0.607843, 1)
+
+[node name="Piles" type="Node3D" parent="Map" index="0"]
+
+[node name="Pile" parent="Map/Piles" index="0" instance=ExtResource("3_41sw1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.19534, 0.328765, 123.298)
+pile_name = "Self confidence"
+
+[node name="Pile2" parent="Map/Piles" index="1" instance=ExtResource("3_41sw1")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.33881, 0, 103.129)
+pile_name = "Vision"
+
+[node name="Pile3" parent="Map/Piles" index="2" instance=ExtResource("3_41sw1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.19534, 0.328765, 77.298)
+pile_name = "Social skills"
+
+[node name="Pile4" type="Node3D" parent="Map/Piles" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.37994, 0, 0)
+
+[node name="Pile4_1" parent="Map/Piles/Pile4" index="0" instance=ExtResource("3_41sw1")]
+transform = Transform3D(-5.24537e-07, 0, -12, 0, 12, 0, 12, 0, -5.24537e-07, 12.0565, 0, 21.3449)
+
+[node name="Pile4_2" parent="Map/Piles/Pile4" index="1" instance=ExtResource("3_41sw1")]
+transform = Transform3D(-6, 0, -10.3923, 0, 12, 0, 10.3923, 0, -6, 14.8839, 0, 17.1639)
+
+[node name="Pile4_3" parent="Map/Piles/Pile4" index="2" instance=ExtResource("3_41sw1")]
+transform = Transform3D(4.67103, 0, -11.0536, 0, 12, 0, 11.0536, 0, 4.67103, 18.7857, 0, 19.0854)
+
+[node name="Pile4_4" parent="Map/Piles/Pile4" index="3" instance=ExtResource("3_41sw1")]
+transform = Transform3D(-1.48155, 0, -11.9082, 0, 12, 0, 11.9082, 0, -1.48155, 19.7627, 0, 14.1336)
+
+[node name="Pile4_5" parent="Map/Piles/Pile4" index="4" instance=ExtResource("3_41sw1")]
+transform = Transform3D(9.83439, 0, -6.8764, 0, 12, 0, 6.8764, 0, 9.83439, 17.6233, 4.07992, 16.6794)
+
+[node name="Pile4_6" parent="Map/Piles/Pile4" index="5" instance=ExtResource("3_41sw1")]
+transform = Transform3D(5.07863, 0, -10.8723, 0, 12, 0, 10.8723, 0, 5.07863, 15.817, 4.07992, 11.9664)
+
+[node name="Pile4_7" parent="Map/Piles/Pile4" index="6" instance=ExtResource("3_41sw1")]
+transform = Transform3D(4.67103, 0, -11.0536, 0, 12, 0, 11.0536, 0, 4.67103, 18.7857, 6, 31.0854)
+
+[node name="Pile4_8" parent="Map/Piles/Pile4" index="7" instance=ExtResource("3_41sw1")]
+transform = Transform3D(-1.48155, 0, -11.9082, 0, 12, 0, 11.9082, 0, -1.48155, 19.7627, 6, 26.1336)
+
+[node name="Pile4_9" parent="Map/Piles/Pile4" index="8" instance=ExtResource("3_41sw1")]
+transform = Transform3D(9.83439, 0, -6.8764, 0, 12, 0, 6.8764, 0, 9.83439, 17.6233, 10.0799, 28.6794)
+
+[node name="Pile4_10" parent="Map/Piles/Pile4" index="9" instance=ExtResource("3_41sw1")]
+transform = Transform3D(5.07863, 0, -10.8723, 0, 12, 0, 10.8723, 0, 5.07863, 15.817, 10.0799, 23.9664)
+
+[node name="Pile4_11" parent="Map/Piles/Pile4" index="10" instance=ExtResource("3_41sw1")]
+transform = Transform3D(-5.24537e-07, 0, -12, 0, 12, 0, 12, 0, -5.24537e-07, 18.0565, 8, 18.3449)
+
+[node name="Pile4_12" parent="Map/Piles/Pile4" index="11" instance=ExtResource("3_41sw1")]
+transform = Transform3D(-6, 0, -10.3923, 0, 12, 0, 10.3923, 0, -6, 20.8839, 8, 14.1639)
+
+[node name="Pile4_13" parent="Map/Piles/Pile4" index="12" instance=ExtResource("3_41sw1")]
+transform = Transform3D(4.67103, 0, -11.0536, 0, 12, 0, 11.0536, 0, 4.67103, 24.7857, 8, 16.0854)
+
+[node name="Pile4_14" parent="Map/Piles/Pile4" index="13" instance=ExtResource("3_41sw1")]
+transform = Transform3D(-1.48155, 0, -11.9082, 0, 12, 0, 11.9082, 0, -1.48155, 25.7627, 8, 11.1336)
+
+[node name="Pile4_15" parent="Map/Piles/Pile4" index="14" instance=ExtResource("3_41sw1")]
+transform = Transform3D(9.83439, 0, -6.8764, 0, 12, 0, 6.8764, 0, 9.83439, 23.6233, 12.0799, 13.6794)
+
+[node name="Pile4_16" parent="Map/Piles/Pile4" index="15" instance=ExtResource("3_41sw1")]
+transform = Transform3D(5.07863, 0, -10.8723, 0, 12, 0, 10.8723, 0, 5.07863, 21.817, 12.0799, 8.96644)
+
+[node name="Pile4_17" parent="Map/Piles/Pile4" index="16" instance=ExtResource("3_41sw1")]
+transform = Transform3D(4.67103, 0, -11.0536, 0, 12, 0, 11.0536, 0, 4.67103, 24.7857, 14, 28.0854)
+
+[node name="Pile4_18" parent="Map/Piles/Pile4" index="17" instance=ExtResource("3_41sw1")]
+transform = Transform3D(-1.48155, 0, -11.9082, 0, 12, 0, 11.9082, 0, -1.48155, 25.7627, 14, 23.1336)
+
+[node name="Pile4_19" parent="Map/Piles/Pile4" index="18" instance=ExtResource("3_41sw1")]
+transform = Transform3D(9.83439, 0, -6.8764, 0, 12, 0, 6.8764, 0, 9.83439, 23.6233, 18.0799, 25.6794)
+
+[node name="Pile4_20" parent="Map/Piles/Pile4" index="19" instance=ExtResource("3_41sw1")]
+transform = Transform3D(5.07863, 0, -10.8723, 0, 12, 0, 10.8723, 0, 5.07863, 21.817, 18.0799, 20.9664)
+
+[node name="Pile4SpotLight" type="SpotLight3D" parent="Map/Piles" index="4"]
+transform = Transform3D(0.707107, 3.09086e-08, -0.707107, 0.707107, -3.09086e-08, 0.707107, 0, -1, -4.37114e-08, -17.1585, 40.9091, 9)
+visible = false
+light_energy = 16.0
+spot_range = 104.293
+
+[node name="Pile5" parent="Map/Piles" index="5" instance=ExtResource("3_41sw1")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 3.68398, 4.32876, -103.113)
+pile_name = "Reason"
+
+[node name="Dialogs" type="Node3D" parent="Map" index="1"]
+
+[node name="01to03" type="MeshInstance3D" parent="Map/Dialogs" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08769, 134.65)
+layers = 32769
+mesh = SubResource("QuadMesh_gnw8t")
+
+[node name="04" type="MeshInstance3D" parent="Map/Dialogs" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21692, 120.65)
+layers = 32769
+mesh = SubResource("QuadMesh_s0bx5")
+
+[node name="05" type="MeshInstance3D" parent="Map/Dialogs" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.689404, 100.65)
+layers = 32769
+mesh = SubResource("QuadMesh_b38h7")
+
+[node name="06" type="MeshInstance3D" parent="Map/Dialogs" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.689404, 75.7579)
+layers = 32769
+mesh = SubResource("QuadMesh_pfn8g")
+
+[node name="07" type="MeshInstance3D" parent="Map/Dialogs" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.689404, 51.6502)
+layers = 32769
+mesh = SubResource("QuadMesh_st0qy")
+
+[node name="08" type="MeshInstance3D" parent="Map/Dialogs" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.689404, 15.6502)
+layers = 32769
+mesh = SubResource("QuadMesh_as3x2")
+
+[node name="09" type="MeshInstance3D" parent="Map/Dialogs" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.909973, -43.3498)
+layers = 32769
+mesh = SubResource("QuadMesh_tjw70")
+
+[node name="10" type="MeshInstance3D" parent="Map/Dialogs" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.909973, -61.3306)
+layers = 32769
+mesh = SubResource("QuadMesh_r7jd3")
+
+[node name="TutorialMesh" parent="Map" index="2"]
+transform = Transform3D(0.151088, 0, 0.98852, 0, 1, 0, -0.98852, 0, 0.151088, -1.14339, -14.019, -13.9105)
+visible = false
+
+[node name="Ground" type="MeshInstance3D" parent="Map" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+mesh = SubResource("BoxMesh_a2hdj")
+skeleton = NodePath("../..")
+
+[node name="Door1" type="MeshInstance3D" parent="Map" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, 145.538)
+mesh = SubResource("BoxMesh_riifo")
+
+[node name="Door2" type="MeshInstance3D" parent="Map" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, 145.538)
+mesh = SubResource("BoxMesh_riifo")
+
+[node name="Wall1" type="StaticBody3D" parent="Map" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="WallMesh" type="MeshInstance3D" parent="Map/Wall1" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 40, 146)
+mesh = SubResource("BoxMesh_41sw1")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall1" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 40, 146)
+shape = SubResource("BoxShape3D_41sw1")
+debug_color = Color(4.81308e-08, 0.647487, 0.209656, 0.42)
+
+[node name="Wall2" type="StaticBody3D" parent="Map" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -198)
+collision_layer = 2
+collision_mask = 2
+
+[node name="WallMesh" type="MeshInstance3D" parent="Map/Wall2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 40, 146)
+mesh = SubResource("BoxMesh_41sw1")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 40, 146)
+shape = SubResource("BoxShape3D_41sw1")
+debug_color = Color(4.81308e-08, 0.647487, 0.209656, 0.42)
+
+[node name="InvisibleWall1" type="StaticBody3D" parent="Map" index="8"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWall1" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -4, 0)
+shape = SubResource("BoxShape3D_a2hdj")
+debug_color = Color(0.6482, 0.000318529, 0.649703, 0.42)
+
+[node name="InvisibleWall2" type="StaticBody3D" parent="Map" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWall2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -4, 0)
+shape = SubResource("BoxShape3D_a2hdj")
+debug_color = Color(0.6482, 0.000318529, 0.649703, 0.42)
+
+[node name="InvisibleWall3" type="StaticBody3D" parent="Map" index="10"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8, 0, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWall3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.26, -4, -6.19888e-06)
+shape = SubResource("BoxShape3D_tj473")
+debug_color = Color(0.367634, 0.432596, 0, 0.42)
+
+[node name="InvisibleWall4" type="StaticBody3D" parent="Map" index="11"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8, 0, -195.835)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWall4" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.26, -4, -6.19888e-06)
+shape = SubResource("BoxShape3D_tj473")
+debug_color = Color(0.367634, 0.432596, 0, 0.42)
+
+[node name="Pile5SpotLight" type="SpotLight3D" parent="Map" index="12"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -10.1585, 42.9091, -103)
+light_energy = 16.0
+spot_range = 104.293
+
+[node name="MapAssets" parent="." index="7"]
+visible = false
+
+[node name="WalkLabel" type="Label" parent="CanvasLayer" index="5"]
+offset_right = 83.0
+offset_bottom = 49.0
+theme = ExtResource("5_riifo")
+theme_override_font_sizes/font_size = 65
+text = "Walk"
+
+[connection signal="body_entered" from="Events/BigSpotLight" to="." method="_on_big_spot_light_body_entered"]
+[connection signal="body_entered" from="Events/EndDream" to="." method="_on_end_dream_body_entered"]

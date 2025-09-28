@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://dk8kmv2w3768y"]
+
+[ext_resource type="Script" uid="uid://cec632m35i3n3" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_6eeq2"]
+
+[resource]
+script = ExtResource("1_6eeq2")
+name = "You"
+color = Color(0.227781, 0.669352, 3.85046e-07, 1)
+metadata/_custom_type_script = "uid://cec632m35i3n3"

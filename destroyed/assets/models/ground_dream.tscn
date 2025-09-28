@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7s8vuryo3ewd"]
+
+[ext_resource type="Texture2D" uid="uid://3cfw0awkccj" path="res://assets/textures/DreamFloor.webp" id="1_qy8ye"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_21g6a"]
+size = Vector3(8, 0.5, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3dmf"]
+albedo_texture = ExtResource("1_qy8ye")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qy8ye"]
+data = PackedVector3Array(-4, 0.25, 4, 4, 0.25, 4, -4, -0.25, 4, 4, 0.25, 4, 4, -0.25, 4, -4, -0.25, 4, 4, 0.25, -4, -4, 0.25, -4, 4, -0.25, -4, -4, 0.25, -4, -4, -0.25, -4, 4, -0.25, -4, 4, 0.25, 4, 4, 0.25, -4, 4, -0.25, 4, 4, 0.25, -4, 4, -0.25, -4, 4, -0.25, 4, -4, 0.25, -4, -4, 0.25, 4, -4, -0.25, -4, -4, 0.25, 4, -4, -0.25, 4, -4, -0.25, -4, 4, 0.25, 4, -4, 0.25, 4, 4, 0.25, -4, -4, 0.25, 4, -4, 0.25, -4, 4, 0.25, -4, -4, -0.25, 4, 4, -0.25, 4, -4, -0.25, -4, 4, -0.25, 4, 4, -0.25, -4, -4, -0.25, -4)
+
+[node name="GroundDream" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_21g6a")
+surface_material_override/0 = SubResource("StandardMaterial3D_k3dmf")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_qy8ye")

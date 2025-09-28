@@ -1,0 +1,144 @@
+[gd_scene load_steps=10 format=3 uid="uid://cx37y58m7pxds"]
+
+[ext_resource type="PackedScene" uid="uid://bekabrcydvmwc" path="res://scenes/maps/school/day.tscn" id="1_ybbts"]
+[ext_resource type="Script" uid="uid://ffxmmnrrx1vk" path="res://scenes/maps/school/day2/day_2.gd" id="2_52w0w"]
+[ext_resource type="PackedScene" uid="uid://cnpk2swip0cyu" path="res://scenes/maps/school/3d_places/exterior.tscn" id="2_xb6iu"]
+[ext_resource type="PackedScene" uid="uid://bg0k7fehyk2fg" path="res://scenes/entities/students/students.tscn" id="4_52w0w"]
+
+[sub_resource type="Environment" id="Environment_xb6iu"]
+background_mode = 1
+background_color = Color(0.275292, 0.573797, 0.815875, 1)
+background_energy_multiplier = 2.6
+ambient_light_source = 3
+ambient_light_color = Color(0.266575, 0.266575, 0.266575, 1)
+ambient_light_energy = 6.0
+
+[sub_resource type="Animation" id="Animation_52w0w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 7, 36.874)]
+}
+
+[sub_resource type="Animation" id="Animation_ca4k7"]
+resource_name = "idle"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.63333, 1.76667, 3.33333, 3.5),
+"transitions": PackedFloat32Array(1.46409, 0.615572, 0.615572, 1.46409, 1.46409),
+"update": 0,
+"values": [Vector3(0, 7, 36.874), Vector3(0, 8, 36.874), Vector3(0, 8, 36.874), Vector3(0, 7, 36.874), Vector3(0, 7, 36.874)]
+}
+
+[sub_resource type="Animation" id="Animation_xb6iu"]
+resource_name = "walk"
+length = 150.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 137.2, 137.9, 138.5, 138.933, 150),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 7, 36.874), Vector3(0, 7, -26.2403), Vector3(0, 7.78424, -26.7813), Vector3(0, 8.80569, -27.1394), Vector3(0, 10.0009, -27.6033), Vector3(0, 7, -34)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ca4k7"]
+_data = {
+&"RESET": SubResource("Animation_52w0w"),
+&"idle": SubResource("Animation_ca4k7"),
+&"walk": SubResource("Animation_xb6iu")
+}
+
+[node name="Day" instance=ExtResource("1_ybbts")]
+script = ExtResource("2_52w0w")
+dialogue_id = "day2communication_speak"
+next_scene_dream = "res://scenes/maps/dreams/dream3/dream3.tscn"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+environment = SubResource("Environment_xb6iu")
+
+[node name="BullyMesh" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -60.1562, 0)
+
+[node name="Camera3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 36.874)
+fov = 120.0
+
+[node name="OmniLight3D" parent="." index="4"]
+transform = Transform3D(0.0669873, -0.25, -0.965926, 0.859789, -0.476727, 0.183013, -0.506236, -0.842752, 0.183013, 0, 21.6095, 6.093)
+light_color = Color(0.447584, 0.4475, 4.81307e-07, 1)
+light_energy = 16.0
+omni_range = 4096.0
+omni_shadow_mode = 0
+
+[node name="Exterior" parent="Areas" index="0" instance=ExtResource("2_xb6iu")]
+
+[node name="DayLabel" parent="DayUI" index="1"]
+offset_left = -229.0
+offset_right = -5.0
+offset_bottom = 87.0
+text = "03/27/2025
+Thursday"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="7"]
+libraries = {
+&"": SubResource("AnimationLibrary_ca4k7")
+}
+
+[node name="Students" parent="." index="8" instance=ExtResource("4_52w0w")]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 18, 5, 29)
+
+[node name="Students2" parent="." index="9" instance=ExtResource("4_52w0w")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 14, 5, 25)
+
+[node name="Students3" parent="." index="10" instance=ExtResource("4_52w0w")]
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 15, 5, 33)
+
+[node name="Students4" parent="." index="11" instance=ExtResource("4_52w0w")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18, 5, 26)
+students_number = 3
+
+[node name="Students5" parent="." index="12" instance=ExtResource("4_52w0w")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -9, 6, 17)
+
+[node name="Students6" parent="." index="13" instance=ExtResource("4_52w0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 5, -32)
+students_number = 2
+
+[node name="Students7" parent="." index="14" instance=ExtResource("4_52w0w")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 12, 5, -27)
+
+[node name="Students8" parent="." index="15" instance=ExtResource("4_52w0w")]
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 18, 5, -19)
+
+[node name="Students9" parent="." index="16" instance=ExtResource("4_52w0w")]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 20, 5, -3)
+
+[node name="Students10" parent="." index="17" instance=ExtResource("4_52w0w")]
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 18, 5, 12)
+
+[node name="Students11" parent="." index="18" instance=ExtResource("4_52w0w")]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, -15, 5, 3)
+
+[node name="Students12" parent="." index="19" instance=ExtResource("4_52w0w")]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, -20, 5, -12)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

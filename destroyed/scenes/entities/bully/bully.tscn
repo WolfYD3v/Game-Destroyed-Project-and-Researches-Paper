@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://th08wthjijaw"]
+
+[ext_resource type="Texture2D" uid="uid://ckargdy8vkixg" path="res://assets/sprites/bully_sprites/bully_normal.png" id="1_0fevp"]
+[ext_resource type="Script" uid="uid://bw2r6w0e5anif" path="res://scenes/entities/bully/bully.gd" id="2_6sgg8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5tssw"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(1, 1, 1, 0.999976)
+albedo_texture = ExtResource("1_0fevp")
+
+[sub_resource type="QuadMesh" id="QuadMesh_imy30"]
+material = SubResource("StandardMaterial3D_5tssw")
+size = Vector2(4.5, 8)
+
+[node name="BullyMesh" type="MeshInstance3D"]
+mesh = SubResource("QuadMesh_imy30")
+script = ExtResource("2_6sgg8")

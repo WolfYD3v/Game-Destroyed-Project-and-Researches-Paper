@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca2k4t8hp0mwv"]
+
+[ext_resource type="PackedScene" uid="uid://dghq0afywihnp" path="res://scenes/entities/player/player.tscn" id="1_tinap"]
+
+[node name="TestPlayerMouvements" type="Node3D"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.60786)
+spot_range = 16.8855
+spot_angle = 26.9302
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.783195, 0.621777, 0, -0.621777, 0.783195, 0, 5.65145, 6.83811)
+keep_aspect = 0
+
+[node name="Player" parent="." instance=ExtResource("1_tinap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.6596)
+speed = 200

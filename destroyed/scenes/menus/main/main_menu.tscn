@@ -1,0 +1,199 @@
+[gd_scene load_steps=19 format=3 uid="uid://b5375lwng33y1"]
+
+[ext_resource type="Script" uid="uid://b0t7sv20eb5jd" path="res://scenes/menus/main/main_menu.gd" id="1_uxumf"]
+[ext_resource type="PackedScene" uid="uid://cnpk2swip0cyu" path="res://scenes/maps/school/3d_places/exterior.tscn" id="2_bep8a"]
+[ext_resource type="Theme" uid="uid://c3vnpqemj71j2" path="res://assets/themes/button_theme.tres" id="3_bep8a"]
+[ext_resource type="Shader" uid="uid://bgbio15y2eu83" path="res://assets/shaders/picelate_sceen.gdshader" id="3_d5car"]
+[ext_resource type="PackedScene" uid="uid://x6r5uw4undma" path="res://scenes/menus/content_warning/content_warning.tscn" id="3_qiond"]
+[ext_resource type="AudioStream" uid="uid://dvoy482opyv5e" path="res://assets/musics/Retro Ambience Acute 01.wav" id="4_bv6an"]
+[ext_resource type="FontFile" uid="uid://dqxkps8kby31r" path="res://assets/fonts/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/LinLibertine_DR.otf" id="5_amjff"]
+[ext_resource type="PackedScene" uid="uid://duyyftv1r0jfu" path="res://scenes/menus/settings/settings.tscn" id="6_w7cc5"]
+
+[sub_resource type="Environment" id="Environment_bep8a"]
+background_mode = 1
+background_color = Color(1, 1, 1, 1)
+background_energy_multiplier = 0.25
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_amjff"]
+render_priority = 0
+shader = ExtResource("3_d5car")
+shader_parameter/pixelation = 0.01
+shader_parameter/opacity = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_634rf"]
+material = SubResource("ShaderMaterial_amjff")
+size = Vector2(10, 10)
+
+[sub_resource type="Animation" id="Animation_uxumf"]
+resource_name = "Fading_in"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuUI/Fading:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ambiance:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
+[sub_resource type="Animation" id="Animation_qiond"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuUI/Fading:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ambiance:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_bep8a"]
+resource_name = "main_menu_loop"
+length = 5.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bv6an"]
+_data = {
+&"Fading_in": SubResource("Animation_uxumf"),
+&"RESET": SubResource("Animation_qiond"),
+&"main_menu_loop": SubResource("Animation_bep8a")
+}
+
+[sub_resource type="Gradient" id="Gradient_bep8a"]
+colors = PackedColorArray(0, 0, 0, 0.392157, 0, 0, 0, 0.392157)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_w7cc5"]
+gradient = SubResource("Gradient_bep8a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7cc5"]
+texture = SubResource("GradientTexture1D_w7cc5")
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_uxumf")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_bep8a")
+
+[node name="Exterior" parent="." instance=ExtResource("2_bep8a")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.686342, 7.78543, -10.4625)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.54074)
+mesh = SubResource("QuadMesh_634rf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bv6an")
+}
+
+[node name="Ambiance" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bv6an")
+
+[node name="MenuUI" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MenuUI"]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 224.0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_w7cc5")
+
+[node name="GameTitle" type="RichTextLabel" parent="MenuUI"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 134.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("5_amjff")
+theme_override_font_sizes/normal_font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxTexture_w7cc5")
+bbcode_enabled = true
+text = "Destroyed"
+horizontal_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="MenuUI"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -79.0
+offset_right = 321.0
+offset_bottom = 79.0
+grow_vertical = 2
+
+[node name="Play_button" type="Button" parent="MenuUI/Buttons"]
+layout_mode = 2
+theme = ExtResource("3_bep8a")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 55
+text = "  Dream"
+alignment = 0
+autowrap_mode = 3
+
+[node name="settings_button" type="Button" parent="MenuUI/Buttons"]
+layout_mode = 2
+theme = ExtResource("3_bep8a")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 55
+text = "  Think"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Quit_button" type="Button" parent="MenuUI/Buttons"]
+layout_mode = 2
+theme = ExtResource("3_bep8a")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 55
+text = "  Give up"
+alignment = 0
+autowrap_mode = 3
+
+[node name="Fading" type="ColorRect" parent="MenuUI"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="ContentWarning" parent="MenuUI" instance=ExtResource("3_qiond")]
+visible = false
+
+[node name="Settings" parent="MenuUI" instance=ExtResource("6_w7cc5")]
+visible = false
+
+[connection signal="pressed" from="MenuUI/Buttons/Play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MenuUI/Buttons/settings_button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MenuUI/Buttons/Quit_button" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://dpe4j80bwkph0"]
+
+[sub_resource type="Gradient" id="Gradient_p6222"]
+colors = PackedColorArray(0.494118, 0.494118, 0.494118, 1, 0.493545, 0.493546, 0.493546, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_p1lnq"]
+noise_type = 2
+seed = 1
+frequency = 0.002
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vrbyv"]
+seamless = true
+color_ramp = SubResource("Gradient_p6222")
+noise = SubResource("FastNoiseLite_p1lnq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6222"]
+albedo_color = Color(0.361381, 0.35906, 0.352746, 1)
+albedo_texture = SubResource("NoiseTexture2D_vrbyv")
+
+[sub_resource type="BoxMesh" id="BoxMesh_p1lnq"]
+material = SubResource("StandardMaterial3D_p6222")
+size = Vector3(50, 75, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p1lnq"]
+size = Vector3(50, 75, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p6222"]
+material = SubResource("StandardMaterial3D_p6222")
+size = Vector3(5, 15, 1)
+
+[node name="SchoolLocker" type="StaticBody3D"]
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_p1lnq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_p1lnq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9811, 13.8284, -10.1435)
+mesh = SubResource("BoxMesh_p6222")

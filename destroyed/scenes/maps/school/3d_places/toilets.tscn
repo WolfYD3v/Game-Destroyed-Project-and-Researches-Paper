@@ -1,0 +1,104 @@
+[gd_scene load_steps=17 format=3 uid="uid://bo6knl653rj4s"]
+
+[ext_resource type="PackedScene" uid="uid://cwye6lxvehthh" path="res://scenes/entities/mirror/mirror.tscn" id="1_hj0s5"]
+[ext_resource type="Texture2D" uid="uid://3cfw0awkccj" path="res://assets/textures/DreamFloor.webp" id="2_06fbx"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ne0hy"]
+seed = 2
+frequency = 0.0009
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vijnt"]
+noise = SubResource("FastNoiseLite_ne0hy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6jsrv"]
+albedo_color = Color(0.783411, 0.633633, 0.514617, 1)
+albedo_texture = SubResource("NoiseTexture2D_vijnt")
+
+[sub_resource type="BoxMesh" id="BoxMesh_f6rd2"]
+material = SubResource("StandardMaterial3D_6jsrv")
+size = Vector3(40, 40, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f5n7"]
+albedo_color = Color(0.783411, 0.633633, 0.514617, 1)
+albedo_texture = SubResource("NoiseTexture2D_vijnt")
+
+[sub_resource type="BoxMesh" id="BoxMesh_ke02f"]
+material = SubResource("StandardMaterial3D_1f5n7")
+size = Vector3(1, 35, 10)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_06fbx"]
+frequency = 0.02
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_f6rd2"]
+noise = SubResource("FastNoiseLite_06fbx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kgfs"]
+albedo_color = Color(0.214304, 0.212997, 0.201702, 1)
+albedo_texture = SubResource("NoiseTexture2D_f6rd2")
+
+[sub_resource type="BoxMesh" id="BoxMesh_06fbx"]
+material = SubResource("StandardMaterial3D_8kgfs")
+size = Vector3(1, 10, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ke02f"]
+albedo_color = Color(0.270588, 0.431373, 0.25098, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dh4i0"]
+material = SubResource("StandardMaterial3D_ke02f")
+size = Vector3(14, 6, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8at4e"]
+albedo_texture = ExtResource("2_06fbx")
+
+[sub_resource type="BoxMesh" id="BoxMesh_8kgfs"]
+material = SubResource("StandardMaterial3D_8at4e")
+size = Vector3(35, 0.5, 35)
+
+[node name="Toilets" type="Node3D"]
+
+[node name="Mirror" parent="." instance=ExtResource("1_hj0s5")]
+transform = Transform3D(5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, 10.1847, 7.48833, -15.747)
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="Left" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.7047, -16.3344)
+mesh = SubResource("BoxMesh_f6rd2")
+
+[node name="Right" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.7047, 16.6656)
+mesh = SubResource("BoxMesh_f6rd2")
+
+[node name="Bottom" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16.5, 11.7047, 0.165595)
+mesh = SubResource("BoxMesh_f6rd2")
+
+[node name="Top" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.5, 11.7047, 0.165593)
+mesh = SubResource("BoxMesh_f6rd2")
+
+[node name="Separation1" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.495843, 11.7047, 12.4959)
+mesh = SubResource("BoxMesh_ke02f")
+
+[node name="Separation2" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.6846, 11.7047, 7.49588)
+mesh = SubResource("BoxMesh_ke02f")
+
+[node name="Door" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.3331, 4.82348, -0.343716)
+mesh = SubResource("BoxMesh_06fbx")
+
+[node name="Sink" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3958, 1.36499, -14.3181)
+mesh = SubResource("BoxMesh_dh4i0")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_8kgfs")
+skeleton = NodePath("../..")
+
+[node name="Roof" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 27, 0)
+mesh = SubResource("BoxMesh_8kgfs")
+skeleton = NodePath("../..")

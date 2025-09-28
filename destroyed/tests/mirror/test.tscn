@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1r1immv5gigv"]
+
+[ext_resource type="PackedScene" uid="uid://cwye6lxvehthh" path="res://scenes/entities/mirror/mirror.tscn" id="1_mtys4"]
+
+[sub_resource type="Environment" id="Environment_mtys4"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_mtys4"]
+size = Vector3(0.3, 0.3, 0.3)
+
+[node name="Test" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mtys4")
+
+[node name="Mirror" parent="." instance=ExtResource("1_mtys4")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.964068, 0.265657, 0, -0.265657, 0.964068, 0, 0.357486, 0.612587)
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.757002, 0.208526, 0.619246, -0.299859, 0.952889, 0.0456874, -0.580545, -0.220272, 0.783867, 0, 0, 0.458382)
+mesh = SubResource("PrismMesh_mtys4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.757002, 0.208526, 0.619246, -0.299859, 0.952889, 0.0456874, -0.580545, -0.220272, 0.783867, 0, -0.139474, 0.554136)
+mesh = SubResource("PrismMesh_mtys4")
+
+[node name="OmniLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.05677)

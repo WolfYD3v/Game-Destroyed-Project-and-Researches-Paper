@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqgxtomy3a22c"]
+
+[ext_resource type="PackedScene" uid="uid://bne7dw8uxnbco" path="res://scenes/entities/cube/Cube.tscn" id="1_mvdux"]
+[ext_resource type="PackedScene" uid="uid://dghq0afywihnp" path="res://scenes/entities/player/player.tscn" id="2_gqjor"]
+
+[node name="TestCube" type="Node3D"]
+
+[node name="Cube" parent="." instance=ExtResource("1_mvdux")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -1.61614)
+next_scene_wake_up = "res://scenes/maps/school/day1.tscn"
+wake_up_dialogue = "TEST"
+
+[node name="Player" parent="." instance=ExtResource("2_gqjor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.862605)

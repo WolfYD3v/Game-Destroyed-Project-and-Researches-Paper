@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwvdrxd0wyk4n"]
+
+[ext_resource type="Texture2D" uid="uid://7io3btynlmsu" path="res://assets/textures/DreamWallTexture.jpg" id="1_jtwvu"]
+[ext_resource type="Texture2D" uid="uid://brnnxxapb2vy3" path="res://assets/textures/DreamWallTextureBIS.jpg" id="2_03qtg"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_i7wuu"]
+size = Vector2(8, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_03qtg"]
+albedo_texture = ExtResource("1_jtwvu")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jtwvu"]
+size = Vector3(9.19055, 16.4618, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jtwvu"]
+size = Vector3(8, 5, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqkx3"]
+albedo_color = Color(1, 0, 0, 1)
+albedo_texture = ExtResource("2_03qtg")
+
+[node name="WallDream" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="WallMesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_i7wuu")
+surface_material_override/0 = SubResource("StandardMaterial3D_03qtg")
+
+[node name="WallMeshCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0321655, -0.485001, 0)
+shape = SubResource("BoxShape3D_jtwvu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.26003, -0.0835233)
+mesh = SubResource("BoxMesh_jtwvu")
+surface_material_override/0 = SubResource("StandardMaterial3D_qqkx3")

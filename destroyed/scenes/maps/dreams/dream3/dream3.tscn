@@ -1,0 +1,784 @@
+[gd_scene load_steps=34 format=3 uid="uid://cfgchgoaopa73"]
+
+[ext_resource type="PackedScene" uid="uid://byuif6sgygvl8" path="res://scenes/maps/dreams/Dream.tscn" id="1_vak6t"]
+[ext_resource type="Script" uid="uid://b8j0h3acuaxwp" path="res://scenes/maps/dreams/dream3/dream_3.gd" id="2_8fsn7"]
+[ext_resource type="PackedScene" uid="uid://b7s8vuryo3ewd" path="res://assets/models/ground_dream.tscn" id="2_jq8in"]
+[ext_resource type="PackedScene" uid="uid://l1kqhoqsf4pp" path="res://scenes/entities/door/door.tscn" id="3_8fsn7"]
+[ext_resource type="PackedScene" uid="uid://dwvdrxd0wyk4n" path="res://assets/models/wall_dream.tscn" id="3_imep7"]
+[ext_resource type="PackedScene" uid="uid://d0ljvgh36ouql" path="res://scenes/maps/dreams/dream_camera.tscn" id="4_6j7tg"]
+[ext_resource type="PackedScene" uid="uid://d1rw666pdhuip" path="res://scenes/entities/fence/fence.tscn" id="5_575ul"]
+[ext_resource type="AudioStream" uid="uid://tk2w30malqnb" path="res://assets/sounds/dropping-rocks-5996.mp3" id="6_vi0pl"]
+[ext_resource type="PackedScene" uid="uid://btbq6ov4s7thx" path="res://assets/models/dream_pillar.tscn" id="8_3ewd0"]
+[ext_resource type="Texture2D" uid="uid://di434qxu4gbsj" path="res://assets/textures/dream3txt_img1.png" id="10_d803s"]
+[ext_resource type="Texture2D" uid="uid://w3wet6ud37cb" path="res://assets/textures/dream3txt_img2.png" id="11_vtu2v"]
+
+[sub_resource type="Environment" id="Environment_d803s"]
+background_mode = 1
+ambient_light_source = 3
+ambient_light_color = Color(0.180005, 0.180005, 0.180005, 1)
+fog_light_color = Color(0.210757, 0.23209, 0.265627, 1)
+fog_density = 0.03
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6j7tg"]
+size = Vector3(8.84741, 13.996, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_575ul"]
+size = Vector3(8.84741, 13.996, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q70lc"]
+size = Vector3(8.84741, 13.996, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6j7tg"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_575ul"]
+material = SubResource("StandardMaterial3D_6j7tg")
+size = Vector3(200, 0.5, 200)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ewd0"]
+size = Vector3(34.2008, 14.0833, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vi0pl"]
+size = Vector3(24.6468, 14.0833, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sufll"]
+size = Vector3(17.2802, 14.0833, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d803s"]
+size = Vector3(17.8283, 14.0833, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vtu2v"]
+size = Vector3(9.55684, 14.0833, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2f8wk"]
+size = Vector3(33.299, 14.0833, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4mvmx"]
+size = Vector3(11.9869, 14.0833, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jcbd3"]
+size = Vector3(9.15654, 14.0833, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vg34r"]
+size = Vector3(17.0022, 14.0833, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hs5b2"]
+albedo_color = Color(0, 0.478865, 0.121254, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_sufll"]
+material = SubResource("StandardMaterial3D_hs5b2")
+font_size = 80
+line_spacing = -55.0
+autowrap_mode = 3
+
+[sub_resource type="TextMesh" id="TextMesh_vi0pl"]
+material = SubResource("StandardMaterial3D_hs5b2")
+font_size = 110
+line_spacing = -55.0
+autowrap_mode = 3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2f8wk"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("10_d803s")
+
+[sub_resource type="QuadMesh" id="QuadMesh_4mvmx"]
+material = SubResource("StandardMaterial3D_2f8wk")
+size = Vector2(15, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcbd3"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("11_vtu2v")
+
+[sub_resource type="QuadMesh" id="QuadMesh_vg34r"]
+material = SubResource("StandardMaterial3D_jcbd3")
+size = Vector2(15, 8)
+
+[node name="Dream" instance=ExtResource("1_vak6t")]
+script = ExtResource("2_8fsn7")
+day = "April 3 , 2025"
+hour = "11:50 pm"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+environment = SubResource("Environment_d803s")
+
+[node name="Player" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2.66685, 0)
+
+[node name="Cube" parent="." index="2"]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -24.586, 0, 63.6503)
+next_scene_wake_up = "res://scenes/maps/school/day3/day3.tscn"
+wake_up_dialogue = "I should forget them , everything is fine"
+
+[node name="Door" parent="." index="3"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.291547, 0.805882, -10.9994)
+test_opening = 3
+unvaible_text_open_door = "This is not use to try"
+text_door_open = "Maybe it's time to try"
+
+[node name="Door2" parent="." index="4" instance=ExtResource("3_8fsn7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 32.183, 0.820824, 9.85049)
+test_opening = 4
+unvaible_text_open_door = "Hope still exist"
+text_door_open = "No , it's not my time yet"
+
+[node name="Main" parent="Cameras" index="0"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.38488, 3.3409, 0.340299)
+
+[node name="DreamCamera1" parent="Cameras" index="1" instance=ExtResource("4_6j7tg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1429, 4.32044, 19.1838)
+
+[node name="DreamCamera2" parent="Cameras" index="2" instance=ExtResource("4_6j7tg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.6671, 3.63088, 29.3401)
+
+[node name="DreamCamera3" parent="Cameras" index="3" instance=ExtResource("4_6j7tg")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -65.6481, 3.76366, 11.8085)
+
+[node name="DreamCamera4" parent="Cameras" index="4" instance=ExtResource("4_6j7tg")]
+transform = Transform3D(-2.98023e-08, 0, 1, 0, 1, 0, -1, 0, -2.98023e-08, -46.9617, 1.08242, 36.243)
+
+[node name="DreamCamera5" parent="Cameras" index="5" instance=ExtResource("4_6j7tg")]
+transform = Transform3D(-0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866025, -27.7723, 2.41373, 51.4649)
+
+[node name="switch_cam_main" type="Area3D" parent="Events" index="0"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.2982, 0.374177, 15.7626)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/switch_cam_main" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24353, 4.49799, 0)
+shape = SubResource("BoxShape3D_6j7tg")
+debug_color = Color(0.180392, 0.478431, 0, 0.419608)
+
+[node name="switch_cam_main_BIS" type="Area3D" parent="Events" index="1"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.55566, 0.374177, 15.7626)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/switch_cam_main_BIS" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24353, 4.49799, 0)
+shape = SubResource("BoxShape3D_6j7tg")
+debug_color = Color(0.180392, 0.478431, 0, 0.419608)
+
+[node name="switch_cam_1" type="Area3D" parent="Events" index="2"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23.9961, 5.27082, 15.9435)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/switch_cam_1" index="0"]
+shape = SubResource("BoxShape3D_575ul")
+debug_color = Color(0.509804, 0.462745, 0, 0.419608)
+
+[node name="switch_cam_2" type="Area3D" parent="Events" index="3"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.89968, 5.27082, 15.9435)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/switch_cam_2" index="0"]
+shape = SubResource("BoxShape3D_575ul")
+debug_color = Color(0.509804, 0.462745, 0, 0.419608)
+
+[node name="switch_cam_2_BIS" type="Area3D" parent="Events" index="4"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -45.6537, 5.27082, 15.9435)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/switch_cam_2_BIS" index="0"]
+shape = SubResource("BoxShape3D_575ul")
+debug_color = Color(0.509804, 0.462745, 0, 0.419608)
+
+[node name="switch_cam_3" type="Area3D" parent="Events" index="5"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -47.2448, 5.27082, 15.9435)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/switch_cam_3" index="0"]
+shape = SubResource("BoxShape3D_575ul")
+debug_color = Color(0.509804, 0.462745, 0, 0.419608)
+
+[node name="switch_cam_3_BIS" type="Area3D" parent="Events" index="6"]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, -71.837, 5.27082, 29.3398)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/switch_cam_3_BIS" index="0"]
+shape = SubResource("BoxShape3D_575ul")
+debug_color = Color(0.509804, 0.462745, 0, 0.419608)
+
+[node name="switch_cam_4" type="Area3D" parent="Events" index="7"]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, -72.068, 5.27082, 30.6671)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/switch_cam_4" index="0"]
+shape = SubResource("BoxShape3D_575ul")
+debug_color = Color(0.509804, 0.462745, 0, 0.419608)
+
+[node name="switch_cam_4_BIS" type="Area3D" parent="Events" index="8"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50.0057, 5.27082, 55.9124)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/switch_cam_4_BIS" index="0"]
+shape = SubResource("BoxShape3D_575ul")
+debug_color = Color(0.509804, 0.462745, 0, 0.419608)
+
+[node name="switch_cam_5" type="Area3D" parent="Events" index="9"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -48.4807, 5.27082, 56.3346)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/switch_cam_5" index="0"]
+shape = SubResource("BoxShape3D_575ul")
+debug_color = Color(0.509804, 0.462745, 0, 0.419608)
+
+[node name="open_fence" type="Area3D" parent="Events" index="10"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 31.4818, 0.374177, 15.7626)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Events/open_fence" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24353, 4.49799, -0.5)
+shape = SubResource("BoxShape3D_q70lc")
+debug_color = Color(0.180392, 0.478431, 0, 0.419608)
+
+[node name="Map" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.20557, 0)
+
+[node name="Fence" parent="Map" index="0" instance=ExtResource("5_575ul")]
+transform = Transform3D(-1.00536e-07, 0, -2.3, 0, 3, 0, 2.3, 0, -1.00536e-07, -3.39716, 7.36905, 15.9119)
+
+[node name="FenceSFXPlayer" type="AudioStreamPlayer3D" parent="Map" index="1"]
+stream = ExtResource("6_vi0pl")
+pitch_scale = 2.7
+
+[node name="DreamLimit" type="MeshInstance3D" parent="Map" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4992, -0.221887, 0)
+mesh = SubResource("BoxMesh_575ul")
+
+[node name="TutorialMesh" parent="Map" index="3"]
+transform = Transform3D(0.151088, 0, 0.98852, 0, 1, 0, -0.98852, 0, 0.151088, -1.14339, -48.2671, -13.9105)
+
+[node name="Ground" type="Node3D" parent="Map" index="4"]
+
+[node name="GroundDream" parent="Map/Ground" index="0" instance=ExtResource("2_jq8in")]
+
+[node name="GroundDream2" parent="Map/Ground" index="1" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="GroundDream3" parent="Map/Ground" index="2" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="GroundDream4" parent="Map/Ground" index="3" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="GroundDream5" parent="Map/Ground" index="4" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 16)
+
+[node name="GroundDream6" parent="Map/Ground" index="5" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 16)
+
+[node name="GroundDream7" parent="Map/Ground" index="6" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 16)
+
+[node name="GroundDream8" parent="Map/Ground" index="7" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 16)
+
+[node name="GroundDream9" parent="Map/Ground" index="8" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 8)
+
+[node name="GroundDream10" parent="Map/Ground" index="9" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 16)
+
+[node name="GroundDream11" parent="Map/Ground" index="10" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 16)
+
+[node name="GroundDream12" parent="Map/Ground" index="11" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 24)
+
+[node name="GroundDream13" parent="Map/Ground" index="12" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 32)
+
+[node name="GroundDream14" parent="Map/Ground" index="13" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 40)
+
+[node name="GroundDream15" parent="Map/Ground" index="14" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 40)
+
+[node name="GroundDream16" parent="Map/Ground" index="15" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 40)
+
+[node name="GroundDream17" parent="Map/Ground" index="16" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 40)
+
+[node name="GroundDream18" parent="Map/Ground" index="17" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 32)
+
+[node name="GroundDream19" parent="Map/Ground" index="18" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 24)
+
+[node name="GroundDream20" parent="Map/Ground" index="19" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 16)
+
+[node name="GroundDream21" parent="Map/Ground" index="20" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 16)
+
+[node name="GroundDream22" parent="Map/Ground" index="21" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 16)
+
+[node name="GroundDream23" parent="Map/Ground" index="22" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 16)
+
+[node name="GroundDream24" parent="Map/Ground" index="23" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 8)
+
+[node name="GroundDream25" parent="Map/Ground" index="24" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 16)
+
+[node name="GroundDream26" parent="Map/Ground" index="25" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 16)
+
+[node name="GroundDream27" parent="Map/Ground" index="26" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 24)
+
+[node name="GroundDream28" parent="Map/Ground" index="27" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 24)
+
+[node name="GroundDream29" parent="Map/Ground" index="28" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 16)
+
+[node name="GroundDream30" parent="Map/Ground" index="29" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, 16)
+
+[node name="GroundDream31" parent="Map/Ground" index="30" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 32)
+
+[node name="GroundDream32" parent="Map/Ground" index="31" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 40)
+
+[node name="GroundDream33" parent="Map/Ground" index="32" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 40)
+
+[node name="GroundDream34" parent="Map/Ground" index="33" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 40)
+
+[node name="GroundDream35" parent="Map/Ground" index="34" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 48)
+
+[node name="GroundDream36" parent="Map/Ground" index="35" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 56)
+
+[node name="GroundDream37" parent="Map/Ground" index="36" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 56)
+
+[node name="GroundDream38" parent="Map/Ground" index="37" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 56)
+
+[node name="GroundDream39" parent="Map/Ground" index="38" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 64)
+
+[node name="GroundDream40" parent="Map/Ground" index="39" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 64)
+
+[node name="GroundDream41" parent="Map/Ground" index="40" instance=ExtResource("2_jq8in")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 64)
+
+[node name="Walls" type="Node3D" parent="Map" index="5"]
+
+[node name="WallDream" parent="Map/Walls" index="0" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.624947, 7.17544, -11.0703)
+
+[node name="WallDream2" parent="Map/Walls" index="1" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.982, 7.175, -8)
+
+[node name="WallDream3" parent="Map/Walls" index="2" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.982, 7.175, 0)
+
+[node name="WallDream4" parent="Map/Walls" index="3" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 35.018, 7.175, 8)
+
+[node name="WallDream5" parent="Map/Walls" index="4" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 7.175, 12.67)
+
+[node name="WallDream6" parent="Map/Walls" index="5" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 7.175, 12.67)
+
+[node name="WallDream7" parent="Map/Walls" index="6" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.6249, 7.17544, 9.87647)
+
+[node name="WallDream8" parent="Map/Walls" index="7" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.982, 7.175, 8)
+
+[node name="WallDream9" parent="Map/Walls" index="8" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 35.018, 7.175, 16)
+
+[node name="WallDream10" parent="Map/Walls" index="9" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 32, 7.175, 19.3231)
+
+[node name="WallDream11" parent="Map/Walls" index="10" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 24, 7.175, 19.3231)
+
+[node name="WallDream12" parent="Map/Walls" index="11" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 16, 7.175, 19.3231)
+
+[node name="WallDream13" parent="Map/Walls" index="12" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8, 7.175, 19.3231)
+
+[node name="WallDream14" parent="Map/Walls" index="13" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 7.175, 19.3231)
+
+[node name="WallDream15" parent="Map/Walls" index="14" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -8, 7.175, 19.3231)
+
+[node name="WallDream16" parent="Map/Walls" index="15" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32.6249, 7.17544, 9.28425)
+
+[node name="WallDream17" parent="Map/Walls" index="16" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.703, 7.175, 24)
+
+[node name="WallDream18" parent="Map/Walls" index="17" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.703, 7.175, 32)
+
+[node name="WallDream19" parent="Map/Walls" index="18" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.703, 7.175, 40)
+
+[node name="WallDream20" parent="Map/Walls" index="19" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -16, 7.175, 43.153)
+
+[node name="WallDream21" parent="Map/Walls" index="20" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -24, 7.175, 43.153)
+
+[node name="WallDream22" parent="Map/Walls" index="21" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -32, 7.175, 43.153)
+
+[node name="WallDream23" parent="Map/Walls" index="22" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -40, 7.175, 43.153)
+
+[node name="WallDream24" parent="Map/Walls" index="23" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.1142, 7.175, 40)
+
+[node name="WallDream25" parent="Map/Walls" index="24" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.1142, 7.175, 32)
+
+[node name="WallDream26" parent="Map/Walls" index="25" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.1142, 7.175, 24)
+
+[node name="WallDream27" parent="Map/Walls" index="26" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28.703, 7.175, 16)
+
+[node name="WallDream28" parent="Map/Walls" index="27" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 7.175, 12.774)
+
+[node name="WallDream29" parent="Map/Walls" index="28" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 7.175, 12.774)
+
+[node name="WallDream30" parent="Map/Walls" index="29" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 7.175, 12.774)
+
+[node name="WallDream31" parent="Map/Walls" index="30" instance=ExtResource("3_imep7")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -28.3035, 7.175, 16)
+
+[node name="WallDream32" parent="Map/Walls" index="31" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -52.703, 7.175, 8)
+
+[node name="WallDream33" parent="Map/Walls" index="32" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 7.175, 4.774)
+
+[node name="WallDream34" parent="Map/Walls" index="33" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -48, 7.175, 19.153)
+
+[node name="WallDream35" parent="Map/Walls" index="34" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -56, 7.175, 19.153)
+
+[node name="WallDream36" parent="Map/Walls" index="35" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -64, 7.175, 27.153)
+
+[node name="WallDream37" parent="Map/Walls" index="36" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -60.703, 7.175, 24)
+
+[node name="WallDream38" parent="Map/Walls" index="37" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -75.5352, 7.175, 40)
+
+[node name="WallDream39" parent="Map/Walls" index="38" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -75.5352, 7.175, 32)
+
+[node name="WallDream40" parent="Map/Walls" index="39" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -75.5352, 7.175, 24)
+
+[node name="WallDream41" parent="Map/Walls" index="40" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -64, 7.175, 43.153)
+
+[node name="WallDream42" parent="Map/Walls" index="41" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -72, 7.175, 43.153)
+
+[node name="WallDream43" parent="Map/Walls" index="42" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -91.5352, 7.175, 16)
+
+[node name="WallDream44" parent="Map/Walls" index="43" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -88, 7.175, 20.153)
+
+[node name="WallDream45" parent="Map/Walls" index="44" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -80, 7.175, 20.153)
+
+[node name="WallDream46" parent="Map/Walls" index="45" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -58.5352, 7.175, 56)
+
+[node name="WallDream47" parent="Map/Walls" index="46" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -58.5352, 7.175, 48)
+
+[node name="WallDream48" parent="Map/Walls" index="47" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -56, 7.175, 59.153)
+
+[node name="WallDream49" parent="Map/Walls" index="48" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -48, 7.175, 59.153)
+
+[node name="WallDream50" parent="Map/Walls" index="49" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -40, 7.175, 67.153)
+
+[node name="WallDream51" parent="Map/Walls" index="50" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -32, 7.175, 67.153)
+
+[node name="WallDream52" parent="Map/Walls" index="51" instance=ExtResource("3_imep7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -24, 7.175, 67.153)
+
+[node name="WallDream53" parent="Map/Walls" index="52" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5352, 7.175, 64)
+
+[node name="WallDream54" parent="Map/Walls" index="53" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20.5352, 7.175, 64)
+
+[node name="WallDream55" parent="Map/Walls" index="54" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -64, 7.175, 27.2379)
+
+[node name="WallDream56" parent="Map/Walls" index="55" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -60.2277, 7.175, 24)
+
+[node name="WallDream57" parent="Map/Walls" index="56" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, -56, 7.175, 19.3658)
+
+[node name="WallDream58" parent="Map/Walls" index="57" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, -48, 7.175, 19.3658)
+
+[node name="WallDream59" parent="Map/Walls" index="58" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -43.2055, 7.175, 40)
+
+[node name="WallDream60" parent="Map/Walls" index="59" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -43.2055, 7.175, 32)
+
+[node name="WallDream61" parent="Map/Walls" index="60" instance=ExtResource("3_imep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -43.2055, 7.175, 24)
+
+[node name="WallDream62" parent="Map/Walls" index="61" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, -16, 7.175, 43.3276)
+
+[node name="WallDream63" parent="Map/Walls" index="62" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, -24, 7.175, 43.3276)
+
+[node name="WallDream64" parent="Map/Walls" index="63" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, -32, 7.175, 43.3276)
+
+[node name="WallDream65" parent="Map/Walls" index="64" instance=ExtResource("3_imep7")]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, -40, 7.175, 43.3276)
+
+[node name="InvisibleWalls" type="Node3D" parent="Map" index="6"]
+
+[node name="InvisibleWall" type="StaticBody3D" parent="Map/InvisibleWalls" index="0"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.2593, 0, -6.89509)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.70245, 6.54166, 2.38419e-07)
+shape = SubResource("BoxShape3D_3ewd0")
+debug_color = Color(0.98014, 0, 0.38219, 0.42)
+
+[node name="InvisibleWall2" type="StaticBody3D" parent="Map/InvisibleWalls" index="1"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 28.3356, 0, -6.89509)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.70245, 6.54166, 2.38419e-07)
+shape = SubResource("BoxShape3D_3ewd0")
+debug_color = Color(0.98014, 0, 0.38219, 0.42)
+
+[node name="InvisibleWall3" type="StaticBody3D" parent="Map/InvisibleWalls" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9675, 0, 12.7941)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6071, 6.54166, 0)
+shape = SubResource("BoxShape3D_vi0pl")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="InvisibleWall4" type="StaticBody3D" parent="Map/InvisibleWalls" index="3"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.2325, 0, 17.03)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall4" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.70245, 6.54166, 2.38419e-07)
+shape = SubResource("BoxShape3D_3ewd0")
+debug_color = Color(0.98014, 0, 0.38219, 0.42)
+
+[node name="InvisibleWall5" type="StaticBody3D" parent="Map/InvisibleWalls" index="4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -36.6956, 0, 17.03)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall5" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1627, 6.54166, 0)
+shape = SubResource("BoxShape3D_sufll")
+debug_color = Color(0.98014, 0, 0.38219, 0.42)
+
+[node name="InvisibleWall6" type="StaticBody3D" parent="Map/InvisibleWalls" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7996, 0, 36.4271)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall6" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19784, 6.54166, 0)
+shape = SubResource("BoxShape3D_d803s")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="InvisibleWall7" type="StaticBody3D" parent="Map/InvisibleWalls" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7996, 0, 18.3817)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall7" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33356, 6.54166, 0)
+shape = SubResource("BoxShape3D_vtu2v")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="InvisibleWall8" type="StaticBody3D" parent="Map/InvisibleWalls" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.1837, 0, 13.1029)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall8" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.9332, 6.54166, 0)
+shape = SubResource("BoxShape3D_2f8wk")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="InvisibleWall9" type="StaticBody3D" parent="Map/InvisibleWalls" index="8"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -58.9198, 0, 8.9405)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall9" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72284, 6.54166, 0)
+shape = SubResource("BoxShape3D_4mvmx")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="InvisibleWall10" type="StaticBody3D" parent="Map/InvisibleWalls" index="9"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -68.3018, 0, 35.0684)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall10" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13802, 6.54166, 0)
+shape = SubResource("BoxShape3D_jcbd3")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="InvisibleWall11" type="StaticBody3D" parent="Map/InvisibleWalls" index="10"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.573, 0, 59.4435)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall11" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13802, 6.54166, 0)
+shape = SubResource("BoxShape3D_jcbd3")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="InvisibleWall12" type="StaticBody3D" parent="Map/InvisibleWalls" index="11"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -53.2005, 0, 50.9321)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall12" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.06086, 6.54166, 0)
+shape = SubResource("BoxShape3D_vg34r")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="InvisibleWall13" type="StaticBody3D" parent="Map/InvisibleWalls" index="12"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -52.39, 0, 36.745)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall13" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.06086, 6.54166, 0)
+shape = SubResource("BoxShape3D_vg34r")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="InvisibleWall14" type="StaticBody3D" parent="Map/InvisibleWalls" index="13"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -21.7933, 0, 60.6143)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall14" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.06086, 6.54166, 0)
+shape = SubResource("BoxShape3D_vg34r")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="InvisibleWall15" type="StaticBody3D" parent="Map/InvisibleWalls" index="14"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -44.9325, 0, 52.6247)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall15" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13802, 6.54166, 0)
+shape = SubResource("BoxShape3D_jcbd3")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="InvisibleWall16" type="StaticBody3D" parent="Map/InvisibleWalls" index="15"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -39.137, 0, 52.6247)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/InvisibleWalls/InvisibleWall16" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13802, 6.54166, 0)
+shape = SubResource("BoxShape3D_jcbd3")
+debug_color = Color(0.980392, 0, 0.380392, 0.419608)
+
+[node name="Pillars" type="Node3D" parent="Map" index="7"]
+
+[node name="DreamPillar" parent="Map/Pillars" index="0" instance=ExtResource("8_3ewd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.63676, 7.34298, 12.5346)
+
+[node name="DreamPillar2" parent="Map/Pillars" index="1" instance=ExtResource("8_3ewd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6368, 7.34298, 19.5346)
+
+[node name="DreamPillar3" parent="Map/Pillars" index="2" instance=ExtResource("8_3ewd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6368, 7.34298, 19.5346)
+
+[node name="DreamPillar4" parent="Map/Pillars" index="3" instance=ExtResource("8_3ewd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.6368, 7.34298, 19.5346)
+
+[node name="DreamPillar5" parent="Map/Pillars" index="4" instance=ExtResource("8_3ewd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.6368, 7.34298, 12.5346)
+
+[node name="DreamPillar6" parent="Map/Pillars" index="5" instance=ExtResource("8_3ewd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.6368, 7.34298, 19.8262)
+
+[node name="DreamPillar7" parent="Map/Pillars" index="6" instance=ExtResource("8_3ewd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.6368, 7.34298, 43.5909)
+
+[node name="DreamPillar8" parent="Map/Pillars" index="7" instance=ExtResource("8_3ewd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.086, 7.34298, 59.8436)
+
+[node name="TextMesh1" type="MeshInstance3D" parent="Map" index="8"]
+transform = Transform3D(-2.3, 0, -3.4729e-07, 0, 2.3, 0, 3.4729e-07, 0, -2.3, 3.49917, 3.72917, 4.32597)
+mesh = SubResource("TextMesh_sufll")
+
+[node name="TextMesh2" type="MeshInstance3D" parent="Map" index="9"]
+transform = Transform3D(-2.3, 0, -3.4729e-07, 0, 2.3, 0, 3.4729e-07, 0, -2.3, 25.2191, 8.03916, 18.0377)
+mesh = SubResource("TextMesh_vi0pl")
+
+[node name="A" type="MeshInstance3D" parent="Map" index="10"]
+transform = Transform3D(-0.0202365, 0, 1.49986, 0, 1.5, 0, -1.49986, 0, -0.0202365, -42.1597, 6.13189, 31.6376)
+mesh = SubResource("QuadMesh_4mvmx")
+
+[node name="B" type="MeshInstance3D" parent="Map" index="11"]
+transform = Transform3D(-1.32413, 0, 0.704762, 0, 1.5, 0, -0.704762, 0, -1.32413, -80.7057, 7.76603, 15.1858)
+mesh = SubResource("QuadMesh_vg34r")
+
+[node name="MapAssets" parent="." index="8"]
+visible = false
+
+[connection signal="body_entered" from="Events/switch_cam_main" to="." method="_on_switch_cam_main_body_entered"]
+[connection signal="body_entered" from="Events/switch_cam_main_BIS" to="." method="_on_switch_cam_main_bis_body_entered"]
+[connection signal="body_entered" from="Events/switch_cam_1" to="." method="_on_switch_cam_1_body_entered"]
+[connection signal="body_entered" from="Events/switch_cam_2" to="." method="_on_switch_cam_2_body_entered"]
+[connection signal="body_entered" from="Events/switch_cam_2_BIS" to="." method="_on_switch_cam_2_bis_body_entered"]
+[connection signal="body_entered" from="Events/switch_cam_3" to="." method="_on_switch_cam_3_body_entered"]
+[connection signal="body_entered" from="Events/switch_cam_3_BIS" to="." method="_on_switch_cam_3_bis_body_entered"]
+[connection signal="body_entered" from="Events/switch_cam_4" to="." method="_on_switch_cam_4_body_entered"]
+[connection signal="body_entered" from="Events/switch_cam_4_BIS" to="." method="_on_switch_cam_4_bis_body_entered"]
+[connection signal="body_entered" from="Events/switch_cam_5" to="." method="_on_switch_cam_5_body_entered"]
+[connection signal="body_entered" from="Events/open_fence" to="." method="_on_open_fence_body_entered"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6togi4v8k8jy"]
+
+[ext_resource type="Texture2D" uid="uid://d331ncjpm0tai" path="res://assets/sprites/girl_sprites/student.png" id="1_8oaem"]
+[ext_resource type="Script" uid="uid://btlqqi0btl8qb" path="res://scenes/entities/girl/girl.gd" id="2_w2am6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w2am6"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(1, 1, 1, 0.999976)
+albedo_texture = ExtResource("1_8oaem")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ql34t"]
+material = SubResource("StandardMaterial3D_w2am6")
+size = Vector2(9, 16)
+
+[node name="GirlMesh" type="MeshInstance3D"]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 27.8376, 19.8184, -129.435)
+mesh = SubResource("QuadMesh_ql34t")
+skeleton = NodePath("../../..")
+script = ExtResource("2_w2am6")

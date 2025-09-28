@@ -1,0 +1,138 @@
+[gd_scene load_steps=27 format=3 uid="uid://d3pjd8qga1jll"]
+
+[ext_resource type="Script" uid="uid://50n453sx2t8a" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="1_7duxu"]
+[ext_resource type="Script" uid="uid://b76n0fm1c7k0j" path="res://scenes/dialogues/dialogues_menu/dialogues_menu.gd" id="1_piuoo"]
+[ext_resource type="Resource" uid="uid://dlwoet11ev6al" path="res://scenes/dialogues/school_dialogues.tres" id="2_piuoo"]
+[ext_resource type="Script" uid="uid://be86xjwffasi" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_ka1dl"]
+[ext_resource type="Script" uid="uid://cfju13j3pb12o" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_sa7eu"]
+[ext_resource type="Script" uid="uid://dxk2e83xnevxv" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_ny1um"]
+[ext_resource type="AudioStream" uid="uid://dnrdh70tbjxin" path="res://assets/sounds/dialogues_sfx/Retro Instrument - drumset - C08.wav" id="8_sa7eu"]
+
+[sub_resource type="Gradient" id="Gradient_e7vuq"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xjaeq"]
+gradient = SubResource("Gradient_e7vuq")
+width = 400
+height = 400
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ka1dl"]
+viewport_path = NodePath("SubViewportContainer/CanvasLayer")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ka1dl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sa7eu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ny1um"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0w0sr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_btr1r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oqwv2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7wvjf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oldgb"]
+border_width_top = 5
+border_color = Color(0.466181, 0.466181, 0.466181, 1)
+corner_radius_top_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hoih"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lnasd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eylhv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xqai7"]
+bg_color = Color(0.340339, 0.340339, 0.340339, 1)
+border_width_top = 60
+border_color = Color(0.6, 0.6, 0.6, 1)
+corner_radius_top_right = 50
+
+[sub_resource type="Theme" id="Theme_kq3xb"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 40
+Button/styles/disabled = SubResource("StyleBoxEmpty_ka1dl")
+Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_sa7eu")
+Button/styles/focus = SubResource("StyleBoxEmpty_ny1um")
+Button/styles/hover = SubResource("StyleBoxEmpty_0w0sr")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_btr1r")
+Button/styles/hover_pressed = SubResource("StyleBoxEmpty_oqwv2")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_7wvjf")
+Button/styles/normal = SubResource("StyleBoxFlat_oldgb")
+Button/styles/normal_mirrored = SubResource("StyleBoxFlat_6hoih")
+Button/styles/pressed = SubResource("StyleBoxEmpty_lnasd")
+Button/styles/pressed_mirrored = SubResource("StyleBoxEmpty_eylhv")
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/shadow_offset_x = 3
+Label/constants/shadow_offset_y = 3
+Label/font_sizes/font_size = 35
+Panel/styles/panel = SubResource("StyleBoxFlat_xqai7")
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/shadow_offset_y = 3
+RichTextLabel/constants/shadow_outline_size = 3
+RichTextLabel/font_sizes/normal_font_size = 25
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_e7vuq"]
+script = ExtResource("3_ka1dl")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_xjaeq"]
+script = ExtResource("4_sa7eu")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_sxdru"]
+script = ExtResource("5_ny1um")
+
+[node name="DialoguesMenu" type="Node3D"]
+script = ExtResource("1_piuoo")
+
+[node name="YepRadialGradient" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29917, -11.9717, -9.61349)
+texture = SubResource("GradientTexture2D_xjaeq")
+
+[node name="UI" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, -5)
+texture = SubResource("ViewportTexture_ka1dl")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="CanvasLayer" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+gui_embed_subwindows = true
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="DialogueBox" type="Panel" parent="SubViewportContainer/CanvasLayer"]
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -185.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_kq3xb")
+script = ExtResource("1_7duxu")
+data = ExtResource("2_piuoo")
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_e7vuq"), SubResource("RichTextEffect_xjaeq"), SubResource("RichTextEffect_sxdru")])
+metadata/_custom_type_script = "uid://50n453sx2t8a"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_sa7eu")
+volume_db = -5.0
+pitch_scale = 0.5
+
+[connection signal="dialogue_ended" from="SubViewportContainer/CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_ended"]
+[connection signal="dialogue_processed" from="SubViewportContainer/CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_processed"]
+[connection signal="dialogue_signal" from="SubViewportContainer/CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]
+[connection signal="option_selected" from="SubViewportContainer/CanvasLayer/DialogueBox" to="." method="_on_dialogue_box_option_selected"]

@@ -1,0 +1,183 @@
+[gd_scene load_steps=10 format=3 uid="uid://bne7dw8uxnbco"]
+
+[ext_resource type="Script" uid="uid://edoailhx3qc0" path="res://scenes/entities/cube/cube.gd" id="1_hatvs"]
+[ext_resource type="AudioStream" uid="uid://bo1u2yv7ie4uh" path="res://assets/sounds/Retro Electric 21.wav" id="2_duemh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hatvs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hatvs"]
+albedo_color = Color(0, 1, 1, 1)
+metallic = 1.0
+emission_enabled = true
+emission = Color(0, 1, 1, 1)
+emission_energy_multiplier = 16.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_hatvs"]
+material = SubResource("StandardMaterial3D_hatvs")
+
+[sub_resource type="Animation" id="Animation_ny2k5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshDreamCube:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshDreamCube:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_i0kvv"]
+resource_name = "touched"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 5),
+"transitions": PackedFloat32Array(0.594604, 2.37841, 0.594604),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.5, 1.5, 1.5), Vector3(1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshDreamCube:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 5),
+"transitions": PackedFloat32Array(0.594604, 2.37841, 0.594604),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.5, 1.5, 1.5), Vector3(1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 5),
+"transitions": PackedFloat32Array(0.535887, 1.62451, 0.535887),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.122282, 1.05592, -0.435752), Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshDreamCube:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2, 5),
+"transitions": PackedFloat32Array(0.535887, 1.62451, 0.535887),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.122282, 1.05592, -0.435752), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_duemh"]
+resource_name = "turning_around"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6.5, 9.5, 12, 15),
+"transitions": PackedFloat32Array(0.420448, 1.7411, 2, 1.56917, 0.63728, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-2.11538e-08, -0.652648, -0.617306), Vector3(0.742156, 2.69042, 0.183147), Vector3(-0.34406, -2.61457, -0.180108), Vector3(-0.155854, -0.921572, 0.532517), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshDreamCube:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 6.5, 9.5, 12, 15),
+"transitions": PackedFloat32Array(0.420448, 1.7411, 2, 1.56917, 0.63728, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-2.11538e-08, -0.652648, -0.617306), Vector3(0.742156, 2.69042, 0.183147), Vector3(-0.34406, -2.61457, -0.180108), Vector3(-0.155854, -0.921572, 0.532517), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ny2k5"]
+_data = {
+&"RESET": SubResource("Animation_ny2k5"),
+&"touched": SubResource("Animation_i0kvv"),
+&"turning_around": SubResource("Animation_duemh")
+}
+
+[node name="Cube" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_hatvs")
+
+[node name="BasePosition" type="Marker3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hatvs")
+
+[node name="MeshDreamCube" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_hatvs")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(35, 0, 0, 0, -2.18557e-07, -35, 0, 5, -1.5299e-06, 0, 0, 0)
+hit_from_inside = true
+
+[node name="SFXPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_duemh")
+volume_db = 15.0
+max_distance = 500.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ny2k5")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

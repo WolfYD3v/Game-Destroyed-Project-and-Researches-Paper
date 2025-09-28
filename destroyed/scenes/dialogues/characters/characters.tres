@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CharacterList" load_steps=8 format=3 uid="uid://c0qyv7gphuxi4"]
+
+[ext_resource type="Script" uid="uid://cec632m35i3n3" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_da436"]
+[ext_resource type="Script" uid="uid://c63b32x34e4be" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="2_4succ"]
+[ext_resource type="Resource" uid="uid://dacuwspklwfyh" path="res://scenes/dialogues/characters/bully.tres" id="2_x6dvo"]
+[ext_resource type="Resource" uid="uid://bu5cm4pjsfxci" path="res://scenes/dialogues/characters/girl.tres" id="3_kiykd"]
+[ext_resource type="Resource" uid="uid://dk8kmv2w3768y" path="res://scenes/dialogues/characters/player.tres" id="4_wflw2"]
+[ext_resource type="Resource" uid="uid://c7fo46vpjxxrl" path="res://scenes/dialogues/characters/students.tres" id="5_rjr33"]
+[ext_resource type="Resource" uid="uid://dnnh4cppgoegf" path="res://scenes/dialogues/characters/system.tres" id="6_kiykd"]
+
+[resource]
+script = ExtResource("2_4succ")
+characters = Array[ExtResource("1_da436")]([ExtResource("2_x6dvo"), ExtResource("3_kiykd"), ExtResource("4_wflw2"), ExtResource("5_rjr33"), ExtResource("6_kiykd")])
+metadata/_custom_type_script = "uid://c63b32x34e4be"

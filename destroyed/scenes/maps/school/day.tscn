@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://bekabrcydvmwc"]
+
+[ext_resource type="Script" uid="uid://bv8smy8xco1fn" path="res://scenes/maps/school/day.gd" id="1_e7vuq"]
+[ext_resource type="PackedScene" uid="uid://d3pjd8qga1jll" path="res://scenes/dialogues/dialogues_menu/dialogues_menu.tscn" id="2_y7y1e"]
+[ext_resource type="PackedScene" uid="uid://th08wthjijaw" path="res://scenes/entities/bully/bully.tscn" id="3_cyuf8"]
+[ext_resource type="Shader" uid="uid://bgbio15y2eu83" path="res://assets/shaders/picelate_sceen.gdshader" id="4_w0l3j"]
+[ext_resource type="FontFile" uid="uid://dqxkps8kby31r" path="res://assets/fonts/linux-libertine/LinLibertine_5.3.0_2012_07_02/LinLibertineOTF_5.3.0_2012_07_02/LinLibertine_DR.otf" id="5_bo5kf"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_bo5kf"]
+size = Vector2(15, 15)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e7vuq"]
+render_priority = 0
+shader = ExtResource("4_w0l3j")
+shader_parameter/pixelation = 0.015
+shader_parameter/opacity = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0l3j"]
+bg_color = Color(0.228264, 0.461226, 0, 1)
+border_width_bottom = 35
+border_color = Color(0.172581, 0.362167, 2.40654e-07, 1)
+corner_radius_bottom_left = 50
+corner_detail = 10
+
+[node name="Day" type="Node3D"]
+script = ExtResource("1_e7vuq")
+
+[node name="BullyMesh" parent="." instance=ExtResource("3_cyuf8")]
+
+[node name="DialoguesMenu" parent="." instance=ExtResource("2_y7y1e")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(1, 2.16005e-12, 0, 0, 1, 8.77814e-13, 0, 8.77808e-13, 1, 0.65139, -0.125664, -1.14759)
+mesh = SubResource("QuadMesh_bo5kf")
+surface_material_override/0 = SubResource("ShaderMaterial_e7vuq")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.894637, 0.885385, 0, 1)
+light_energy = 3.0
+
+[node name="Areas" type="Node3D" parent="."]
+
+[node name="DayUI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="DayUI"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 704.0
+offset_bottom = 74.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w0l3j")
+
+[node name="DayLabel" type="Label" parent="DayUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -224.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("5_bo5kf")
+theme_override_font_sizes/font_size = 30
+text = "m/d/y
+D"
+horizontal_alignment = 2
+autowrap_mode = 3

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg0k7fehyk2fg"]
+
+[ext_resource type="Script" uid="uid://c7tlkjs1r237b" path="res://scenes/entities/students/students.gd" id="1_7gqgu"]
+[ext_resource type="Texture2D" uid="uid://73qpvwb02n7s" path="res://assets/sprites/students_sprites/student_1.png" id="1_s55se"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hpimv"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_s55se")
+
+[sub_resource type="QuadMesh" id="QuadMesh_8rdc3"]
+lightmap_size_hint = Vector2i(22, 44)
+material = SubResource("StandardMaterial3D_hpimv")
+size = Vector2(4, 8.5)
+
+[node name="Students" type="MeshInstance3D"]
+mesh = SubResource("QuadMesh_8rdc3")
+script = ExtResource("1_7gqgu")
+
+[node name="NoisePlayer" type="AudioStreamPlayer3D" parent="."]
+volume_db = -4.886
+max_distance = 400.0

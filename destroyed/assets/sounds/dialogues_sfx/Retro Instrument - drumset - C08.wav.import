@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dnrdh70tbjxin"
+path="res://.godot/imported/Retro Instrument - drumset - C08.wav-e09f2285fc4fa60a6625badb8098902f.sample"
+
+[deps]
+
+source_file="res://assets/sounds/dialogues_sfx/Retro Instrument - drumset - C08.wav"
+dest_files=["res://.godot/imported/Retro Instrument - drumset - C08.wav-e09f2285fc4fa60a6625badb8098902f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
